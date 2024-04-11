@@ -1,0 +1,646 @@
+@import url(./reset.css);
+@import url(./navBar.css);
+@import url(./about.css);
+@import url(./login.css);
+@import url(./register.css);
+@import url(./product.css);
+@import url(./product_info.css);
+@import url(./carts.css);
+@import url(./fitness_blog.css);
+@import url(./blog_page.css);
+@import url(./trainer.css);
+@import url(./session.css);
+@import url(./my_session.css);
+@import url(./contact_us.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #1e1e1e;
+  font-family: "Roboto", sans-serif;
+}
+
+.section1_bg {
+  max-width: 100%;
+  background-image: url(../fitness_environment_img/homePage_first.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  font-family: "Roboto", sans-serif;
+}
+.section1_bg .section1_img_filter {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 90px;
+}
+.section1_bg .section1_img_filter h1 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 600;
+  color: #f6f6f6;
+  margin: 7rem 0 2rem 0;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+.section1_bg .section1_img_filter .trainNow_btn {
+  margin-top: 1.2rem;
+  width: 190px;
+  margin-bottom: 120px;
+  height: 50px;
+}
+.section1_bg .section1_img_filter .trainNow_btn a {
+  background-color: #151515;
+  text-align: center;
+  border-radius: 8px;
+  display: block;
+  line-height: 50px;
+  color: #f6f6f6;
+  font-size: 24px;
+  letter-spacing: 4px;
+  border: 1px solid #f6f6f6;
+  font-weight: 500;
+  transition: transform 0.5s;
+}
+.section1_bg .section1_img_filter .trainNow_btn a:hover {
+  transform: translateY(-5px);
+  border: 1px solid #ffdd00;
+  color: #ffdd00;
+  box-shadow: 0px 0px 10px 5px #ffdd00;
+}
+
+.column_section_area {
+  max-width: 100%;
+  margin-bottom: 10rem;
+}
+
+.column_sections {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  margin-top: -85px;
+}
+.column_sections li {
+  margin: 0 3rem;
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+}
+.column_sections li::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+.column_sections .trainer_column_img {
+  position: relative;
+}
+.column_sections .trainer_column_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: #c6bdac;
+  border-radius: 8px;
+  z-index: 30;
+}
+.column_sections h3 {
+  position: absolute;
+  color: #f6f6f6;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+.column_sections img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  z-index: -1;
+  border: 1px solid red;
+}
+.column_sections a {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  padding: 1.5rem 0 0rem 0;
+  font-weight: bold;
+  color: #1e1e1e;
+  text-decoration: underline;
+}
+.column_sections a:hover {
+  color: #ffdd00;
+}
+.column_sections p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  padding: 1rem;
+}
+.column_sections > h3,
+.column_sections p {
+  color: #1e1e1e;
+}
+
+li:hover .trainer_column_content {
+  opacity: 1;
+}
+li:hover li:nth-child(2) {
+  margin: 0rem;
+}
+
+.ftandm {
+  width: 1000px;
+  background-color: #c6bdac;
+  margin: 0 auto;
+  display: flex;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 10rem;
+}
+.ftandm .firstTime_bg {
+  width: 500px;
+  height: 500px;
+  background-image: url(../fitness_environment_img/First_Time_bg_img.jpg);
+  background-size: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  flex: 1;
+  cursor: pointer;
+  transition: 1s;
+}
+.ftandm .firstTime_filter {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.ftandm .firstTime_bg:hover {
+  flex: 2;
+}
+.ftandm .firstTime_bg:hover .firstTime_filter {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.ftandm .firstTime_bg:hover p {
+  visibility: visible;
+}
+.ftandm .member_bg {
+  width: 500px;
+  height: 500px;
+  background-image: url(../fitness_environment_img/Member_bg_img.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  flex: 1;
+  cursor: pointer;
+  transition: 1s;
+}
+.ftandm .member_bg:hover {
+  flex: 2;
+}
+.ftandm .member_bg:hover .member_filter {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.ftandm .member_bg:hover p {
+  visibility: visible;
+}
+.ftandm .member_filter {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.ftandm .firstTime_filter,
+.ftandm .member_filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.ftandm .firstTime_filter h1,
+.ftandm .member_filter h1 {
+  font-size: 36px;
+  margin-bottom: 1.2rem;
+  padding-top: 10rem;
+}
+.ftandm .firstTime_filter p,
+.ftandm .member_filter p {
+  visibility: hidden;
+  font-size: 12px;
+  margin-bottom: 10rem;
+}
+.ftandm .firstTime_filter h1,
+.ftandm .firstTime_filter p,
+.ftandm .member_filter h1,
+.ftandm .member_filter p {
+  color: #f6f6f6;
+}
+
+.fslogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 12rem 0;
+}
+.fslogan h1 {
+  font-weight: 600;
+  text-align: center;
+  font-size: 40px;
+  color: #ffdd00;
+  margin-bottom: 2rem;
+}
+.fslogan p {
+  text-align: center;
+  font-size: 24px;
+  line-height: 2;
+  color: #f6f6f6;
+  margin: 0 11rem;
+}
+
+.sharepost1 {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 200px;
+}
+
+.postArea1 {
+  top: 18.5px;
+  position: absolute;
+  padding: 2px;
+  z-index: 1;
+  border-radius: 8px;
+  width: 426px;
+  background-color: #f6f6f6;
+}
+.postArea1 .postArea1_bg {
+  border-radius: 8px;
+  height: 256px;
+  background-image: url(../fitness_environment_img/postimg.jpg);
+  background-position-y: -50px;
+  background-size: cover;
+}
+.postArea1 .postArea1_bg .postArea1_bg_filter {
+  border-radius: 8px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.postArea1 .contents {
+  color: #151515;
+  margin: 0.5rem;
+}
+.postArea1 .contents h1 {
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+.postArea1 .contents span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+.postArea1 .contents p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.sharepost1_img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70%;
+  background-image: url(../fitness_environment_img/sharePost1_img.jpg);
+  background-size: cover;
+  height: 500px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.sharepost1_img .sharepost1_img_filter {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.sharepost2 {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin-bottom: 220px;
+}
+
+.postArea2 {
+  top: 18.5px;
+  right: 0;
+  margin-right: 4rem;
+  position: absolute;
+  padding: 2px;
+  z-index: 1;
+  border-radius: 8px;
+  width: 426px;
+  background-color: #f6f6f6;
+}
+.postArea2 .postArea2_bg {
+  border-radius: 8px;
+  height: 256px;
+  background-image: url(../fitness_environment_img/postimg2.jpg);
+  background-size: cover;
+}
+.postArea2 .postArea2_bg .postArea2_bg_filter {
+  border-radius: 8px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.postArea2 .contents {
+  color: #151515;
+  margin: 0.5rem;
+}
+.postArea2 .contents h1 {
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+.postArea2 .contents span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+.postArea2 .contents p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.sharepost2_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70%;
+  background-image: url(../fitness_environment_img/sharePost2_img.jpg);
+  background-size: cover;
+  height: 500px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.sharepost2_img .sharepost2_img_filter {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.member_number {
+  width: 80%;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+.member_number ul {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+.member_number li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #1e1e1e;
+  text-align: center;
+}
+.member_number li h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.member_number li p {
+  font-size: 14px;
+}
+
+.slogan2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 8rem 2rem;
+}
+.slogan2 h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  color: #ffdd00;
+  margin-bottom: 2rem;
+}
+.slogan2 p {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.8;
+  color: #f6f6f6;
+  margin: 0 11rem;
+}
+
+.top_sale_area {
+  max-width: 100%;
+  display: flex;
+  margin-bottom: 8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top_sale_area h1 {
+  font-size: 48px;
+  color: #f6f6f6;
+  margin: 0rem 3rem 3rem 3rem;
+}
+.top_sale_area .products {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.top_sale_area .products li {
+  background-color: #f6f6f6;
+  margin: 0 1rem;
+  border-radius: 8px;
+}
+.top_sale_area .products h4,
+.top_sale_area .products p {
+  color: #1e1e1e;
+  text-align: center;
+}
+.top_sale_area .products h4 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 1.2rem 0;
+}
+.top_sale_area .products p {
+  font-size: 18px;
+  padding-bottom: 2rem;
+}
+.top_sale_area a {
+  display: block;
+}
+.top_sale_area a .product_bg {
+  width: 268px;
+  height: 240px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.top_sale_area a .product_bg .product_bg_filter {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.top_sale_area .dumbbell5 {
+  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell5.jpg);
+}
+.top_sale_area .dumbbell12 {
+  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell12.png);
+}
+.top_sale_area .aeroflex {
+  background-image: url(../fitness_environment_img/PRODUCTS/AeroFlex\ Leap.png);
+}
+.top_sale_area li a .kettlebells {
+  background-image: url(../fitness_environment_img/PRODUCTS/Kettlebells.png);
+  background-position-x: 16px;
+  background-position-y: -90px;
+}
+.top_sale_area a > .product_bg {
+  background-position: center;
+  background-size: cover;
+}
+
+.totop {
+  width: 20%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.totop a {
+  display: block;
+}
+.totop a .fa-solid {
+  font-size: 60px;
+  color: #ffdd00;
+}
+
+footer {
+  max-width: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 2rem 2rem 2rem;
+}
+footer .footer_ul {
+  display: flex;
+  padding-bottom: 1.5rem;
+  padding-right: 4rem;
+}
+footer .footer_ul .no_text_logo {
+  display: block;
+  text-align: center;
+}
+footer .footer_ul img {
+  width: 28%;
+}
+footer li {
+  width: 100%;
+  color: #f6f6f6;
+}
+footer li h4 {
+  font-size: 28px;
+  padding-bottom: 1.2rem;
+}
+footer li a {
+  color: #f6f6f6;
+  font-size: 16px;
+  display: block;
+  padding-bottom: 1rem;
+}
+footer li a:hover {
+  color: #ffdd00;
+}
+footer li p {
+  font-size: 14px;
+  line-height: 1.4;
+  padding-bottom: 1.2rem;
+}
+footer li .footer_register {
+  background-color: #f6f6f6;
+  color: #1e1e1e;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 40px;
+}
+footer li:nth-child(6) {
+  margin-right: 0;
+}
+footer .media_icons {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+footer .media_icons a {
+  display: block;
+  text-align: center;
+  margin-right: 2rem;
+}
+footer .media_icons a i {
+  font-size: 28px;
+}
+footer .media_icons a:nth-child(4) {
+  margin-right: 0;
+}
+footer .copyright {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0 0.5rem 0;
+}
+footer .copyright img {
+  width: 20px;
+}
+footer .copyright p {
+  color: #ffdd00;
+  font-size: 12px;
+}
+footer .project_statemen {
+  width: 100%;
+}
+footer .project_statemen p {
+  text-align: center;
+  font-size: 10px;
+  line-height: 2;
+  letter-spacing: 1px;
+  color: #f6f6f6;
+}/*# sourceMappingURL=style.css.map */

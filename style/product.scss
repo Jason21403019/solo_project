@@ -1,0 +1,261 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$yello: #ffdd00;
+$sidebar_bgc: #c6bdac;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//---------------- product_title --------------
+.product_title {
+  max-width: 100%;
+  //   border: 1px solid red;
+  h1 {
+    margin: 0 auto;
+    // border: 1px solid red;
+    width: fit-content;
+    padding: 2rem 0;
+    font-size: 40px;
+    color: $font_color;
+    font-weight: bold;
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: 200px;
+      height: 2px;
+      background-color: $font_color;
+      @include border-radius(8px);
+      transform: translateY(-50%);
+    }
+    &:before {
+      left: -220px;
+    }
+    &:after {
+      right: -220px;
+    }
+  }
+}
+
+//---------------- breadcrumb --------------
+.breadcrumb {
+  max-width: 100%;
+  padding: 1rem 0;
+  padding-left: 4rem;
+  //   border: 1px solid red;
+  .breadcrumb_ul {
+    display: flex;
+    li {
+      color: $yello;
+    }
+    span {
+      color: $font_color;
+    }
+    a {
+      color: $font_color;
+    }
+  }
+}
+
+//---------------- search_bar --------------
+.search_bar {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 4rem;
+  margin-bottom: 1rem;
+  .search {
+    // border: 1px solid red;
+    position: relative;
+    input {
+      width: 268px;
+      height: 44px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      font-size: 24px;
+      padding-left: 1rem;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      display: none;
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+//---------------- Product_area --------------
+.product_area {
+  display: flex;
+}
+.product_sidebar {
+  //----------- product_sidebar -------
+  flex: 1;
+  position: sticky;
+  height: fit-content;
+  top: 0;
+  margin-left: 4rem;
+  margin-right: 5rem;
+  //   border: 1px solid red;
+  background-color: $sidebar_bgc;
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
+  border-radius: 8px;
+  .sidebar_title {
+    li {
+      margin-bottom: 1rem;
+      a {
+        color: $bgc_1e;
+        // border: 1px solid red;
+        font-size: 20px;
+        display: block;
+
+        cursor: pointer;
+        padding: 0.25rem 0.5rem;
+        &:hover {
+          color: $yello;
+        }
+      }
+    }
+
+    .fitness_equipment_product,
+    .protein_powder_product,
+    .health_Supplements_product,
+    .fit_gear_product {
+      display: none;
+      li {
+        margin-bottom: 0rem;
+        a {
+          color: $bgc_1e;
+          font-size: 16px;
+          display: block;
+          margin-bottom: 0.25rem;
+          padding-left: 1rem;
+          //   border: 1px solid red;
+          &:hover {
+            color: $yello;
+          }
+        }
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    // & li:hover .fitness_equipment_product,
+    // & li:hover .protein_powder_product,
+    // & li:hover .health_Supplements_product,
+    // & li:hover .fit_gear_product {
+    //   display: block;
+    // }
+  }
+}
+.product_sections {
+  //-------- product_sections ------
+  //   border: 1px solid red;
+  margin-right: 4rem;
+  flex: 3;
+  .products {
+    max-width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    // border: 1px solid red;
+    li {
+      background-color: $font_color;
+      margin: 0 0 3rem 38px;
+      //   border: 1px solid red;
+      @include border-radius(8px);
+    }
+    h4,
+    p {
+      color: $bgc_1e;
+      text-align: center;
+    }
+    h4 {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 1.2rem 0;
+    }
+    p {
+      font-size: 18px;
+      padding-bottom: 2rem;
+    }
+  }
+  a {
+    display: block;
+    // width: 20%;
+    .product_bg {
+      width: 214px;
+      height: 192px;
+      .product_bg_filter {
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000, $alpha: 0.2);
+      }
+    }
+  }
+  .aeroflexleap {
+    background-image: url(../fitness_environment_img/PRODUCTS/AeroFlex\ Leap.png);
+  }
+  li a .kettlebells {
+    background-image: url(../fitness_environment_img/PRODUCTS/Kettlebells.png);
+    background-position-x: 16px;
+    background-position-y: -90px;
+  }
+  li a .dumbbell10 {
+    background-image: url(../fitness_environment_img/PRODUCTS/dumbbell10.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .dumbbell12 {
+    background-image: url(../fitness_environment_img/PRODUCTS/dumbbell12.png);
+  }
+  .dumbbell14 {
+    background-image: url(../fitness_environment_img/PRODUCTS/dumbbell14.png);
+  }
+  .fbottle {
+    background-image: url(../fitness_environment_img/PRODUCTS/fbottle.png);
+  }
+  li a .kettlebell5 {
+    background-image: url(../fitness_environment_img/PRODUCTS/kettlebell5.png);
+    background-size: contain;
+  }
+  .bench {
+    background-image: url(../fitness_environment_img/PRODUCTS/bench.png);
+  }
+  .medicineball {
+    background-image: url(../fitness_environment_img/PRODUCTS/medicineball.png);
+  }
+  a > .product_bg {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+//---------------- page_number--------------
+.page_number {
+  max-width: 100%;
+  //   border: 1px solid red;
+
+  margin: 3rem 0;
+  .page {
+    margin: 0 auto;
+    // border: 1px solid blue;
+    width: fit-content;
+    display: flex;
+    padding: 0.5rem 0;
+    a {
+      display: block;
+      margin: 0 0.5rem;
+      color: $yello;
+    }
+  }
+}

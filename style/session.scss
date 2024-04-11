@@ -1,0 +1,212 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$yello: #ffdd00;
+$sidebar_bgc: #c6bdac;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+//---------------- session_title --------------
+.product_title {
+  max-width: 100%;
+  //   border: 1px solid red;
+  h1 {
+    margin: 0 auto;
+    // border: 1px solid red;
+    width: fit-content;
+    padding: 2rem 0;
+    font-size: 40px;
+    color: $font_color;
+    font-weight: bold;
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: 200px;
+      height: 2px;
+      background-color: $font_color;
+      @include border-radius(8px);
+      transform: translateY(-50%);
+    }
+    &:before {
+      left: -220px;
+    }
+    &:after {
+      right: -220px;
+    }
+  }
+}
+
+//---------------- month_area --------------
+.session {
+  max-width: 90%;
+  margin: 0 auto;
+  //   border: 1px solid red;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  .month {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    .month_title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $sidebar_bgc;
+      @include border-radius(4px);
+      padding: 0.75rem;
+      width: 346px;
+    }
+    h1 {
+      color: $bgc_1e;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .days_ul {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      flex: auto;
+    }
+    li {
+      margin-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      //   border: 1px solid red;
+      p {
+        line-height: 1.2;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      button {
+        border: none;
+        background-color: $font_color;
+        cursor: pointer;
+        padding: 0.75rem;
+        @include border-radius(8px);
+      }
+      .changebgc {
+        background-color: $sidebar_bgc;
+      }
+    }
+  }
+}
+
+//----------------session_list_area --------------
+.session_list {
+  display: flex;
+  // border: 1px solid red;
+  .login_newm_area {
+    width: 346px;
+    .login,
+    .newm {
+      width: 100%;
+      margin: 1.5rem 0;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      @include border-radius(8px);
+      a {
+        display: inline-block;
+        background-color: rgba($color: $font_color, $alpha: 0.8);
+        color: $bgc_1e;
+        font-size: 36px;
+        padding: 0.5rem;
+        @include border-radius(8px);
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        @include border-radius(8px);
+      }
+    }
+    .login {
+      background-image: url(../fitness_environment_img/FITNESS/session_login.jpg);
+      border: 1px solid $yello;
+      &:hover {
+        box-shadow: 0px 0px 15px 1px $yello;
+      }
+    }
+    .newm {
+      background-image: url(../fitness_environment_img/FITNESS/session_register.jpg);
+      border: 1px solid $font_color;
+      &:hover {
+        box-shadow: 0px 0px 15px 1px $font_color;
+      }
+    }
+  }
+  .session_content {
+    flex: auto;
+    margin-left: 4.6rem;
+    height: 690px;
+    // border: 1px solid blue;
+    overflow: scroll;
+    li {
+      position: relative;
+      margin: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      //   border: 1px solid red;
+      padding: 1.5rem 1rem;
+      background-color: $font_color;
+      @include border-radius(8px);
+    }
+    .session_name {
+      width: 520px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    a {
+      color: $bgc_1e;
+      //   border: 1px solid red;
+    }
+    .detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 2px solid $bgc_1e;
+      padding-left: 1rem;
+    }
+    h6 {
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 0.5rem;
+    }
+    .address,
+    .tianer_name {
+      display: flex;
+      align-items: center;
+    }
+    .address {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,312 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$yello: #ffdd00;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+//------------- main_bg_area --------------
+.main_bg_area {
+  //   border: 1px solid red;
+  max-width: 100%;
+  background-image: url(../fitness_environment_img/AboutMainBgi.jpg);
+  background-size: cover;
+  .main_bg_area_filter {
+    width: 100%;
+    background-color: rgba($color: #000, $alpha: 0.3);
+  }
+
+  .main_bg_area_content {
+    width: 50%;
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      margin-top: 7rem;
+      //   margin-left: 5rem;
+      color: $font_color;
+      padding: 0 2rem;
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 4rem;
+      line-height: 1.4;
+      //   border: 1px solid red;
+      letter-spacing: 2px;
+    }
+    a {
+      width: 15vw;
+      height: 60px;
+      display: block;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 7rem;
+      background-color: $font_color;
+      color: $bgc_1e;
+      font-size: 28px;
+      line-height: 60px;
+      @include border-radius(8px);
+    }
+  }
+}
+
+//------------- main_bg_area --------------
+.aslogan {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 6rem 0;
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #ffdd00;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.8;
+    color: $font_color;
+    margin: 0 11rem;
+  }
+}
+
+//------------- marquee_area --------------
+@mixin media($max) {
+  @media (max-width: ($max + px)) {
+    @content;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-(20% * 5));
+  }
+}
+
+@include media(1024) {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-(25% * 5));
+    }
+  }
+}
+@include media(768) {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-(33.33% * 5));
+    }
+  }
+}
+
+.marquee {
+  width: 100%;
+  margin-bottom: 20rem;
+  .view {
+    overflow: hidden;
+    width: 100%;
+  }
+  .pic-container {
+    display: flex;
+    animation: marquee 20s infinite linear;
+    .pic {
+      position: relative;
+      flex-basis: 30%;
+      flex-shrink: 0;
+      margin: 1rem;
+      @include media(1024) {
+        flex-basis: 25%;
+      }
+      @include media(768) {
+        flex-basis: 33.33%;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  img {
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 8px;
+  }
+}
+
+//------------- Our_brand_purpose_concept_area --------------
+.brand_purpose {
+  max-width: 100%;
+  // border: 1px solid red;
+  margin: 0 3rem;
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
+  margin-bottom: 16rem;
+
+  .brand_purpose_content,
+  .brand_purpose_img {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    font-size: initial;
+    box-sizing: border-box;
+  }
+  .brand_purpose_content {
+    width: 40%;
+    background-color: $font_color;
+    @include border-radius(8px);
+    padding: 2rem 1.3rem;
+    margin-top: -10rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    h3 {
+      font-size: 32px;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.4;
+      letter-spacing: 1px;
+    }
+  }
+
+  .brand_purpose_img {
+    width: 45%;
+    position: relative;
+    img {
+      width: 100%;
+      @include border-radius(8px);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include border-radius(8px);
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+//------------- Our_Vision_area --------------
+.our_vision {
+  max-width: 100%;
+  // border: 1px solid red;
+  margin: 0 3rem;
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
+  margin-bottom: 10rem;
+
+  .our_vision_img,
+  .our_vision_content {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  .our_vision_img {
+    width: 45%;
+    position: relative;
+    margin-left: 2.2rem;
+    img {
+      width: 100%;
+      @include border-radius(8px);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include border-radius(8px);
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  .our_vision_content {
+    width: 40%;
+    background-color: $font_color;
+    @include border-radius(8px);
+    padding: 2rem 1.3rem;
+    margin-top: -6rem;
+    margin-left: 3rem;
+    h3 {
+      font-size: 32px;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.4;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+//------------- location_area --------------
+.location {
+  margin-bottom: 5rem;
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #ffdd00;
+    margin-bottom: 2rem;
+  }
+  .map {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    background-color: #f6f6f6;
+    @include border-radius(8px);
+    width: fit-content;
+    iframe {
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include border-radius(8px);
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: -1;
+    }
+  }
+}

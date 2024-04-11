@@ -1,0 +1,145 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$sidebar_bgc: #c6bdac;
+$yello: #ffdd00;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+//------------- contact_area ---------------
+.contact_us {
+  max-width: 100%;
+  margin: auto;
+  background-color: $font_color;
+  padding: 2rem 0rem;
+}
+.contact_info_area {
+  width: 100%;
+  // border: 1px solid red;
+  display: flex;
+}
+.info {
+  width: 50%;
+  letter-spacing: 1px;
+  //   border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    // border: 1px solid red;
+  }
+  h1 {
+    font-size: 36px;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  button,
+  a {
+    width: 60%;
+    text-align: start;
+    font-size: 16px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid $bgc_1e;
+    outline: none;
+    background-color: $font_color;
+    @include border-radius(4px);
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    i {
+      margin-right: 0.25rem;
+      color: $bgc_1e;
+    }
+    &:hover {
+      background-color: $bgc_1e;
+      color: $font_color;
+      border: 1px solid $sidebar_bgc;
+      transform: translateY(-5px) translateX(3px);
+      i {
+        color: $font_color;
+      }
+    }
+  }
+  a {
+    display: block;
+    font-size: 16px;
+    color: $bgc_1e;
+  }
+  .info_content:nth-child(5) {
+    margin-bottom: 0;
+  }
+}
+.contact_form_area {
+  width: 50%;
+  margin: 0 auto;
+  //   border: 1px solid blue;
+  border-left: 2px solid $bgc_1e;
+  .full_name {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-size: 18px;
+    margin-bottom: 0.25rem;
+  }
+  input {
+    &:focus {
+      outline: none;
+    }
+    &::placeholder-shown {
+      color: transparent;
+    }
+  }
+  textarea {
+    &:focus {
+      outline: none;
+    }
+    &::placeholder-shown {
+      color: transparent;
+    }
+  }
+  input,
+  textarea {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid $bgc_1e;
+    @include border-radius(4px);
+    background-color: $font_color;
+  }
+}
+.send_btn {
+  font-size: 16px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $bgc_1e;
+  outline: none;
+  background-color: $font_color;
+  @include border-radius(4px);
+  cursor: pointer;
+  i {
+    color: $bgc_1e;
+    margin-left: 0.25rem;
+  }
+  &:hover {
+    background-color: $bgc_1e;
+    color: $font_color;
+    border: 1px solid $sidebar_bgc;
+    transform: translateY(-5px) translateX(3px);
+    i {
+      color: $font_color;
+    }
+  }
+}

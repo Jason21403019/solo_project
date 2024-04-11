@@ -1,0 +1,288 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$yello: #ffdd00;
+$sidebar_bgc: #c6bdac;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+//---------------- breadcrumb --------------
+.breadcrumb {
+  max-width: 100%;
+  padding: 1rem 0;
+  padding-left: 4rem;
+  //   border: 1px solid red;
+  .breadcrumb_ul {
+    display: flex;
+    li {
+      color: $yello;
+    }
+    span {
+      color: $font_color;
+    }
+    a {
+      color: $font_color;
+    }
+  }
+}
+
+//---------------- product_info --------------
+.product_info {
+  max-width: 100%;
+  display: flex;
+  padding: 3rem 6rem;
+  .info_img {
+    width: 100%;
+    // border: 1px solid red;
+    height: fit-content;
+    margin-right: 3rem;
+    padding: 1rem;
+    flex: 1;
+    align-items: flex-start;
+    background-color: $font_color;
+    @include border-radius(8px);
+    .main_img {
+      // border: 1px solid red;
+      background-color: $sidebar_bgc;
+      @include border-radius(8px);
+      position: relative;
+
+      img {
+        width: 342px;
+        height: 342px;
+        object-position: center;
+        object-fit: cover;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        @include border-radius(8px);
+        background-color: rgba($color: #000, $alpha: 0.2);
+      }
+    }
+    .sub_img {
+      display: flex;
+      justify-content: space-between;
+      .img1,
+      .img2,
+      .img3 {
+        // border: 1px solid red;
+        background-color: $sidebar_bgc;
+        border-radius: 8px;
+        position: relative;
+        margin-top: 1rem;
+        img {
+          width: 117px;
+          height: 70px;
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          left: 0;
+          @include border-radius(8px);
+          top: 0;
+          background-color: rgba($color: #000, $alpha: 0.2);
+        }
+      }
+    }
+    p {
+      margin-top: 1rem;
+      letter-spacing: 1px;
+      line-height: 1.4;
+      font-size: 16px;
+    }
+  }
+  .info_content {
+    // border: 1px solid red;
+    flex: 1.5;
+    color: $font_color;
+    letter-spacing: 1px;
+    padding-left: 2rem;
+    h1 {
+      font-size: 48px;
+      margin-bottom: 0.25rem;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: 18px;
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 3rem;
+    }
+    .quantity {
+      display: flex;
+      // border: 1px solid red;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    h3 {
+      font-size: 24px;
+      margin-right: 1rem;
+    }
+    .quantity_btn {
+      // border: 1px solid red;
+      margin-right: 1rem;
+
+      button {
+        border: none;
+        margin: 0;
+        padding: 0;
+        padding: 0.25rem 0.25rem;
+        @include border-radius(4px);
+        background-color: $font_color;
+        cursor: pointer;
+      }
+      .btn1 {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      input[type="number"] {
+        text-align: center;
+        margin-right: -5px;
+        margin-left: -5px;
+        border: none;
+        outline: none;
+        padding: 0.25rem 0;
+        background-color: $font_color;
+        @include border-radius(4px);
+        width: 35px;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+    .bsbtn {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3rem;
+
+      .add_to_cart,
+      .buy_now {
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        @include border-radius(8px);
+        font-size: 36px;
+        width: 70%;
+        padding: 0.45rem 0rem;
+        cursor: pointer;
+      }
+      .add_to_cart {
+        margin-bottom: 0.75rem;
+        background-color: $sidebar_bgc;
+      }
+    }
+    .shipping_info,
+    .return_info {
+      font-size: 24px;
+      width: 90%;
+      border-bottom: 1px solid $font_color;
+      padding: 0.75rem 0;
+      cursor: pointer;
+    }
+
+    .shipping_info_p,
+    .return_info_p {
+      display: none;
+      font-size: 14px;
+      width: 90%;
+      letter-spacing: 1px;
+      line-height: 1.6;
+    }
+  }
+}
+
+//--------------topSaleArea---------------//
+.top_sale_area {
+  max-width: 100%;
+  display: flex;
+  margin-bottom: 8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 48px;
+    color: $font_color;
+    margin: 0rem 3rem 3rem 3rem;
+  }
+
+  .products {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      background-color: $font_color;
+      margin: 0 1rem;
+      @include border-radius(8px);
+    }
+    h4,
+    p {
+      color: $bgc_1e;
+      text-align: center;
+    }
+    h4 {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 1.2rem 0;
+    }
+    p {
+      font-size: 18px;
+      padding-bottom: 2rem;
+    }
+  }
+
+  a {
+    display: block;
+    // width: 20%;
+    .product_bg {
+      width: 268px;
+      height: 240px;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      .product_bg_filter {
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        background-color: rgba($color: #000, $alpha: 0.4);
+      }
+    }
+  }
+
+  .dumbbell5 {
+    background-image: url(../fitness_environment_img/PRODUCTS/dumbbell5.jpg);
+  }
+  .dumbbell12 {
+    background-image: url(../fitness_environment_img/PRODUCTS/bench.png);
+  }
+  .aeroflex {
+    background-image: url(../fitness_environment_img/PRODUCTS/AeroFlex\ Leap.png);
+  }
+  li a .kettlebells {
+    background-image: url(../fitness_environment_img/PRODUCTS/Kettlebells.png);
+    background-position-x: 16px;
+    background-position-y: -90px;
+  }
+  a > .product_bg {
+    background-position: center;
+    background-size: cover;
+  }
+}

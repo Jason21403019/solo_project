@@ -1,0 +1,182 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$yello: #ffdd00;
+$sidebar_bgc: #c6bdac;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//---------------- product_title --------------
+.product_title {
+  max-width: 100%;
+  //   border: 1px solid red;
+  h1 {
+    margin: 0 auto;
+    // border: 1px solid red;
+    width: fit-content;
+    padding: 2rem 0;
+    font-size: 40px;
+    color: $font_color;
+    font-weight: bold;
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: 200px;
+      height: 2px;
+      background-color: $font_color;
+      @include border-radius(8px);
+      transform: translateY(-50%);
+    }
+    &:before {
+      left: -220px;
+    }
+    &:after {
+      right: -220px;
+    }
+  }
+}
+
+//---------------- product_title --------------
+.trainer_area {
+  max-width: 100%;
+  margin-bottom: 3rem;
+  .trainers {
+    width: 90%;
+    // border: 1px solid red;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 32px;
+    color: $font_color;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .strength_trainer {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    li {
+      margin: 0 1.07rem;
+      border: 2px solid $font_color;
+      @include border-radius(8px);
+      .trainer_img {
+        width: 240px;
+        height: 270px;
+        background-size: cover;
+        @include border-radius(8px);
+        cursor: pointer;
+        &:hover {
+          .trainer_content {
+            display: block;
+          }
+        }
+      }
+      .trainer_content {
+        width: 240px;
+        height: 270px;
+        background-color: $font_color;
+        letter-spacing: 1px;
+        display: none;
+        @include border-radius(4px);
+        h2 {
+          font-size: 28px;
+          padding: 1rem 0 1rem 0.5rem;
+          font-weight: bold;
+        }
+        h3 {
+          font-size: 24px;
+          margin-left: 0.5rem;
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 0.5rem;
+        }
+      }
+      .trainer1 {
+        background-image: url(../fitness_environment_img/TRAINER/trainer1.jpg);
+        background-position-y: -50px;
+      }
+      .trainer2 {
+        background-image: url(../fitness_environment_img/TRAINER/trainer2.jpg);
+        background-position-x: -35px;
+      }
+      .trainer3 {
+        background-image: url(../fitness_environment_img/TRAINER/trainer3.jpg);
+        background-position-y: -95px;
+      }
+      .trainer4 {
+        background-image: url(../fitness_environment_img/TRAINER/trainer4.jpg);
+        background-position-x: -135px;
+      }
+    }
+  }
+  .aerobic_trainer {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      margin: 0 1.07rem;
+      border: 2px solid $font_color;
+      @include border-radius(8px);
+      .trainer_img {
+        width: 240px;
+        height: 270px;
+        background-size: cover;
+        @include border-radius(8px);
+        cursor: pointer;
+        &:hover {
+          .trainer_content {
+            display: block;
+          }
+        }
+      }
+      .trainer_content {
+        width: 240px;
+        height: 270px;
+        background-color: $font_color;
+        letter-spacing: 1px;
+        display: none;
+
+        @include border-radius(4px);
+        h2 {
+          font-size: 28px;
+          padding: 1rem 0 1rem 0.5rem;
+          font-weight: bold;
+        }
+        h3 {
+          font-size: 24px;
+          margin-left: 0.5rem;
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 0.5rem;
+        }
+      }
+      .trainer5 {
+        background-image: url(../fitness_environment_img/TRAINER/trainer5.jpg);
+        background-position-y: -50px;
+      }
+      .trainer6 {
+        background-image: url(../fitness_environment_img/TRAINER/trainer6.jpg);
+        background-position-x: center;
+      }
+      .trainer7 {
+        background-position-x: center;
+        background-image: url(../fitness_environment_img/TRAINER/trainer7.jpg);
+      }
+      .trainer8 {
+        background-position-x: center;
+        background-image: url(../fitness_environment_img/TRAINER/trainer8.jpg);
+      }
+    }
+  }
+}

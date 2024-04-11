@@ -1,0 +1,234 @@
+.product_title {
+  max-width: 100%;
+}
+.product_title h1 {
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2rem 0;
+  font-size: 40px;
+  color: #f6f6f6;
+  font-weight: bold;
+  position: relative;
+}
+.product_title h1:before, .product_title h1:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 200px;
+  height: 2px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  transform: translateY(-50%);
+}
+.product_title h1:before {
+  left: -220px;
+}
+.product_title h1:after {
+  right: -220px;
+}
+
+.breadcrumb {
+  max-width: 100%;
+  padding: 1rem 0;
+  padding-left: 4rem;
+}
+.breadcrumb .breadcrumb_ul {
+  display: flex;
+}
+.breadcrumb .breadcrumb_ul li {
+  color: #ffdd00;
+}
+.breadcrumb .breadcrumb_ul span {
+  color: #f6f6f6;
+}
+.breadcrumb .breadcrumb_ul a {
+  color: #f6f6f6;
+}
+
+.search_bar {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 4rem;
+  margin-bottom: 1rem;
+}
+.search_bar .search {
+  position: relative;
+}
+.search_bar .search input {
+  width: 268px;
+  height: 44px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 24px;
+  padding-left: 1rem;
+}
+.search_bar .search input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+.search_bar .search i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.product_area {
+  display: flex;
+}
+
+.product_sidebar {
+  flex: 1;
+  position: sticky;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+  margin-left: 4rem;
+  margin-right: 5rem;
+  background-color: #c6bdac;
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
+  border-radius: 8px;
+}
+.product_sidebar .sidebar_title li {
+  margin-bottom: 1rem;
+}
+.product_sidebar .sidebar_title li a {
+  color: #1e1e1e;
+  font-size: 20px;
+  display: block;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+.product_sidebar .sidebar_title li a:hover {
+  color: #ffdd00;
+}
+.product_sidebar .sidebar_title .fitness_equipment_product,
+.product_sidebar .sidebar_title .protein_powder_product,
+.product_sidebar .sidebar_title .health_Supplements_product,
+.product_sidebar .sidebar_title .fit_gear_product {
+  display: none;
+}
+.product_sidebar .sidebar_title .fitness_equipment_product li,
+.product_sidebar .sidebar_title .protein_powder_product li,
+.product_sidebar .sidebar_title .health_Supplements_product li,
+.product_sidebar .sidebar_title .fit_gear_product li {
+  margin-bottom: 0rem;
+}
+.product_sidebar .sidebar_title .fitness_equipment_product li a,
+.product_sidebar .sidebar_title .protein_powder_product li a,
+.product_sidebar .sidebar_title .health_Supplements_product li a,
+.product_sidebar .sidebar_title .fit_gear_product li a {
+  color: #1e1e1e;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+}
+.product_sidebar .sidebar_title .fitness_equipment_product li a:hover,
+.product_sidebar .sidebar_title .protein_powder_product li a:hover,
+.product_sidebar .sidebar_title .health_Supplements_product li a:hover,
+.product_sidebar .sidebar_title .fit_gear_product li a:hover {
+  color: #ffdd00;
+}
+.product_sidebar .sidebar_title .fitness_equipment_product li:last-child,
+.product_sidebar .sidebar_title .protein_powder_product li:last-child,
+.product_sidebar .sidebar_title .health_Supplements_product li:last-child,
+.product_sidebar .sidebar_title .fit_gear_product li:last-child {
+  margin-bottom: 1rem;
+}
+
+.product_sections {
+  margin-right: 4rem;
+  flex: 3;
+}
+.product_sections .products {
+  max-width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.product_sections .products li {
+  background-color: #f6f6f6;
+  margin: 0 0 3rem 38px;
+  border-radius: 8px;
+}
+.product_sections .products h4,
+.product_sections .products p {
+  color: #1e1e1e;
+  text-align: center;
+}
+.product_sections .products h4 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 1.2rem 0;
+}
+.product_sections .products p {
+  font-size: 18px;
+  padding-bottom: 2rem;
+}
+.product_sections a {
+  display: block;
+}
+.product_sections a .product_bg {
+  width: 214px;
+  height: 192px;
+}
+.product_sections a .product_bg .product_bg_filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.product_sections .aeroflexleap {
+  background-image: url(../fitness_environment_img/PRODUCTS/AeroFlex\ Leap.png);
+}
+.product_sections li a .kettlebells {
+  background-image: url(../fitness_environment_img/PRODUCTS/Kettlebells.png);
+  background-position-x: 16px;
+  background-position-y: -90px;
+}
+.product_sections li a .dumbbell10 {
+  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell10.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.product_sections .dumbbell12 {
+  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell12.png);
+}
+.product_sections .dumbbell14 {
+  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell14.png);
+}
+.product_sections .fbottle {
+  background-image: url(../fitness_environment_img/PRODUCTS/fbottle.png);
+}
+.product_sections li a .kettlebell5 {
+  background-image: url(../fitness_environment_img/PRODUCTS/kettlebell5.png);
+  background-size: contain;
+}
+.product_sections .bench {
+  background-image: url(../fitness_environment_img/PRODUCTS/bench.png);
+}
+.product_sections .medicineball {
+  background-image: url(../fitness_environment_img/PRODUCTS/medicineball.png);
+}
+.product_sections a > .product_bg {
+  background-position: center;
+  background-size: cover;
+}
+
+.page_number {
+  max-width: 100%;
+  margin: 3rem 0;
+}
+.page_number .page {
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  padding: 0.5rem 0;
+}
+.page_number .page a {
+  display: block;
+  margin: 0 0.5rem;
+  color: #ffdd00;
+}/*# sourceMappingURL=product.css.map */

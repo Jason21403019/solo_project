@@ -1,0 +1,138 @@
+.contact_us {
+  max-width: 100%;
+  margin: auto;
+  background-color: #f6f6f6;
+  padding: 2rem 0rem;
+}
+
+.contact_info_area {
+  width: 100%;
+  display: flex;
+}
+
+.info {
+  width: 50%;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.info h1 {
+  font-size: 36px;
+  margin-bottom: 1rem;
+}
+.info p {
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.info button,
+.info a {
+  width: 60%;
+  text-align: start;
+  font-size: 16px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #1e1e1e;
+  outline: none;
+  background-color: #f6f6f6;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.info button i,
+.info a i {
+  margin-right: 0.25rem;
+  color: #1e1e1e;
+}
+.info button:hover,
+.info a:hover {
+  background-color: #1e1e1e;
+  color: #f6f6f6;
+  border: 1px solid #c6bdac;
+  transform: translateY(-5px) translateX(3px);
+}
+.info button:hover i,
+.info a:hover i {
+  color: #f6f6f6;
+}
+.info a {
+  display: block;
+  font-size: 16px;
+  color: #1e1e1e;
+}
+.info .info_content:nth-child(5) {
+  margin-bottom: 0;
+}
+
+.contact_form_area {
+  width: 50%;
+  margin: 0 auto;
+  border-left: 2px solid #1e1e1e;
+}
+.contact_form_area .full_name {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.contact_form_area label {
+  font-size: 18px;
+  margin-bottom: 0.25rem;
+}
+.contact_form_area input:focus {
+  outline: none;
+}
+.contact_form_area input::-moz-placeholder-shown {
+  color: transparent;
+}
+.contact_form_area input::placeholder-shown {
+  color: transparent;
+}
+.contact_form_area textarea:focus {
+  outline: none;
+}
+.contact_form_area textarea::-moz-placeholder-shown {
+  color: transparent;
+}
+.contact_form_area textarea::placeholder-shown {
+  color: transparent;
+}
+.contact_form_area input,
+.contact_form_area textarea {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #1e1e1e;
+  border-radius: 4px;
+  background-color: #f6f6f6;
+}
+
+.send_btn {
+  font-size: 16px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #1e1e1e;
+  outline: none;
+  background-color: #f6f6f6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.send_btn i {
+  color: #1e1e1e;
+  margin-left: 0.25rem;
+}
+.send_btn:hover {
+  background-color: #1e1e1e;
+  color: #f6f6f6;
+  border: 1px solid #c6bdac;
+  transform: translateY(-5px) translateX(3px);
+}
+.send_btn:hover i {
+  color: #f6f6f6;
+}/*# sourceMappingURL=contact_us.css.map */

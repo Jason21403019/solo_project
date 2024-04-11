@@ -1,0 +1,149 @@
+.product_title {
+  max-width: 100%;
+}
+.product_title h1 {
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2rem 0;
+  font-size: 40px;
+  color: #f6f6f6;
+  font-weight: bold;
+  position: relative;
+}
+.product_title h1:before, .product_title h1:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 200px;
+  height: 2px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  transform: translateY(-50%);
+}
+.product_title h1:before {
+  left: -220px;
+}
+.product_title h1:after {
+  right: -220px;
+}
+
+.my_session {
+  max-width: 60%;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+.my_session .mysession_month {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.my_session .session_month_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c6bdac;
+  border-radius: 4px;
+  padding: 0rem 1rem;
+}
+.my_session .session_month_title h1 {
+  color: #1e1e1e;
+  font-size: 48px;
+  font-weight: bold;
+}
+.my_session .session_days_ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex: auto;
+}
+.my_session .session_days_ul li {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.my_session .session_days_ul p {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 500;
+}
+.my_session .session_days_ul button {
+  border: none;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+.my_session .session_days_ul .changebgc {
+  background-color: #c6bdac;
+}
+.my_session .my_session_list {
+  display: flex;
+}
+.my_session .my_session_list .my_session_content {
+  flex: auto;
+  height: 690px;
+  overflow: scroll;
+}
+.my_session .my_session_list .my_session_content li {
+  position: relative;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+}
+.my_session .my_session_list .session_name {
+  width: 520px;
+}
+.my_session .my_session_list h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.my_session .my_session_list p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.my_session .my_session_list a {
+  color: #1e1e1e;
+}
+.my_session .my_session_list .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 2px solid #1e1e1e;
+  padding-left: 1rem;
+}
+.my_session .my_session_list h6 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+.my_session .my_session_list .address,
+.my_session .my_session_list .tianer_name {
+  display: flex;
+  align-items: center;
+}
+.my_session .my_session_list .address {
+  margin-bottom: 1rem;
+}
+.my_session .my_session_list .trashbtn {
+  margin-left: auto;
+}
+.my_session .my_session_list button {
+  border: none;
+  outline: none;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}/*# sourceMappingURL=my_session.css.map */

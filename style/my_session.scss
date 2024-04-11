@@ -1,0 +1,171 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$yello: #ffdd00;
+$sidebar_bgc: #c6bdac;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//---------------- my_session_title --------------
+.product_title {
+  max-width: 100%;
+  //   border: 1px solid red;
+  h1 {
+    margin: 0 auto;
+    // border: 1px solid red;
+    width: fit-content;
+    padding: 2rem 0;
+    font-size: 40px;
+    color: $font_color;
+    font-weight: bold;
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: 200px;
+      height: 2px;
+      background-color: $font_color;
+      @include border-radius(8px);
+      transform: translateY(-50%);
+    }
+    &:before {
+      left: -220px;
+    }
+    &:after {
+      right: -220px;
+    }
+  }
+}
+
+//---------------- my_session_area --------------
+.my_session {
+  max-width: 60%;
+  margin: 0 auto;
+  //   border: 1px solid red;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  .mysession_month {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // margin: 1rem 0;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    @include border-radius(8px);
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+  .session_month_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $sidebar_bgc;
+    @include border-radius(4px);
+    padding: 0rem 1rem;
+    h1 {
+      color: $bgc_1e;
+      font-size: 48px;
+      font-weight: bold;
+    }
+  }
+  .session_days_ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: auto;
+    li {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      //   border: 1px solid red;
+    }
+    p {
+      line-height: 1.2;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    button {
+      border: none;
+      background-color: $font_color;
+      cursor: pointer;
+      padding: 0.75rem;
+      @include border-radius(8px);
+    }
+    .changebgc {
+      background-color: $sidebar_bgc;
+    }
+  }
+  .my_session_list {
+    display: flex;
+    // border: 1px solid red;
+    .my_session_content {
+      flex: auto;
+      height: 690px;
+      //   border: 1px solid blue;
+      overflow: scroll;
+      li {
+        position: relative;
+        margin: 1.5rem 0;
+        display: flex;
+        align-items: center;
+        //   border: 1px solid red;
+        padding: 1.5rem 1rem;
+        background-color: $font_color;
+        @include border-radius(8px);
+      }
+    }
+    .session_name {
+      width: 520px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    a {
+      color: $bgc_1e;
+      //   border: 1px solid red;
+    }
+    .detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 2px solid $bgc_1e;
+      padding-left: 1rem;
+    }
+    h6 {
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 0.5rem;
+    }
+    .address,
+    .tianer_name {
+      display: flex;
+      align-items: center;
+    }
+    .address {
+      margin-bottom: 1rem;
+    }
+    .trashbtn {
+      margin-left: auto;
+    }
+    button {
+      border: none;
+      outline: none;
+      background-color: $font_color;
+      cursor: pointer;
+    }
+  }
+}

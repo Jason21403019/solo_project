@@ -1,0 +1,145 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$yello: #ffdd00;
+$sidebar_bgc: #c6bdac;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//---------------- blog_title --------------
+.product_title {
+  max-width: 100%;
+  //   border: 1px solid red;
+  h1 {
+    margin: 0 auto;
+    // border: 1px solid red;
+    width: fit-content;
+    padding: 2rem 0;
+    font-size: 40px;
+    color: $font_color;
+    font-weight: bold;
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: 200px;
+      height: 2px;
+      background-color: $font_color;
+      @include border-radius(8px);
+      transform: translateY(-50%);
+    }
+    &:before {
+      left: -220px;
+    }
+    &:after {
+      right: -220px;
+    }
+  }
+}
+
+//---------------- sort_by_area --------------
+.sort_by_area {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 8rem;
+  margin-bottom: 1rem;
+  .sort_by {
+    color: $font_color;
+    label {
+      letter-spacing: 2px;
+    }
+    select {
+      border: none;
+      outline: none;
+      @include border-radius(4px);
+      padding: 0.25rem 0.5rem;
+    }
+  }
+}
+
+//---------------- fitness_blog_area --------------
+.fitness_blog {
+  display: flex;
+  max-width: 75%;
+  margin: 0 auto;
+  li {
+    margin-bottom: 2rem;
+  }
+  a {
+    width: 100%;
+    display: block;
+    background-color: $font_color;
+    @include border-radius(8px);
+  }
+  .blog_link {
+    width: 100%;
+    display: flex;
+    // border: 1px solid red;
+  }
+  .img {
+    width: 371px;
+    height: 255px;
+    flex: 1;
+    //   border: 1px solid blue;
+    position: relative;
+    img {
+      width: 371px;
+      height: 255px;
+      display: block;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      background-size: cover;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+  .contents {
+    width: 100%;
+    flex: 2;
+    padding: 1rem 1rem;
+    color: $bgc_1e;
+    letter-spacing: 1px;
+    .name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      button {
+        border: none;
+        outline: none;
+        background-color: $font_color;
+        cursor: pointer;
+      }
+    }
+    h6 {
+      font-size: 14px;
+      margin-bottom: 1.75rem;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+    p {
+      line-height: 1.2;
+      font-size: 18px;
+    }
+  }
+}

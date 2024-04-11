@@ -1,0 +1,714 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto Serif", serif;
+}
+@import url(./reset.css);
+@import url(./navBar.css);
+@import url(./about.css);
+@import url(./login.css);
+@import url(./register.css);
+@import url(./product.css);
+@import url(./product_info.css);
+@import url(./carts.css);
+@import url(./fitness_blog.css);
+@import url(./blog_page.css);
+@import url(./trainer.css);
+@import url(./session.css);
+@import url(./my_session.css);
+@import url(./contact_us.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$sidebar_bgc: #c6bdac;
+$yello: #ffdd00;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  background-color: $bgc_1e;
+  font-family: "Roboto", sans-serif;
+}
+
+//-------------section1----------------//
+.section1_bg {
+  max-width: 100%;
+  background-image: url(../fitness_environment_img/homePage_first.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  font-family: "Roboto", sans-serif;
+  .section1_img_filter {
+    width: 100%;
+    background-color: rgba($color: #000, $alpha: 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 90px;
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      font-weight: 600;
+      color: $font_color;
+      margin: 7rem 0 2rem 0;
+      letter-spacing: 2px;
+      line-height: 1.6;
+    }
+    .trainNow_btn {
+      margin-top: 1.2rem;
+      width: 190px;
+      margin-bottom: 120px;
+      height: 50px;
+      a {
+        background-color: #151515;
+        text-align: center;
+        @include border-radius(8px);
+        display: block;
+        line-height: 50px;
+        color: $font_color;
+        font-size: 24px;
+        letter-spacing: 4px;
+        border: 1px solid $font_color;
+        font-weight: 500;
+        transition: transform 0.5s;
+        &:hover {
+          transform: translateY(-5px);
+          border: 1px solid $yello;
+          color: $yello;
+          box-shadow: 0px 0px 10px 5px $yello;
+        }
+      }
+    }
+  }
+}
+
+//--------------columnSection_area---------------//
+.column_section_area {
+  // outline: 1px solid red;
+  max-width: 100%;
+  margin-bottom: 10rem;
+}
+.column_sections {
+  // outline: 1px solid blue;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  margin-top: -85px;
+  li {
+    // border: 1px solid blue;
+    margin: 0 3rem;
+    @include border-radius(8px);
+    position: relative;
+    width: 100%;
+    // border: 1px solid red;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      @include border-radius(8px);
+      background-color: rgba($color: #000, $alpha: 0.7);
+      z-index: 10;
+    }
+  }
+  .trainer_column_img {
+    position: relative;
+  }
+  .trainer_column_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: #c6bdac;
+    @include border-radius(8px);
+    z-index: 30;
+  }
+  h3 {
+    position: absolute;
+    color: $font_color;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 48px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+  }
+  img {
+    width: 100%;
+    display: block;
+    @include border-radius(8px);
+    z-index: -1;
+    border: 1px solid red;
+  }
+  a {
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    padding: 1.5rem 0 0rem 0;
+    font-weight: bold;
+    color: $bgc_1e;
+    text-decoration: underline;
+    &:hover {
+      color: $yello;
+    }
+  }
+  p {
+    font-size: 16px;
+    // padding: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+  & > h3,
+  p {
+    color: $bgc_1e;
+  }
+}
+li:hover {
+  .trainer_column_content {
+    opacity: 1;
+  }
+  li:nth-child(2) {
+    margin: 0rem;
+  }
+}
+
+//--------------ftandm---------------//
+.ftandm {
+  // border: 1px solid red;
+  width: 1000px;
+  background-color: #c6bdac;
+  margin: 0 auto;
+  display: flex;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 10rem;
+  // a {
+  //   display: flex;
+  // }
+
+  .firstTime_bg {
+    width: 500px;
+    height: 500px;
+    background-image: url(../fitness_environment_img/First_Time_bg_img.jpg);
+    background-size: cover;
+    // background-position: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    flex: 1;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .firstTime_filter {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .firstTime_bg:hover {
+    flex: 2;
+
+    .firstTime_filter {
+      background-color: rgba($color: #000, $alpha: 0.6);
+    }
+    p {
+      visibility: visible;
+    }
+  }
+
+  .member_bg {
+    width: 500px;
+    height: 500px;
+    background-image: url(../fitness_environment_img/Member_bg_img.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    flex: 1;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .member_bg:hover {
+    flex: 2;
+    .member_filter {
+      background-color: rgba($color: #000, $alpha: 0.6);
+    }
+    p {
+      visibility: visible;
+    }
+  }
+
+  .member_filter {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .firstTime_filter,
+  .member_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba($color: #000, $alpha: 0.8);
+    h1 {
+      font-size: 36px;
+      margin-bottom: 1.2rem;
+      padding-top: 10rem;
+    }
+    p {
+      visibility: hidden;
+      font-size: 12px;
+      margin-bottom: 10rem;
+    }
+    h1,
+    p {
+      color: $font_color;
+    }
+  }
+}
+
+//--------------fslogan---------------//
+.fslogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 12rem 0;
+  h1 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 40px;
+    color: #ffdd00;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 2;
+    color: $font_color;
+    margin: 0 11rem;
+  }
+}
+
+//--------------sharrpost1---------------//
+.sharepost1 {
+  width: 100%;
+  height: 500px;
+  // border: 1px solid red;
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 200px;
+}
+.postArea1 {
+  top: 18.5px;
+  position: absolute;
+  padding: 2px;
+  z-index: 1;
+  border-radius: 8px;
+  // border: 1px solid red;
+  width: 426px;
+  background-color: #f6f6f6;
+  .postArea1_bg {
+    border-radius: 8px;
+    height: 256px;
+    background-image: url(../fitness_environment_img/postimg.jpg);
+    background-position-y: -50px;
+    background-size: cover;
+
+    .postArea1_bg_filter {
+      border-radius: 8px;
+      height: 100%;
+      background-color: rgba($color: #000, $alpha: 0.2);
+    }
+  }
+  .contents {
+    color: #151515;
+    margin: 0.5rem;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 0.5rem;
+    }
+    span {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 12px;
+    }
+    p {
+      // margin-bottom: 1rem;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+}
+.sharepost1_img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  // border: 1px solid red;
+  width: 70%;
+  background-image: url(../fitness_environment_img/sharePost1_img.jpg);
+  background-size: cover;
+  height: 500px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  .sharepost1_img_filter {
+    height: 100%;
+    background-color: rgba($color: #000, $alpha: 0.4);
+  }
+}
+
+//--------------sharrpost2---------------//
+.sharepost2 {
+  width: 100%;
+  height: 500px;
+  // border: 1px solid red;
+  position: relative;
+  margin-bottom: 220px;
+}
+.postArea2 {
+  top: 18.5px;
+  right: 0;
+  margin-right: 4rem;
+  position: absolute;
+  padding: 2px;
+  z-index: 1;
+  border-radius: 8px;
+  // border: 1px solid red;
+  width: 426px;
+  background-color: #f6f6f6;
+  .postArea2_bg {
+    border-radius: 8px;
+    height: 256px;
+    background-image: url(../fitness_environment_img/postimg2.jpg);
+    background-size: cover;
+    .postArea2_bg_filter {
+      border-radius: 8px;
+      height: 100%;
+      background-color: rgba($color: #000, $alpha: 0.4);
+    }
+  }
+  .contents {
+    color: #151515;
+    margin: 0.5rem;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 0.5rem;
+    }
+    span {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 12px;
+    }
+    p {
+      // margin-bottom: 1rem;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+}
+.sharepost2_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  // border: 1px solid red;
+  width: 70%;
+  background-image: url(../fitness_environment_img/sharePost2_img.jpg);
+  background-size: cover;
+  height: 500px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  .sharepost2_img_filter {
+    height: 100%;
+    background-color: rgba($color: #000, $alpha: 0.4);
+  }
+}
+
+//--------------member_number---------------//
+.member_number {
+  width: 80%;
+  background-color: $font_color;
+  @include border-radius(8px);
+  margin: 0 auto;
+  margin-bottom: 120px;
+  ul {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $bgc_1e;
+    text-align: center;
+    h3 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+//--------------fpageSlogan2---------------//
+.slogan2 {
+  // padding: 2rem;
+  // height: 600px;
+  // border-radius: 50%;
+  // background-color: rgba($color: #f6f6f6, $alpha: 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 8rem 2rem;
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    color: #ffdd00;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.8;
+    color: $font_color;
+    margin: 0 11rem;
+  }
+}
+
+//--------------topSaleArea---------------//
+.top_sale_area {
+  max-width: 100%;
+  display: flex;
+  margin-bottom: 8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 48px;
+    color: $font_color;
+    margin: 0rem 3rem 3rem 3rem;
+  }
+
+  .products {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      background-color: $font_color;
+      margin: 0 1rem;
+      @include border-radius(8px);
+    }
+    h4,
+    p {
+      color: $bgc_1e;
+      text-align: center;
+    }
+    h4 {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 1.2rem 0;
+    }
+    p {
+      font-size: 18px;
+      padding-bottom: 2rem;
+    }
+  }
+
+  a {
+    display: block;
+    // width: 20%;
+    .product_bg {
+      width: 268px;
+      height: 240px;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      .product_bg_filter {
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        background-color: rgba($color: #000, $alpha: 0.4);
+      }
+    }
+  }
+
+  .dumbbell5 {
+    background-image: url(../fitness_environment_img/PRODUCTS/dumbbell5.jpg);
+  }
+  .dumbbell12 {
+    background-image: url(../fitness_environment_img/PRODUCTS/dumbbell12.png);
+  }
+  .aeroflex {
+    background-image: url(../fitness_environment_img/PRODUCTS/AeroFlex\ Leap.png);
+  }
+  li a .kettlebells {
+    background-image: url(../fitness_environment_img/PRODUCTS/Kettlebells.png);
+    background-position-x: 16px;
+    background-position-y: -90px;
+  }
+  a > .product_bg {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+//--------------totopIocn---------------//
+
+.totop {
+  width: 20%;
+  margin: 0 auto;
+  // border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  a {
+    display: block;
+    .fa-solid {
+      font-size: 60px;
+      color: #ffdd00;
+    }
+  }
+}
+
+//--------------footer---------------//
+footer {
+  max-width: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 2rem 2rem 2rem;
+
+  //--------- footer_ul -------------
+  .footer_ul {
+    display: flex;
+    padding-bottom: 1.5rem;
+    // border: 1px solid red;
+    padding-right: 4rem;
+    .no_text_logo {
+      display: block;
+      text-align: center;
+    }
+    img {
+      width: 28%;
+    }
+  }
+  li {
+    width: 100%;
+    color: $font_color;
+    h4 {
+      font-size: 28px;
+      padding-bottom: 1.2rem;
+    }
+    a {
+      color: $font_color;
+      font-size: 16px;
+      display: block;
+      padding-bottom: 1rem;
+      &:hover {
+        color: $yello;
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+      padding-bottom: 1.2rem;
+    }
+    .footer_register {
+      background-color: $font_color;
+      color: #1e1e1e;
+      height: 40px;
+      @include border-radius(8px);
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  li:nth-child(6) {
+    margin-right: 0;
+  }
+
+  //---------- media_icons -----------
+  .media_icons {
+    // border: 1px solid red;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    a {
+      // width: 50%;
+      display: block;
+      text-align: center;
+      margin-right: 2rem;
+      i {
+        font-size: 28px;
+      }
+    }
+    a:nth-child(4) {
+      margin-right: 0;
+    }
+  }
+
+  //---------- media_icons -----------
+  .copyright {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0 0.5rem 0;
+    img {
+      width: 20px;
+    }
+    p {
+      color: #ffdd00;
+      font-size: 12px;
+    }
+  }
+
+  //---------- media_icons -----------
+  .project_statemen {
+    width: 100%;
+    p {
+      text-align: center;
+      font-size: 10px;
+      line-height: 2;
+      letter-spacing: 1px;
+      color: $font_color;
+    }
+  }
+}
+
+// @media screen and (max-width: 1180px) {
+//   .columnSections {
+//     li {
+//       margin: 0 2rem;
+//     }
+//   }
+// }

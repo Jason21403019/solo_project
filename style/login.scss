@@ -1,0 +1,99 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$yello: #ffdd00;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.login_area {
+  max-width: 100%;
+  display: flex;
+  .login_bg {
+    flex: 1;
+    background-image: url(../fitness_environment_img/FITNESS/loginPage_bg.jpg);
+    background-size: cover;
+    .login_bg_filter {
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000, $alpha: 0.4);
+    }
+  }
+  .login_form_area {
+    flex: 1;
+    background-color: $font_color;
+    padding: 4rem;
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      color: $bgc_1e;
+      margin-bottom: 3rem;
+      font-weight: bold;
+    }
+    input[type="email"] {
+      width: 100%;
+      font-size: 24px;
+      padding: 1rem;
+      border: none;
+      border-bottom: 1px solid #1e1e1e;
+      outline: none;
+      background-color: $font_color;
+      margin-bottom: 1rem;
+      &:focus::placeholder {
+        color: transparent;
+      }
+    }
+    input[type="password"] {
+      width: 100%;
+      font-size: 24px;
+      padding: 1rem;
+      border: none;
+      border-bottom: 1px solid #1e1e1e;
+      outline: none;
+      background-color: $font_color;
+      margin-bottom: 0.5rem;
+      &:focus::placeholder {
+        color: transparent;
+      }
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 0.5rem;
+    }
+    .signup {
+      margin-bottom: 3rem;
+    }
+  }
+  p {
+    a {
+      color: #1e1e1e;
+      text-decoration: underline;
+      &:hover {
+        background-color: $bgc_1e;
+        padding: 2px 7px;
+        @include border-radius(8px);
+        color: $yello;
+      }
+    }
+  }
+  button {
+    color: $font_color;
+    background-color: $bgc_1e;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+  }
+  button:hover {
+    color: $yello;
+    transform: translateY(-4px);
+  }
+  & :nth-child(6) {
+    padding: 0.5rem 3rem;
+    font-size: 28px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,266 @@
+.breadcrumb {
+  max-width: 100%;
+  padding: 1rem 0;
+  padding-left: 4rem;
+}
+.breadcrumb .breadcrumb_ul {
+  display: flex;
+}
+.breadcrumb .breadcrumb_ul li {
+  color: #ffdd00;
+}
+.breadcrumb .breadcrumb_ul span {
+  color: #f6f6f6;
+}
+.breadcrumb .breadcrumb_ul a {
+  color: #f6f6f6;
+}
+
+.product_info {
+  max-width: 100%;
+  display: flex;
+  padding: 3rem 6rem;
+}
+.product_info .info_img {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 3rem;
+  padding: 1rem;
+  flex: 1;
+  align-items: flex-start;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+}
+.product_info .info_img .main_img {
+  background-color: #c6bdac;
+  border-radius: 8px;
+  position: relative;
+}
+.product_info .info_img .main_img img {
+  width: 342px;
+  height: 342px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product_info .info_img .main_img:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.product_info .info_img .sub_img {
+  display: flex;
+  justify-content: space-between;
+}
+.product_info .info_img .sub_img .img1,
+.product_info .info_img .sub_img .img2,
+.product_info .info_img .sub_img .img3 {
+  background-color: #c6bdac;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 1rem;
+}
+.product_info .info_img .sub_img .img1 img,
+.product_info .info_img .sub_img .img2 img,
+.product_info .info_img .sub_img .img3 img {
+  width: 117px;
+  height: 70px;
+}
+.product_info .info_img .sub_img .img1:before,
+.product_info .info_img .sub_img .img2:before,
+.product_info .info_img .sub_img .img3:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-radius: 8px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.product_info .info_img p {
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  font-size: 16px;
+}
+.product_info .info_content {
+  flex: 1.5;
+  color: #f6f6f6;
+  letter-spacing: 1px;
+  padding-left: 2rem;
+}
+.product_info .info_content h1 {
+  font-size: 48px;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+.product_info .info_content h4 {
+  font-size: 18px;
+  margin-bottom: 3rem;
+}
+.product_info .info_content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+.product_info .info_content .quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.product_info .info_content h3 {
+  font-size: 24px;
+  margin-right: 1rem;
+}
+.product_info .info_content .quantity_btn {
+  margin-right: 1rem;
+}
+.product_info .info_content .quantity_btn button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding: 0.25rem 0.25rem;
+  border-radius: 4px;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+.product_info .info_content .quantity_btn .btn1 {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.product_info .info_content .quantity_btn input[type=number] {
+  text-align: center;
+  margin-right: -5px;
+  margin-left: -5px;
+  border: none;
+  outline: none;
+  padding: 0.25rem 0;
+  background-color: #f6f6f6;
+  border-radius: 4px;
+  width: 35px;
+}
+.product_info .info_content .quantity_btn input[type=number]::-webkit-inner-spin-button,
+.product_info .info_content .quantity_btn input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product_info .info_content .quantity_btn input[type=number] {
+  -moz-appearance: textfield;
+}
+.product_info .info_content .bsbtn {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.product_info .info_content .bsbtn .add_to_cart,
+.product_info .info_content .bsbtn .buy_now {
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 36px;
+  width: 70%;
+  padding: 0.45rem 0rem;
+  cursor: pointer;
+}
+.product_info .info_content .bsbtn .add_to_cart {
+  margin-bottom: 0.75rem;
+  background-color: #c6bdac;
+}
+.product_info .info_content .shipping_info,
+.product_info .info_content .return_info {
+  font-size: 24px;
+  width: 90%;
+  border-bottom: 1px solid #f6f6f6;
+  padding: 0.75rem 0;
+  cursor: pointer;
+}
+.product_info .info_content .shipping_info_p,
+.product_info .info_content .return_info_p {
+  display: none;
+  font-size: 14px;
+  width: 90%;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+.top_sale_area {
+  max-width: 100%;
+  display: flex;
+  margin-bottom: 8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top_sale_area h1 {
+  font-size: 48px;
+  color: #f6f6f6;
+  margin: 0rem 3rem 3rem 3rem;
+}
+.top_sale_area .products {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.top_sale_area .products li {
+  background-color: #f6f6f6;
+  margin: 0 1rem;
+  border-radius: 8px;
+}
+.top_sale_area .products h4,
+.top_sale_area .products p {
+  color: #1e1e1e;
+  text-align: center;
+}
+.top_sale_area .products h4 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 1.2rem 0;
+}
+.top_sale_area .products p {
+  font-size: 18px;
+  padding-bottom: 2rem;
+}
+.top_sale_area a {
+  display: block;
+}
+.top_sale_area a .product_bg {
+  width: 268px;
+  height: 240px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.top_sale_area a .product_bg .product_bg_filter {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.top_sale_area .dumbbell5 {
+  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell5.jpg);
+}
+.top_sale_area .dumbbell12 {
+  background-image: url(../fitness_environment_img/PRODUCTS/bench.png);
+}
+.top_sale_area .aeroflex {
+  background-image: url(../fitness_environment_img/PRODUCTS/AeroFlex\ Leap.png);
+}
+.top_sale_area li a .kettlebells {
+  background-image: url(../fitness_environment_img/PRODUCTS/Kettlebells.png);
+  background-position-x: 16px;
+  background-position-y: -90px;
+}
+.top_sale_area a > .product_bg {
+  background-position: center;
+  background-size: cover;
+}/*# sourceMappingURL=product_info.css.map */

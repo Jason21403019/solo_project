@@ -1,0 +1,159 @@
+.product_title {
+  max-width: 100%;
+}
+.product_title h1 {
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2rem 0;
+  font-size: 40px;
+  color: #f6f6f6;
+  font-weight: bold;
+  position: relative;
+}
+.product_title h1:before, .product_title h1:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 200px;
+  height: 2px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  transform: translateY(-50%);
+}
+.product_title h1:before {
+  left: -220px;
+}
+.product_title h1:after {
+  right: -220px;
+}
+
+.trainer_area {
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+.trainer_area .trainers {
+  width: 90%;
+  margin: 0 auto;
+}
+.trainer_area h1 {
+  font-size: 32px;
+  color: #f6f6f6;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.trainer_area .strength_trainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.trainer_area .strength_trainer li {
+  margin: 0 1.07rem;
+  border: 2px solid #f6f6f6;
+  border-radius: 8px;
+}
+.trainer_area .strength_trainer li .trainer_img {
+  width: 240px;
+  height: 270px;
+  background-size: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.trainer_area .strength_trainer li .trainer_img:hover .trainer_content {
+  display: block;
+}
+.trainer_area .strength_trainer li .trainer_content {
+  width: 240px;
+  height: 270px;
+  background-color: #f6f6f6;
+  letter-spacing: 1px;
+  display: none;
+  border-radius: 4px;
+}
+.trainer_area .strength_trainer li .trainer_content h2 {
+  font-size: 28px;
+  padding: 1rem 0 1rem 0.5rem;
+  font-weight: bold;
+}
+.trainer_area .strength_trainer li .trainer_content h3 {
+  font-size: 24px;
+  margin-left: 0.5rem;
+}
+.trainer_area .strength_trainer li .trainer_content p {
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 0.5rem;
+}
+.trainer_area .strength_trainer li .trainer1 {
+  background-image: url(../fitness_environment_img/TRAINER/trainer1.jpg);
+  background-position-y: -50px;
+}
+.trainer_area .strength_trainer li .trainer2 {
+  background-image: url(../fitness_environment_img/TRAINER/trainer2.jpg);
+  background-position-x: -35px;
+}
+.trainer_area .strength_trainer li .trainer3 {
+  background-image: url(../fitness_environment_img/TRAINER/trainer3.jpg);
+  background-position-y: -95px;
+}
+.trainer_area .strength_trainer li .trainer4 {
+  background-image: url(../fitness_environment_img/TRAINER/trainer4.jpg);
+  background-position-x: -135px;
+}
+.trainer_area .aerobic_trainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.trainer_area .aerobic_trainer li {
+  margin: 0 1.07rem;
+  border: 2px solid #f6f6f6;
+  border-radius: 8px;
+}
+.trainer_area .aerobic_trainer li .trainer_img {
+  width: 240px;
+  height: 270px;
+  background-size: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.trainer_area .aerobic_trainer li .trainer_img:hover .trainer_content {
+  display: block;
+}
+.trainer_area .aerobic_trainer li .trainer_content {
+  width: 240px;
+  height: 270px;
+  background-color: #f6f6f6;
+  letter-spacing: 1px;
+  display: none;
+  border-radius: 4px;
+}
+.trainer_area .aerobic_trainer li .trainer_content h2 {
+  font-size: 28px;
+  padding: 1rem 0 1rem 0.5rem;
+  font-weight: bold;
+}
+.trainer_area .aerobic_trainer li .trainer_content h3 {
+  font-size: 24px;
+  margin-left: 0.5rem;
+}
+.trainer_area .aerobic_trainer li .trainer_content p {
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 0.5rem;
+}
+.trainer_area .aerobic_trainer li .trainer5 {
+  background-image: url(../fitness_environment_img/TRAINER/trainer5.jpg);
+  background-position-y: -50px;
+}
+.trainer_area .aerobic_trainer li .trainer6 {
+  background-image: url(../fitness_environment_img/TRAINER/trainer6.jpg);
+  background-position-x: center;
+}
+.trainer_area .aerobic_trainer li .trainer7 {
+  background-position-x: center;
+  background-image: url(../fitness_environment_img/TRAINER/trainer7.jpg);
+}
+.trainer_area .aerobic_trainer li .trainer8 {
+  background-position-x: center;
+  background-image: url(../fitness_environment_img/TRAINER/trainer8.jpg);
+}/*# sourceMappingURL=trainer.css.map */
