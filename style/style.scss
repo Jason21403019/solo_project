@@ -585,15 +585,16 @@ li:hover {
 .totop {
   width: 20%;
   margin: 0 auto;
-  // border: 1px solid red;
   display: flex;
   justify-content: center;
   margin-bottom: 3rem;
   a {
     display: block;
     .fa-solid {
+      // border: 1px solid red;
       font-size: 60px;
       color: #ffdd00;
+      animation: fa-solid 1s ease infinite;
     }
   }
 }
@@ -612,7 +613,6 @@ footer {
     display: flex;
     padding-bottom: 1.5rem;
     // border: 1px solid red;
-    padding-right: 4rem;
     .no_text_logo {
       display: block;
       text-align: center;
@@ -654,6 +654,35 @@ footer {
   li:nth-child(6) {
     margin-right: 0;
   }
+  //---------- footer_register_content -----------
+  .footer_register_content {
+    color: $font_color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    a {
+      display: inline-block;
+      padding: 1rem 1.25rem;
+      color: $bgc_1e;
+      background-color: $font_color;
+      @include border-radius(8px);
+      margin: 0.5rem;
+      animation: footer_register 1.5s ease infinite;
+      &:hover {
+        animation: none;
+      }
+    }
+  }
 
   //---------- media_icons -----------
   .media_icons {
@@ -676,7 +705,7 @@ footer {
     }
   }
 
-  //---------- media_icons -----------
+  //---------- copyright_area -----------
   .copyright {
     width: 100%;
     display: flex;
@@ -692,7 +721,7 @@ footer {
     }
   }
 
-  //---------- media_icons -----------
+  //---------- project_statemen_icons -----------
   .project_statemen {
     width: 100%;
     p {
@@ -712,3 +741,27 @@ footer {
 //     }
 //   }
 // }
+@keyframes footer_register {
+  0% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(1);
+    background-color: $yello;
+    color: $bgc_1e;
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
+@keyframes fa-solid {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -86,7 +86,7 @@
   height: fit-content;
   top: 0;
   margin-left: 4rem;
-  margin-right: 5rem;
+  margin-right: 4rem;
   background-color: #c6bdac;
   padding: 0.5rem 0rem 0.5rem 0.5rem;
   border-radius: 8px;
@@ -140,7 +140,6 @@
 }
 
 .product_sections {
-  margin-right: 4rem;
   flex: 3;
 }
 .product_sections .products {

@@ -104,7 +104,7 @@ $font_size12: 12px;
   height: fit-content;
   top: 0;
   margin-left: 4rem;
-  margin-right: 5rem;
+  margin-right: 4rem;
   //   border: 1px solid red;
   background-color: $sidebar_bgc;
   padding: 0.5rem 0rem 0.5rem 0.5rem;
@@ -161,7 +161,6 @@ $font_size12: 12px;
 .product_sections {
   //-------- product_sections ------
   //   border: 1px solid red;
-  margin-right: 4rem;
   flex: 3;
   .products {
     max-width: 100%;

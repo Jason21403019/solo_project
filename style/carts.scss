@@ -9,7 +9,7 @@ $font_size12: 12px;
   border-radius: $radius;
 }
 body {
-  position: relative;
+  // position: relative;
 }
 
 //---------------- product_title --------------
@@ -168,10 +168,11 @@ body {
   max-width: 80%;
   border: 1px solide red;
   margin: 0 auto;
-  position: absolute;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
+  margin-bottom: 2rem;
+  // position: absolute;
+  // position: -webkit-sticky;
+  // position: sticky;
+  // bottom: 0;
   .check_content_area {
     padding: 0.75rem 0.75rem;
     background-color: $font_color;
