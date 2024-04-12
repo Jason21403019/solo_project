@@ -1,17 +1,22 @@
 $font_color: #f6f6f6;
-
+$bgc_1e: #1e1e1e;
+$sidebar_bgc: #c6bdac;
+$yello: #ffdd00;
 header {
   // border: 1px solid red;
   display: flex;
   max-width: 100%;
-  // box-shadow: 0px 1px 20px #f6f6f6;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: $bgc_1e;
+  transition: 0.35s ease;
   .log {
     // outline: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
-    // padding-left: 1.5rem;
     a {
       display: flex;
       justify-content: center;
@@ -26,8 +31,11 @@ header {
   nav {
     // outline: 1px solid red;
     flex: 3;
+<<<<<<< HEAD
     // margin-left: 1rem;
 
+=======
+>>>>>>> origin/master
     ul {
       display: flex;
       justify-content: center;
