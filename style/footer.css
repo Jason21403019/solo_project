@@ -1,0 +1,122 @@
+footer {
+  margin-top: 1.5rem;
+  max-width: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 2rem 2rem 2rem;
+}
+footer .footer_ul {
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+footer .footer_ul .no_text_logo {
+  display: block;
+  text-align: center;
+}
+footer .footer_ul img {
+  width: 28%;
+}
+footer li {
+  width: 100%;
+  color: #f6f6f6;
+}
+footer li h4 {
+  font-size: 28px;
+  padding-bottom: 1.2rem;
+}
+footer li a {
+  color: #f6f6f6;
+  font-size: 16px;
+  display: block;
+  padding-bottom: 1rem;
+}
+footer li a:hover {
+  color: #ffdd00;
+}
+footer li p {
+  font-size: 14px;
+  line-height: 1.4;
+  padding-bottom: 1.2rem;
+}
+footer li .footer_register {
+  background-color: #f6f6f6;
+  color: #1e1e1e;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 40px;
+}
+footer li:nth-child(6) {
+  margin-right: 0;
+}
+footer .footer_register_content {
+  color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer_register_content h4 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+footer .footer_register_content p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+footer .footer_register_content a {
+  display: inline-block;
+  padding: 1rem 1.25rem;
+  color: #1e1e1e;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  margin: 0.5rem;
+  animation: footer_register 1.5s ease infinite;
+}
+footer .footer_register_content a:hover {
+  animation: none;
+}
+footer .media_icons {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+footer .media_icons a {
+  display: block;
+  text-align: center;
+  margin-right: 2rem;
+}
+footer .media_icons a i {
+  font-size: 28px;
+}
+footer .media_icons a:nth-child(4) {
+  margin-right: 0;
+}
+footer .copyright {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0 0.5rem 0;
+}
+footer .copyright img {
+  width: 20px;
+}
+footer .copyright p {
+  color: #ffdd00;
+  font-size: 12px;
+}
+footer .project_statemen {
+  width: 100%;
+}
+footer .project_statemen p {
+  text-align: center;
+  font-size: 10px;
+  line-height: 2;
+  letter-spacing: 1px;
+  color: #f6f6f6;
+}/*# sourceMappingURL=footer.css.map */

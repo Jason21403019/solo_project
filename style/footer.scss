@@ -1,0 +1,146 @@
+$font_color: #f6f6f6;
+$bgc_1e: #1e1e1e;
+$sidebar_bgc: #c6bdac;
+$yello: #ffdd00;
+$font_size12: 12px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//--------------footer---------------//
+footer {
+  margin-top: 1.5rem;
+  max-width: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 2rem 2rem 2rem;
+
+  //--------- footer_ul -------------
+  .footer_ul {
+    display: flex;
+    padding-bottom: 1.5rem;
+    // border: 1px solid red;
+    .no_text_logo {
+      display: block;
+      text-align: center;
+    }
+    img {
+      width: 28%;
+    }
+  }
+  li {
+    width: 100%;
+    color: $font_color;
+    h4 {
+      font-size: 28px;
+      padding-bottom: 1.2rem;
+    }
+    a {
+      color: $font_color;
+      font-size: 16px;
+      display: block;
+      padding-bottom: 1rem;
+      &:hover {
+        color: $yello;
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+      padding-bottom: 1.2rem;
+    }
+    .footer_register {
+      background-color: $font_color;
+      color: #1e1e1e;
+      height: 40px;
+      @include border-radius(8px);
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  li:nth-child(6) {
+    margin-right: 0;
+  }
+  //---------- footer_register_content -----------
+  .footer_register_content {
+    color: $font_color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    a {
+      display: inline-block;
+      padding: 1rem 1.25rem;
+      color: $bgc_1e;
+      background-color: $font_color;
+      @include border-radius(8px);
+      margin: 0.5rem;
+      animation: footer_register 1.5s ease infinite;
+      &:hover {
+        animation: none;
+      }
+    }
+  }
+
+  //---------- media_icons -----------
+  .media_icons {
+    // border: 1px solid red;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    a {
+      // width: 50%;
+      display: block;
+      text-align: center;
+      margin-right: 2rem;
+      i {
+        font-size: 28px;
+      }
+    }
+    a:nth-child(4) {
+      margin-right: 0;
+    }
+  }
+
+  //---------- copyright_area -----------
+  .copyright {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0 0.5rem 0;
+    img {
+      width: 20px;
+    }
+    p {
+      color: #ffdd00;
+      font-size: 12px;
+    }
+  }
+
+  //---------- project_statemen_icons -----------
+  .project_statemen {
+    width: 100%;
+    p {
+      text-align: center;
+      font-size: 10px;
+      line-height: 2;
+      letter-spacing: 1px;
+      color: $font_color;
+    }
+  }
+}
