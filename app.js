@@ -87,3 +87,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let headers = document.querySelector("header");
+  let headerA = document.querySelectorAll("header ul li a");
+  let logo = document.querySelector("#logo");
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset != 0) {
+      headers.style.backgroundColor = "rgba(246,246,246,0.8)";
+      headers.style.color = "#f6f6f6";
+      headerA.forEach((a) => {
+        a.style.color = "#1e1e1e";
+        logo.src = "./Logo_Img/black_logo.svg";
+      });
+    } else {
+      headers.style = "";
+      headerA.forEach((a) => {
+        a.style.color = "#f6f6f6";
+      });
+      logo.src = "./Logo_Img/yellow_logo.svg";
+    }
+  });
+});

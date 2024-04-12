@@ -1,6 +1,11 @@
 header {
   display: flex;
   max-width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #1e1e1e;
+  transition: 0.35s ease;
 }
 header .log {
   display: flex;
