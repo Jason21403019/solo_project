@@ -26,7 +26,7 @@
   </head>
   <body>
     <!-- header -->
-    <header id="top">
+    <header class="slide-down">
       <!-- logo -->
       <div class="log">
         <a href="./index.html"
@@ -58,9 +58,9 @@
     </header>
 
     <!-------------- section1 ----------------->
-    <section class="section1_bg">
+    <section class="section1_bg" id="top">
       <div class="section1_img_filter">
-        <h1>
+        <h1 class="slide-right">
           Take Charge of Your Health and Fitness<br />
           Journey with Our Expert Guidance and Support
         </h1>
@@ -136,6 +136,28 @@
       </ul>
     </section>
 
+    <!-------------- member number ----------------->
+    <section class="member_number">
+      <ul class="mn_ul">
+        <li>
+          <h3>5000&nbsp;+</h3>
+          <p>Register</p>
+        </li>
+        <li>
+          <h3>1000&nbsp;+</h3>
+          <p>Session</p>
+        </li>
+        <li>
+          <h3>500&nbsp;+</h3>
+          <p>Fitness Blog</p>
+        </li>
+        <li>
+          <h3>1000&nbsp;+</h3>
+          <p>Happy Member</p>
+        </li>
+      </ul>
+    </section>
+
     <!-------------- ftandm ----------------->
     <section class="ftandm">
       <div class="firstTime_bg">
@@ -155,8 +177,8 @@
 
     <!-------------- hpageSlogan ----------------->
     <section class="fslogan">
-      <h1>We Care About Your Physical Health Condition</h1>
-      <p>
+      <h1 class="slide-down">We Care About Your Physical Health Condition</h1>
+      <p class="slide-down">
         We offer personalized training programs tailored to your needs and goals
         to ensure maximum improvement in your physical health condition.
       </p>
@@ -206,32 +228,10 @@
       </div>
     </section>
 
-    <!-------------- member number ----------------->
-    <section class="member_number">
-      <ul class="mn_ul">
-        <li>
-          <h3>5000&nbsp;+</h3>
-          <p>Register</p>
-        </li>
-        <li>
-          <h3>1000&nbsp;+</h3>
-          <p>Session</p>
-        </li>
-        <li>
-          <h3>500&nbsp;+</h3>
-          <p>Fitness Blog</p>
-        </li>
-        <li>
-          <h3>1000&nbsp;+</h3>
-          <p>Happy Member</p>
-        </li>
-      </ul>
-    </section>
-
     <!-------------- hpageSlogan2 ----------------->
     <section class="slogan2">
-      <h1>You can sculpt a different physique</h1>
-      <p>
+      <h1 class="slide-down">You can sculpt a different physique</h1>
+      <p class="slide-down">
         Transform your body at Apex Fitness with our diverse range of
         specialized workouts and personalized training programs. Whether you're
         aiming to build muscle, tone up, or improve endurance, our expert
@@ -246,9 +246,13 @@
         <li>
           <a href="">
             <div class="product_bg dumbbell5">
-              <div class="product_bg_filter"></div>
+              <img
+                src="./fitness_environment_img/PRODUCTS/dumbbell5.png"
+                alt="dumbbell5"
+              />
             </div>
             <h4>Dumbbell 5Kg</h4>
+            <h6>a versatile fitness tool for strength training</h6>
             <p>$590</p>
           </a>
         </li>
@@ -358,5 +362,16 @@
       </div>
     </footer>
   </body>
+  <script>
+    const h3Element = document.querySelector("h3");
+
+    window.addEventListener("scroll", () => {
+      const rect = h3Element.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        h3Element.classList.add("h3");
+      }
+    });
+  </script>
   <script src="./app.js"></script>
 </html>

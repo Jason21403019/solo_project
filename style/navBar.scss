@@ -31,11 +31,8 @@ header {
   nav {
     // outline: 1px solid red;
     flex: 3;
-<<<<<<< HEAD
     // margin-left: 1rem;
 
-=======
->>>>>>> origin/master
     ul {
       display: flex;
       justify-content: center;
@@ -74,7 +71,7 @@ header {
             position: absolute;
             width: 100%;
             height: 100%;
-            color: rgba(0, 0, 0, 0);
+            color: $bgc_1e;
             background-color: #ffdd00;
           }
         }
@@ -103,4 +100,9 @@ header {
       }
     }
   }
+}
+
+//-------------- hide_nav ---------------
+.hide_nav {
+  top: 0px;
 }
