@@ -178,76 +178,52 @@
   flex: 3;
 }
 .product_sections .products {
+  border: 1px solid red;
   max-width: 100%;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
 }
 .product_sections .products li {
   background-color: #f6f6f6;
-  margin: 0 0 3rem 38px;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
   border-radius: 8px;
+  border: 1px solid blue;
 }
 .product_sections .products h4,
-.product_sections .products p {
+.product_sections .products p,
+.product_sections .products h6 {
   color: #1e1e1e;
   text-align: center;
 }
 .product_sections .products h4 {
   font-size: 28px;
   font-weight: 600;
-  margin: 1.2rem 0;
+  margin: 1rem 0;
 }
 .product_sections .products p {
   font-size: 18px;
   padding-bottom: 2rem;
 }
+.product_sections .products h6 {
+  font-size: 12px;
+  margin-bottom: 1.5rem;
+}
 .product_sections a {
   display: block;
 }
 .product_sections a .product_bg {
-  width: 214px;
-  height: 192px;
+  width: 228px;
+  height: 204px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
-.product_sections a .product_bg .product_bg_filter {
+.product_sections a .product_bg img {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.product_sections .aeroflexleap {
-  background-image: url(../fitness_environment_img/PRODUCTS/AeroFlex\ Leap.png);
-}
-.product_sections li a .kettlebells {
-  background-image: url(../fitness_environment_img/PRODUCTS/Kettlebells.png);
-  background-position-x: 16px;
-  background-position-y: -90px;
-}
-.product_sections li a .dumbbell10 {
-  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell10.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.product_sections .dumbbell12 {
-  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell12.png);
-}
-.product_sections .dumbbell14 {
-  background-image: url(../fitness_environment_img/PRODUCTS/dumbbell14.png);
-}
-.product_sections .fbottle {
-  background-image: url(../fitness_environment_img/PRODUCTS/fbottle.png);
-}
-.product_sections li a .kettlebell5 {
-  background-image: url(../fitness_environment_img/PRODUCTS/kettlebell5.png);
-  background-size: contain;
-}
-.product_sections .bench {
-  background-image: url(../fitness_environment_img/PRODUCTS/bench.png);
-}
-.product_sections .medicineball {
-  background-image: url(../fitness_environment_img/PRODUCTS/medicineball.png);
-}
-.product_sections a > .product_bg {
-  background-position: center;
-  background-size: cover;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .page_number {

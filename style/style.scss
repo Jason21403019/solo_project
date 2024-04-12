@@ -116,6 +116,8 @@ body {
     }
   }
   .trainer_column_img {
+    width: 100%;
+    height: 100%;
     position: relative;
   }
   .trainer_column_content {
@@ -128,7 +130,7 @@ body {
     transition: opacity 0.3s ease;
     background-color: #c6bdac;
     @include border-radius(8px);
-    z-index: 30;
+    z-index: 10;
   }
   h3 {
     position: absolute;
@@ -139,7 +141,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 20;
+    z-index: 10;
   }
   img {
     width: 100%;
@@ -500,32 +502,32 @@ li:hover {
   max-width: 100%;
   display: flex;
   margin-bottom: 8rem;
+  align-items: center;
   flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   h1 {
     font-size: 48px;
     color: $font_color;
     margin: 0rem 3rem 3rem 3rem;
   }
-
   .products {
+    border: 1px solid red;
     max-width: 100%;
     display: flex;
-    // align-items: center;
-    // justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-
     li {
       background-color: $font_color;
       margin: 0 1rem;
+      margin-bottom: 1rem;
       @include border-radius(8px);
+      border: 1px solid blue;
     }
     h4,
     p,
     h6 {
       color: $bgc_1e;
-      text-align: center;
+      padding-left: 0.5rem;
+      // text-align: center;
     }
     h4 {
       font-size: 28px;
@@ -537,6 +539,7 @@ li:hover {
       padding-bottom: 2rem;
     }
     h6 {
+      line-height: 1.2;
       font-size: 12px;
       margin-bottom: 1.5rem;
     }
@@ -546,8 +549,8 @@ li:hover {
     display: block;
     // width: 20%;
     .product_bg {
-      width: 268px;
-      height: 240px;
+      width: 228px;
+      height: 204px;
       border-top-right-radius: 8px;
       border-top-left-radius: 8px;
       img {
@@ -558,21 +561,6 @@ li:hover {
         background-color: rgba($color: #000, $alpha: 0.4);
       }
     }
-  }
-
-  .dumbbell5 {
-    background-image: url(../fitness_environment_img/PRODUCTS/dumbbell5.jpg);
-  }
-  .dumbbell12 {
-    background-image: url(../fitness_environment_img/PRODUCTS/dumbbell12.png);
-  }
-  .aeroflex {
-    background-image: url(../fitness_environment_img/PRODUCTS/AeroFlex\ Leap.png);
-  }
-  li a .kettlebells {
-    background-image: url(../fitness_environment_img/PRODUCTS/Kettlebells.png);
-    background-position-x: 16px;
-    background-position-y: -90px;
   }
 }
 
@@ -667,7 +655,7 @@ li:hover {
 .slide-right {
   overflow-x: hidden;
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(50px);
   transition: 1s ease;
 }
 
