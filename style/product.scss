@@ -100,6 +100,7 @@ $font_size12: 12px;
 .product_sidebar {
   //----------- product_sidebar -------
   flex: 1;
+  flex-shrink: 1; //這裡要馬把左側欄設定死寬度，或是可以把右邊數定成flex-grow
   position: sticky;
   height: fit-content;
   top: 0;
@@ -109,20 +110,56 @@ $font_size12: 12px;
   background-color: $sidebar_bgc;
   padding: 0.5rem 0rem 0.5rem 0.5rem;
   border-radius: 8px;
+  .fit_ness_title {
+    display: flex;
+    border: 1px solid red;
+  }
+
+  .plusbtn {
+    padding-top: 0.1rem;
+    // border: 1px solid blue;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      @include border-radius(8px);
+      top: 50%;
+      background-color: $bgc_1e;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      transform: rotate(90deg);
+      @include border-radius(8px);
+      top: 50%;
+      background-color: $bgc_1e;
+      display: none;
+    }
+  }
   .sidebar_title {
     li {
       margin-bottom: 1rem;
       a {
+        width: 100%;
         color: $bgc_1e;
-        // border: 1px solid red;
+        border: 1px solid red;
         font-size: 20px;
-        display: block;
-
+        display: flex;
+        justify-content: space-between;
         cursor: pointer;
         padding: 0.25rem 0.5rem;
         &:hover {
           color: $yello;
         }
+      }
+      .active {
       }
     }
 

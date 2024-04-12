@@ -81,6 +81,7 @@
 
 .product_sidebar {
   flex: 1;
+  flex-shrink: 1;
   position: sticky;
   height: -moz-fit-content;
   height: fit-content;
@@ -91,13 +92,47 @@
   padding: 0.5rem 0rem 0.5rem 0.5rem;
   border-radius: 8px;
 }
+.product_sidebar .fit_ness_title {
+  display: flex;
+  border: 1px solid red;
+}
+.product_sidebar .plusbtn {
+  padding-top: 0.1rem;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+.product_sidebar .plusbtn::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  border-radius: 8px;
+  top: 50%;
+  background-color: #1e1e1e;
+}
+.product_sidebar .plusbtn::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  transform: rotate(90deg);
+  border-radius: 8px;
+  top: 50%;
+  background-color: #1e1e1e;
+  display: none;
+}
 .product_sidebar .sidebar_title li {
   margin-bottom: 1rem;
 }
 .product_sidebar .sidebar_title li a {
+  width: 100%;
   color: #1e1e1e;
+  border: 1px solid red;
   font-size: 20px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
 }
