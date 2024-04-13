@@ -119,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       headers.classList.remove("hide-nav");
     }
-    console.log(headers);
     lastScrollTop = currentTop <= 0 ? 0 : currentTop;
   });
 });

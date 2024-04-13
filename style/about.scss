@@ -36,12 +36,12 @@ body {
     align-items: center;
     h1 {
       margin-top: 7rem;
-      //   margin-left: 5rem;
       color: $font_color;
       padding: 0 2rem;
       font-size: 40px;
+      font-weight: bold;
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
       line-height: 1.4;
       //   border: 1px solid red;
       letter-spacing: 2px;
@@ -53,11 +53,13 @@ body {
       letter-spacing: 2px;
       text-align: center;
       margin-bottom: 7rem;
+      font-weight: bold;
       background-color: $font_color;
       color: $bgc_1e;
       font-size: 28px;
       line-height: 60px;
       @include border-radius(8px);
+      animation: about_atag 1s ease infinite;
     }
   }
 }
@@ -308,5 +310,25 @@ body {
       background-color: rgba(0, 0, 0, 0.2);
       z-index: -1;
     }
+  }
+}
+
+@keyframes about_atag {
+  0% {
+    transform: scale(0.6) translateY(-5px);
+  }
+  25% {
+    transform: scale(0.7) translateY(-4px);
+  }
+  50% {
+    transform: scale(0.8) translateY(-3px);
+    background-color: $yello;
+    box-shadow: 0px 0px 10px 5px $font_color;
+  }
+  75% {
+    transform: scale(0.9) translateY(-2px);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
   }
 }
