@@ -99,12 +99,11 @@ body {
   flex: 1;
   margin-top: -85px;
   li {
-    // border: 1px solid blue;
+    border: 1px solid $font_color;
     margin: 0 3rem;
     @include border-radius(8px);
     position: relative;
     width: 100%;
-    // border: 1px solid red;
     &::before {
       position: absolute;
       content: "";
@@ -149,7 +148,7 @@ body {
     display: block;
     @include border-radius(8px);
     z-index: -1;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
   a {
     display: block;
