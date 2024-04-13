@@ -152,7 +152,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   font-size: 0;
-  vertical-align: top;
   margin-bottom: 16rem;
 }
 .brand_purpose .brand_purpose_content {
@@ -173,7 +172,6 @@ body {
   letter-spacing: 1px;
 }
 .brand_purpose img {
-  position: relative;
   width: 576px;
   border-radius: 8px;
   position: relative;
@@ -182,53 +180,33 @@ body {
 
 .our_vision {
   max-width: 100%;
-  margin: 0 3rem;
-  display: inline-block;
+  display: flex;
+  justify-content: space-evenly;
   font-size: 0;
-  vertical-align: top;
   margin-bottom: 10rem;
 }
-.our_vision .our_vision_img,
-.our_vision .our_vision_content {
-  display: inline-block;
-  vertical-align: top;
-  width: 50%;
-  box-sizing: border-box;
-}
-.our_vision .our_vision_img {
-  width: 45%;
+.our_vision img {
+  width: 576px;
+  height: 376px;
   position: relative;
-  margin-left: 2.2rem;
-}
-.our_vision .our_vision_img img {
-  width: 100%;
+  top: 100px;
   border-radius: 8px;
-}
-.our_vision .our_vision_img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .our_vision .our_vision_content {
-  width: 40%;
+  width: 576px;
   background-color: #f6f6f6;
   border-radius: 8px;
-  padding: 2rem 1.3rem;
-  margin-top: -6rem;
-  margin-left: 3rem;
+  padding: 1.5rem 1rem;
+  position: relative;
+  top: -100px;
 }
 .our_vision .our_vision_content h3 {
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 1rem;
 }
 .our_vision .our_vision_content p {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 2;
   letter-spacing: 1px;
 }
 
