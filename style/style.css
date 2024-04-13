@@ -279,33 +279,41 @@ li:hover li:nth-child(2) {
 }
 
 .sharepost1 {
-  width: 100%;
-  height: 500px;
-  position: relative;
-  padding-left: 4rem;
+  max-width: 100%;
   margin-bottom: 200px;
+  display: flex;
+  justify-content: end;
+}
+.sharepost1 img {
+  width: 850px;
+  height: 550px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .postArea1 {
-  top: 18.5px;
-  position: absolute;
-  padding: 2px;
-  z-index: 1;
+  position: relative;
+  top: 25px;
+  right: -100px;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 8px;
-  width: 426px;
+  width: 290px;
   background-color: #f6f6f6;
 }
-.postArea1 .postArea1_bg {
-  border-radius: 8px;
-  height: 256px;
-  background-image: url(../fitness_environment_img/postimg.jpg);
-  background-position-y: -50px;
-  background-size: cover;
+.postArea1 .postArea1_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 260px;
 }
-.postArea1 .postArea1_bg .postArea1_bg_filter {
-  border-radius: 8px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+.postArea1 .postArea1_img img {
+  width: 95%;
+  height: 95%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  display: block;
 }
 .postArea1 .contents {
   color: #151515;
@@ -325,52 +333,42 @@ li:hover li:nth-child(2) {
   line-height: 1.4;
 }
 
-.sharepost1_img {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 70%;
-  background-image: url(../fitness_environment_img/sharePost1_img.jpg);
-  background-size: cover;
-  height: 500px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-.sharepost1_img .sharepost1_img_filter {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 .sharepost2 {
-  width: 100%;
-  height: 500px;
-  position: relative;
-  margin-bottom: 220px;
+  max-width: 100%;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: start;
+}
+.sharepost2 img {
+  width: 850px;
+  height: 550px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .postArea2 {
-  top: 18.5px;
-  right: 0;
-  margin-right: 4rem;
-  position: absolute;
-  padding: 2px;
-  z-index: 1;
+  position: relative;
+  top: 25px;
+  left: -100px;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 8px;
-  width: 426px;
+  width: 290px;
   background-color: #f6f6f6;
 }
-.postArea2 .postArea2_bg {
-  border-radius: 8px;
-  height: 256px;
-  background-image: url(../fitness_environment_img/postimg2.jpg);
-  background-size: cover;
+.postArea2 .postArea2_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 260px;
 }
-.postArea2 .postArea2_bg .postArea2_bg_filter {
-  border-radius: 8px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+.postArea2 .postArea2_img img {
+  width: 95%;
+  height: 95%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 .postArea2 .contents {
   color: #151515;
@@ -388,24 +386,6 @@ li:hover li:nth-child(2) {
 .postArea2 .contents p {
   font-size: 14px;
   line-height: 1.4;
-}
-
-.sharepost2_img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 70%;
-  background-image: url(../fitness_environment_img/sharePost2_img.jpg);
-  background-size: cover;
-  height: 500px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-.sharepost2_img .sharepost2_img_filter {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .member_number {
