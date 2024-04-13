@@ -199,12 +199,11 @@
   margin-bottom: 8rem;
 }
 .top_sale_area h1 {
-  font-size: 48px;
+  font-size: 40px;
   color: #f6f6f6;
-  margin: 0rem 3rem 3rem 3rem;
+  margin: 0rem 3rem 1rem 3rem;
 }
 .top_sale_area .products {
-  border: 1px solid red;
   max-width: 100%;
   display: flex;
   align-items: center;
@@ -212,10 +211,8 @@
 }
 .top_sale_area .products li {
   background-color: #f6f6f6;
-  margin: 0 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
   border-radius: 8px;
-  border: 1px solid blue;
 }
 .top_sale_area .products h4,
 .top_sale_area .products p,
@@ -251,4 +248,6 @@
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   background-color: rgba(0, 0, 0, 0.4);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }/*# sourceMappingURL=product_info.css.map */

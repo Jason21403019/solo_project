@@ -30,14 +30,14 @@ header nav ul {
   align-items: center;
 }
 header nav ul li {
-  margin-top: 2px;
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
   position: relative;
 }
 header nav ul li a {
-  padding: 28px 0px;
+  height: 72px;
+  line-height: 72px;
   display: block;
   color: #f6f6f6;
   font-size: 14px;

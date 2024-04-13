@@ -39,13 +39,13 @@ header {
       align-items: center;
       li {
         // outline: 1px solid red;
-        margin-top: 2px;
         flex-basis: 0;
         flex-grow: 1;
         text-align: center;
         position: relative;
         a {
-          padding: 28px 0px;
+          height: 72px;
+          line-height: 72px;
           display: block;
           color: $font_color;
           font-size: 14px;

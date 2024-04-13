@@ -505,29 +505,27 @@ li:hover {
   align-items: center;
   flex-direction: column;
   h1 {
-    font-size: 48px;
+    font-size: 40px;
     color: $font_color;
-    margin: 0rem 3rem 3rem 3rem;
+    margin: 0rem 3rem 1rem 3rem;
   }
   .products {
-    border: 1px solid red;
+    // border: 1px solid red;
     max-width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     li {
       background-color: $font_color;
-      margin: 0 1rem;
-      margin-bottom: 1rem;
+      margin: 1rem;
       @include border-radius(8px);
-      border: 1px solid blue;
+      // border: 1px solid blue;
     }
     h4,
     p,
     h6 {
       color: $bgc_1e;
       padding-left: 0.5rem;
-      // text-align: center;
     }
     h4 {
       font-size: 28px;
@@ -536,12 +534,12 @@ li:hover {
     }
     p {
       font-size: 18px;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
     h6 {
       line-height: 1.2;
       font-size: 12px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
   }
 

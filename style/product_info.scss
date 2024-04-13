@@ -215,22 +215,21 @@ $font_size12: 12px;
   align-items: center;
   margin-bottom: 8rem;
   h1 {
-    font-size: 48px;
+    font-size: 40px;
     color: $font_color;
-    margin: 0rem 3rem 3rem 3rem;
+    margin: 0rem 3rem 1rem 3rem;
   }
   .products {
-    border: 1px solid red;
+    // border: 1px solid red;
     max-width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     li {
       background-color: $font_color;
-      margin: 0 1rem;
-      margin-bottom: 1rem;
+      margin: 1rem;
       @include border-radius(8px);
-      border: 1px solid blue;
+      // border: 1px solid blue;
     }
     h4,
     p,
@@ -268,6 +267,7 @@ $font_size12: 12px;
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
         background-color: rgba($color: #000, $alpha: 0.4);
+        object-fit: scale-down;
       }
     }
   }

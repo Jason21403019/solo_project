@@ -46,7 +46,7 @@ $font_size12: 12px;
 .breadcrumb {
   max-width: 100%;
   padding: 1rem 0;
-  padding-left: 4rem;
+  padding-left: 5%;
   //   border: 1px solid red;
   .breadcrumb_ul {
     display: flex;
@@ -67,13 +67,13 @@ $font_size12: 12px;
   width: 100%;
   display: flex;
   justify-content: end;
-  padding-right: 4rem;
+  padding-right: 9.5%;
   margin-bottom: 1rem;
   .search {
     // border: 1px solid red;
     position: relative;
     input {
-      width: 268px;
+      width: 228px;
       height: 44px;
       border: none;
       outline: none;
@@ -96,37 +96,35 @@ $font_size12: 12px;
 //---------------- Product_area --------------
 .product_area {
   display: flex;
+  margin-left: 6%;
 }
 .product_sidebar {
   //----------- product_sidebar -------
-  flex: 1;
-  flex-shrink: 1; //這裡要馬把左側欄設定死寬度，或是可以把右邊數定成flex-grow
+  width: 540px;
   position: sticky;
   height: fit-content;
-  top: 0;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  //   border: 1px solid red;
+  top: 72px;
+  margin-top: 1rem;
+  // border: 1px solid red;
   background-color: $sidebar_bgc;
-  padding: 0.5rem 0rem 0.5rem 0.5rem;
+  padding: 0.5rem;
   border-radius: 8px;
   .fit_ness_title {
     display: flex;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
 
   .plusbtn {
-    padding-top: 0.1rem;
     // border: 1px solid blue;
     width: 20px;
-    height: 20px;
+    height: 28px;
     display: inline-block;
     position: relative;
     &::before {
       content: "";
       position: absolute;
       width: 20px;
-      height: 3px;
+      height: 2.5px;
       @include border-radius(8px);
       top: 50%;
       background-color: $bgc_1e;
@@ -148,13 +146,16 @@ $font_size12: 12px;
       margin-bottom: 1rem;
       a {
         width: 100%;
+        height: 40px;
+        line-height: 28px;
         color: $bgc_1e;
-        border: 1px solid red;
-        font-size: 20px;
+        font-weight: 600;
+        // border: 1px solid red;
+        font-size: 1.35vw;
         display: flex;
         justify-content: space-between;
         cursor: pointer;
-        padding: 0.25rem 0.5rem;
+        // padding: 0.25rem 0.5rem;
         &:hover {
           color: $yello;
         }
@@ -172,10 +173,11 @@ $font_size12: 12px;
         margin-bottom: 0rem;
         a {
           color: $bgc_1e;
-          font-size: 16px;
+          font-size: 1.25vw;
           display: block;
           margin-bottom: 0.25rem;
           padding-left: 1rem;
+          font-weight: normal;
           //   border: 1px solid red;
           &:hover {
             color: $yello;
@@ -190,25 +192,24 @@ $font_size12: 12px;
 }
 .product_sections {
   //-------- product_sections ------
-  //   border: 1px solid red;
-  flex: 3;
+  // border: 1px solid red;
+  flex-grow: 1;
   .products {
-    border: 1px solid red;
-    max-width: 100%;
+    // border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 6%;
     li {
       background-color: $font_color;
-      margin: 0 1rem;
-      margin-bottom: 1rem;
+      margin: 1.85%;
       @include border-radius(8px);
-      border: 1px solid blue;
+      // border: 1px solid blue;
     }
     h4,
     p,
     h6 {
       color: $bgc_1e;
-      text-align: center;
+      padding-left: 0.5rem;
     }
     h4 {
       font-size: 28px;
@@ -217,11 +218,12 @@ $font_size12: 12px;
     }
     p {
       font-size: 18px;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
     h6 {
+      line-height: 1.2;
       font-size: 12px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -239,6 +241,7 @@ $font_size12: 12px;
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
         background-color: rgba($color: #000, $alpha: 0.4);
+        object-fit: scale-down;
       }
     }
   }

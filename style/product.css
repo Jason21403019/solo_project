@@ -31,7 +31,7 @@
 .breadcrumb {
   max-width: 100%;
   padding: 1rem 0;
-  padding-left: 4rem;
+  padding-left: 5%;
 }
 .breadcrumb .breadcrumb_ul {
   display: flex;
@@ -50,14 +50,14 @@
   width: 100%;
   display: flex;
   justify-content: end;
-  padding-right: 4rem;
+  padding-right: 9.5%;
   margin-bottom: 1rem;
 }
 .search_bar .search {
   position: relative;
 }
 .search_bar .search input {
-  width: 268px;
+  width: 228px;
   height: 44px;
   border: none;
   outline: none;
@@ -77,29 +77,26 @@
 
 .product_area {
   display: flex;
+  margin-left: 6%;
 }
 
 .product_sidebar {
-  flex: 1;
-  flex-shrink: 1;
+  width: 540px;
   position: sticky;
   height: -moz-fit-content;
   height: fit-content;
-  top: 0;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  top: 72px;
+  margin-top: 1rem;
   background-color: #c6bdac;
-  padding: 0.5rem 0rem 0.5rem 0.5rem;
+  padding: 0.5rem;
   border-radius: 8px;
 }
 .product_sidebar .fit_ness_title {
   display: flex;
-  border: 1px solid red;
 }
 .product_sidebar .plusbtn {
-  padding-top: 0.1rem;
   width: 20px;
-  height: 20px;
+  height: 28px;
   display: inline-block;
   position: relative;
 }
@@ -107,7 +104,7 @@
   content: "";
   position: absolute;
   width: 20px;
-  height: 3px;
+  height: 2.5px;
   border-radius: 8px;
   top: 50%;
   background-color: #1e1e1e;
@@ -128,13 +125,14 @@
 }
 .product_sidebar .sidebar_title li a {
   width: 100%;
+  height: 40px;
+  line-height: 28px;
   color: #1e1e1e;
-  border: 1px solid red;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 1.35vw;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
 }
 .product_sidebar .sidebar_title li a:hover {
   color: #ffdd00;
@@ -156,10 +154,11 @@
 .product_sidebar .sidebar_title .health_Supplements_product li a,
 .product_sidebar .sidebar_title .fit_gear_product li a {
   color: #1e1e1e;
-  font-size: 16px;
+  font-size: 1.25vw;
   display: block;
   margin-bottom: 0.25rem;
   padding-left: 1rem;
+  font-weight: normal;
 }
 .product_sidebar .sidebar_title .fitness_equipment_product li a:hover,
 .product_sidebar .sidebar_title .protein_powder_product li a:hover,
@@ -175,26 +174,23 @@
 }
 
 .product_sections {
-  flex: 3;
+  flex-grow: 1;
 }
 .product_sections .products {
-  border: 1px solid red;
-  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 6%;
 }
 .product_sections .products li {
   background-color: #f6f6f6;
-  margin: 0 1rem;
-  margin-bottom: 1rem;
+  margin: 1.85%;
   border-radius: 8px;
-  border: 1px solid blue;
 }
 .product_sections .products h4,
 .product_sections .products p,
 .product_sections .products h6 {
   color: #1e1e1e;
-  text-align: center;
+  padding-left: 0.5rem;
 }
 .product_sections .products h4 {
   font-size: 28px;
@@ -203,11 +199,12 @@
 }
 .product_sections .products p {
   font-size: 18px;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .product_sections .products h6 {
+  line-height: 1.2;
   font-size: 12px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .product_sections a {
   display: block;
@@ -224,6 +221,8 @@
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   background-color: rgba(0, 0, 0, 0.4);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .page_number {
