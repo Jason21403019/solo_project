@@ -169,57 +169,36 @@ body {
 //------------- Our_brand_purpose_concept_area --------------
 .brand_purpose {
   max-width: 100%;
-  // border: 1px solid red;
-  margin: 0 3rem;
-  display: inline-block;
+  display: flex;
+  justify-content: space-evenly;
   font-size: 0;
   vertical-align: top;
   margin-bottom: 16rem;
 
-  .brand_purpose_content,
-  .brand_purpose_img {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    font-size: initial;
-    box-sizing: border-box;
-  }
   .brand_purpose_content {
-    width: 40%;
+    width: 576px;
     background-color: $font_color;
     @include border-radius(8px);
-    padding: 2rem 1.3rem;
-    margin-top: -10rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
+    padding: 1.5rem 1rem;
+    position: relative;
+    top: -100px;
     h3 {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 1rem;
     }
     p {
-      font-size: 18px;
-      line-height: 1.4;
+      font-size: 16px;
+      line-height: 2;
       letter-spacing: 1px;
     }
   }
 
-  .brand_purpose_img {
-    width: 45%;
+  img {
     position: relative;
-    img {
-      width: 100%;
-      @include border-radius(8px);
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      @include border-radius(8px);
-      background-color: rgba(0, 0, 0, 0.2);
-    }
+    width: 576px;
+    @include border-radius(8px);
+    position: relative;
+    top: 100px;
   }
 }
 
