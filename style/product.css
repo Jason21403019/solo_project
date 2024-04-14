@@ -118,6 +118,7 @@
   border-radius: 8px;
   top: 50%;
   background-color: #ffdd00;
+  transition: all 0.3s ease-in-out;
 }
 .product_sidebar .plusbtn.plus::after {
   transform: rotate(0deg);

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let health = document.querySelector(".health_Supplements_product");
   let fits = document.querySelector(".fits");
   let fit = document.querySelector(".fit_gear_product");
-  let plusbtn = document.querySelector(".plusbtn");
+  // let plusbtn = document.querySelector(".plusbtn");
   let fe = document.querySelector(".fitness_equipment");
   let pp = document.querySelector(".protein_powder");
   let hs = document.querySelector(".health_supplments");

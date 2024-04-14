@@ -141,6 +141,7 @@ $font_size12: 12px;
       // border: 1px solid red;
       top: 50%;
       background-color: $yello;
+      transition: all 0.3s ease-in-out;
     }
     &.plus::after {
       transform: rotate(0deg);
@@ -149,6 +150,7 @@ $font_size12: 12px;
   .sidebar_title {
     li {
       margin-bottom: 1rem;
+
       a {
         width: 100%;
         height: 40px;
