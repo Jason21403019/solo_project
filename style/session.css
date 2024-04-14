@@ -45,13 +45,18 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 3rem;
+  position: sticky;
+  top: 72px;
+  z-index: 10;
+  background-color: #c6bdac;
+  box-shadow: 0px 5px 10px 5px;
+  border-radius: 8px;
 }
 .month_choose .months {
   display: flex;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-right: 1.5rem;
-  position: relative;
 }
 .month_choose .months:last-child {
   margin-right: 0;
@@ -59,28 +64,17 @@ body {
 .month_choose .months option {
   font-weight: 600;
 }
-.month_choose .months i {
-  position: absolute;
-  right: 25px;
-  cursor: pointer;
-}
 .month_choose .weeks {
   display: flex;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-right: 1.5rem;
-  position: relative;
 }
 .month_choose .weeks:last-child {
   margin-right: 0;
 }
 .month_choose .weeks option {
   font-weight: 600;
-}
-.month_choose .weeks i {
-  position: absolute;
-  right: 20px;
-  cursor: pointer;
 }
 .month_choose .month,
 .month_choose .week {
@@ -129,17 +123,12 @@ body {
   border-radius: 8px;
 }
 .month_choose li .changebgc {
-  background-color: #c6bdac;
+  background-color: #ffdd00;
 }
 
 .session_list {
   width: 80%;
   margin: 0 auto;
-}
-.session_list .session_content {
-  flex: auto;
-  height: 690px;
-  overflow: scroll;
 }
 .session_list .session_content li {
   position: relative;
@@ -148,6 +137,7 @@ body {
   justify-content: space-between;
   background-color: #f6f6f6;
   padding: 0.5rem;
+  margin-bottom: 1.5rem;
   border-radius: 8px;
 }
 .session_list .session_content p {

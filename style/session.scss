@@ -58,44 +58,50 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 3rem;
+  position: sticky;
+  top: 72px;
+  z-index: 10;
+  background-color: rgba($color: $sidebar_bgc, $alpha: 1);
+  box-shadow: 0px 5px 10px 5px;
+  @include border-radius(8px);
   // border: 1px solid red;
   .months {
     display: flex;
     align-items: center;
-    @include border-radius(4px);
+    @include border-radius(8px);
     margin-right: 1.5rem;
     // border: 1px solid red;
-    position: relative;
+    // position: relative;
     &:last-child {
       margin-right: 0;
     }
     option {
       font-weight: 600;
     }
-    i {
-      position: absolute;
-      right: 25px;
-      cursor: pointer;
-    }
+    // i {
+    //   position: absolute;
+    //   right: 25px;
+    //   cursor: pointer;
+    // }
   }
   .weeks {
     display: flex;
     align-items: center;
-    @include border-radius(4px);
+    @include border-radius(8px);
     margin-right: 1.5rem;
     // border: 1px solid red;
-    position: relative;
+    // position: relative;
     &:last-child {
       margin-right: 0;
     }
     option {
       font-weight: 600;
     }
-    i {
-      position: absolute;
-      right: 20px;
-      cursor: pointer;
-    }
+    // i {
+    //   position: absolute;
+    //   right: 20px;
+    //   cursor: pointer;
+    // }
   }
   .month,
   .week {
@@ -147,7 +153,7 @@ body {
       @include border-radius(8px);
     }
     .changebgc {
-      background-color: $sidebar_bgc;
+      background-color: $yello;
     }
   }
 }
@@ -158,10 +164,6 @@ body {
   // border: 1px solid red;
   margin: 0 auto;
   .session_content {
-    flex: auto;
-    height: 690px;
-    // border: 1px solid blue;
-    overflow: scroll;
     li {
       position: relative;
       display: flex;
@@ -169,6 +171,7 @@ body {
       justify-content: space-between;
       background-color: $font_color;
       padding: 0.5rem;
+      margin-bottom: 1.5rem;
       @include border-radius(8px);
       // border: 1px solid red;
     }
