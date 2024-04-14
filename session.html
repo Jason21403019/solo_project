@@ -75,9 +75,34 @@
     <!-------------- month_title ----------------->
     <main class="session">
       <!-------------- month_area ----------------->
-      <section class="month">
-        <div class="month_title">
-          <h1>July Session</h1>
+      <section class="month_choose">
+        <div class="months">
+          <select name="month" id="month" class="month">
+            <option value="month">Month :</option>
+            <option value="jan">January</option>
+            <option value="feb">February</option>
+            <option value="mar">March</option>
+            <option value="apr">April</option>
+            <option value="may">May</option>
+            <option value="jun">June</option>
+            <option value="jul">July</option>
+            <option value="aug">August</option>
+            <option value="sep">September</option>
+            <option value="oct">October</option>
+            <option value="nov">November</option>
+            <option value="dec">December</option>
+          </select>
+          <!-- <i class="fa-solid fa-chevron-down fa-sm" style="color: #1e1e1e"></i> -->
+        </div>
+        <div class="weeks">
+          <select name="week" id="week" class="week">
+            <option value="week">Week :</option>
+            <option value="w1">Week1</option>
+            <option value="w2">Week2</option>
+            <option value="w3">Week3</option>
+            <option value="w4">Week4</option>
+          </select>
+          <!-- <i class="fa-solid fa-chevron-down fa-sm" style="color: #1e1e1e"></i> -->
         </div>
         <ul class="days_ul">
           <li>
@@ -128,7 +153,7 @@
       <!-------------- session_list_area ----------------->
       <section class="session_list">
         <ul class="session_content">
-          <li>
+          <li class="slide-right">
             <div class="session_name">
               <img
                 src="./fitness_environment_img/TRAINER/trainer1.jpg"

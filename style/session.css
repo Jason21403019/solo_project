@@ -37,53 +37,98 @@ body {
   letter-spacing: 1px;
   margin-bottom: 3rem;
 }
-.session .month {
+
+.month_choose {
   width: 90%;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 3rem;
 }
-.session .month .month_title {
+.month_choose .months {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #c6bdac;
   border-radius: 4px;
-  padding: 0.75rem;
-  width: 346px;
+  margin-right: 1.5rem;
+  position: relative;
 }
-.session .month h1 {
+.month_choose .months:last-child {
+  margin-right: 0;
+}
+.month_choose .months option {
+  font-weight: 600;
+}
+.month_choose .months i {
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+}
+.month_choose .weeks {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 1.5rem;
+  position: relative;
+}
+.month_choose .weeks:last-child {
+  margin-right: 0;
+}
+.month_choose .weeks option {
+  font-weight: 600;
+}
+.month_choose .weeks i {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+.month_choose .month,
+.month_choose .week {
+  padding: 0.9rem 1rem 0.9rem 1rem;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.month_choose h1 {
   color: #1e1e1e;
   font-size: 36px;
   font-weight: bold;
 }
-.session .month .days_ul {
+.month_choose .days_ul {
+  padding: 0.75rem 0;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  flex: auto;
 }
-.session .month li {
-  margin-left: 2rem;
+.month_choose li {
+  margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.session .month li p {
+.month_choose li:first-child {
+  margin-left: 0;
+}
+.month_choose li p {
   line-height: 1.2;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
-.session .month li button {
+.month_choose li button {
   border: none;
   background-color: #f6f6f6;
   cursor: pointer;
-  padding: 0.75rem;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
 }
-.session .month li .changebgc {
+.month_choose li .changebgc {
   background-color: #c6bdac;
 }
 

@@ -47,57 +47,107 @@ body {
 //---------------- month_area --------------
 .session {
   max-width: 100%;
-  //   border: 1px solid red;
+  // border: 1px solid red;
   letter-spacing: 1px;
   margin-bottom: 3rem;
-  .month {
-    width: 90%;
-    margin: 0 auto;
+}
+.month_choose {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  // border: 1px solid red;
+  .months {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    .month_title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    align-items: center;
+    @include border-radius(4px);
+    margin-right: 1.5rem;
+    // border: 1px solid red;
+    position: relative;
+    &:last-child {
+      margin-right: 0;
+    }
+    option {
+      font-weight: 600;
+    }
+    i {
+      position: absolute;
+      right: 25px;
+      cursor: pointer;
+    }
+  }
+  .weeks {
+    display: flex;
+    align-items: center;
+    @include border-radius(4px);
+    margin-right: 1.5rem;
+    // border: 1px solid red;
+    position: relative;
+    &:last-child {
+      margin-right: 0;
+    }
+    option {
+      font-weight: 600;
+    }
+    i {
+      position: absolute;
+      right: 20px;
+      cursor: pointer;
+    }
+  }
+  .month,
+  .week {
+    padding: 0.9rem 1rem 0.9rem 1rem;
+    border: none;
+    outline: none;
+    text-align: center;
+    @include border-radius(8px);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  h1 {
+    color: $bgc_1e;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .days_ul {
+    padding: 0.75rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex: auto;
+    // border: 1px solid blue;
+  }
+  li {
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:first-child {
+      margin-left: 0;
+    }
+    //   border: 1px solid red;
+    p {
+      line-height: 1.2;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    button {
+      border: none;
+      background-color: $font_color;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      @include border-radius(8px);
+    }
+    .changebgc {
       background-color: $sidebar_bgc;
-      @include border-radius(4px);
-      padding: 0.75rem;
-      width: 346px;
-    }
-    h1 {
-      color: $bgc_1e;
-      font-size: 36px;
-      font-weight: bold;
-    }
-    .days_ul {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      flex: auto;
-    }
-    li {
-      margin-left: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      //   border: 1px solid red;
-      p {
-        line-height: 1.2;
-        font-size: 18px;
-        font-weight: 500;
-      }
-      button {
-        border: none;
-        background-color: $font_color;
-        cursor: pointer;
-        padding: 0.75rem;
-        @include border-radius(8px);
-      }
-      .changebgc {
-        background-color: $sidebar_bgc;
-      }
     }
   }
 }
