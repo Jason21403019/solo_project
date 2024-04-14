@@ -16,18 +16,26 @@ $font_size12: 12px;
   padding: 2rem 0rem;
 }
 .contact_info_area {
-  width: 100%;
-  // border: 1px solid red;
+  // border: 1px solid green;
   display: flex;
 }
 .info {
   width: 50%;
   letter-spacing: 1px;
-  //   border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 550px;
+    right: 0;
+    background-color: $bgc_1e;
+  }
   .content {
     display: flex;
     flex-direction: column;
@@ -83,8 +91,7 @@ $font_size12: 12px;
 .contact_form_area {
   width: 50%;
   margin: 0 auto;
-  //   border: 1px solid blue;
-  border-left: 2px solid $bgc_1e;
+  // border: 1px solid blue;
   .full_name {
     width: 80%;
     margin: 0 auto;
