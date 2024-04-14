@@ -106,7 +106,7 @@ $font_size12: 12px;
   top: 72px;
   margin-top: 1rem;
   // border: 1px solid red;
-  background-color: $sidebar_bgc;
+  // background-color: $sidebar_bgc;
   padding: 0.5rem;
   border-radius: 8px;
   .fit_ness_title {
@@ -120,25 +120,30 @@ $font_size12: 12px;
     height: 28px;
     display: inline-block;
     position: relative;
+    cursor: pointer;
     &::before {
       content: "";
       position: absolute;
-      width: 20px;
+      width: 15px;
       height: 2.5px;
       @include border-radius(8px);
       top: 50%;
-      background-color: $bgc_1e;
+      background-color: $yello;
+      // border: 1px solid red;
     }
     &::after {
       content: "";
       position: absolute;
-      width: 20px;
+      width: 15px;
       height: 3px;
       transform: rotate(90deg);
       @include border-radius(8px);
+      // border: 1px solid red;
       top: 50%;
-      background-color: $bgc_1e;
-      display: none;
+      background-color: $yello;
+    }
+    &.plus::after {
+      transform: rotate(0deg);
     }
   }
   .sidebar_title {
@@ -148,44 +153,44 @@ $font_size12: 12px;
         width: 100%;
         height: 40px;
         line-height: 28px;
-        color: $bgc_1e;
+        color: $font_color;
         font-weight: 600;
         // border: 1px solid red;
         font-size: 1.35vw;
         display: flex;
         justify-content: space-between;
         cursor: pointer;
-        // padding: 0.25rem 0.5rem;
         &:hover {
           color: $yello;
         }
       }
-      .active {
+      i {
+        line-height: 28px;
+        margin-right: 0.25rem;
       }
     }
-
-    .fitness_equipment_product,
-    .protein_powder_product,
-    .health_Supplements_product,
-    .fit_gear_product {
-      display: none;
-      li {
-        margin-bottom: 0rem;
-        a {
-          color: $bgc_1e;
-          font-size: 1.25vw;
-          display: block;
-          margin-bottom: 0.25rem;
-          padding-left: 1rem;
-          font-weight: normal;
-          //   border: 1px solid red;
-          &:hover {
-            color: $yello;
-          }
+  }
+  .fitness_equipment_product,
+  .protein_powder_product,
+  .health_Supplements_product,
+  .fit_gear_product {
+    display: none;
+    li {
+      margin-bottom: 0rem;
+      a {
+        color: $font_color;
+        font-size: 1.25vw;
+        display: block;
+        margin-bottom: 0.25rem;
+        padding-left: 1.25rem;
+        font-weight: normal;
+        //   border: 1px solid red;
+        &:hover {
+          color: $yello;
         }
-        &:last-child {
-          margin-bottom: 1rem;
-        }
+      }
+      &:last-child {
+        margin-bottom: 1rem;
       }
     }
   }
