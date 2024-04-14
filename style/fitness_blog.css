@@ -29,10 +29,10 @@
 }
 
 .sort_by_area {
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: end;
-  padding-right: 8rem;
+  margin: 0 auto;
   margin-bottom: 1rem;
 }
 .sort_by_area .sort_by {
@@ -96,30 +96,21 @@
   color: #1e1e1e;
   letter-spacing: 1px;
 }
-.fitness_blog .contents .name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.fitness_blog .contents .name h4 {
+.fitness_blog .contents h4 {
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
-.fitness_blog .contents .name button {
-  border: none;
-  outline: none;
-  background-color: #f6f6f6;
-  cursor: pointer;
-}
-.fitness_blog .contents h6 {
-  font-size: 14px;
-  margin-bottom: 1.75rem;
+.fitness_blog .contents h4 span {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  margin-left: 0.25rem;
 }
 .fitness_blog .contents h2 {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 .fitness_blog .contents p {
   line-height: 1.2;

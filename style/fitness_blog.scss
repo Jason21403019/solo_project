@@ -44,10 +44,11 @@ $font_size12: 12px;
 
 //---------------- sort_by_area --------------
 .sort_by_area {
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: end;
-  padding-right: 8rem;
+  // border: 1px solid red;
+  margin: 0 auto;
   margin-bottom: 1rem;
   .sort_by {
     color: $font_color;
@@ -112,30 +113,23 @@ $font_size12: 12px;
     padding: 1rem 1rem;
     color: $bgc_1e;
     letter-spacing: 1px;
-    .name {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      h4 {
-        font-size: 16px;
-        font-weight: bold;
-      }
-      button {
-        border: none;
-        outline: none;
-        background-color: $font_color;
-        cursor: pointer;
+
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      span {
+        color: rgba($color: #000000, $alpha: 0.5);
+        font-size: 12px;
+        margin-left: 0.25rem;
       }
     }
-    h6 {
-      font-size: 14px;
-      margin-bottom: 1.75rem;
-    }
+
     h2 {
       font-size: 24px;
       font-weight: bold;
       line-height: 1.2;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
     }
     p {
       line-height: 1.2;
