@@ -8,9 +8,6 @@ $font_size12: 12px;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
-body {
-  // position: relative;
-}
 
 //---------------- product_title --------------
 .product_title {
@@ -48,16 +45,16 @@ body {
 //---------------- product_items_section --------------
 .product_items {
   max-width: 70%;
-  //   border: 1px solid red;
   margin: 0 auto;
-  //------ ul.items -------
+  //   border: 1px solid red;
+  //------ ul_items -------
   .items {
     width: 100%;
     li {
       display: flex;
       padding: 0.5rem 0.5rem 0.5rem 0.75rem;
       background-color: $font_color;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
       @include border-radius(8px);
     }
   }
@@ -165,14 +162,10 @@ body {
 
 //---------------- check_content_section --------------
 .check_content {
-  max-width: 80%;
+  max-width: 70%;
   border: 1px solide red;
   margin: 0 auto;
   margin-bottom: 2rem;
-  // position: absolute;
-  // position: -webkit-sticky;
-  // position: sticky;
-  // bottom: 0;
   .check_content_area {
     padding: 0.75rem 0.75rem;
     background-color: $font_color;
