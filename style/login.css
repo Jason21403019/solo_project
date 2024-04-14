@@ -73,21 +73,17 @@
   border-radius: 8px;
   color: #ffdd00;
 }
-.login_area button {
+.login_area .login_a {
+  width: 36%;
+  display: block;
+  margin: 0 auto;
   color: #f6f6f6;
   background-color: #1e1e1e;
-  outline: none;
-  border: none;
   border-radius: 8px;
-}
-.login_area button:hover {
-  color: #ffdd00;
-  transform: translateY(-4px);
-}
-.login_area :nth-child(6) {
   padding: 0.5rem 3rem;
   font-size: 28px;
-  margin: 0 auto;
-  display: block;
-  cursor: pointer;
+}
+.login_area a:hover {
+  color: #ffdd00;
+  transform: translateY(-4px);
 }/*# sourceMappingURL=login.css.map */

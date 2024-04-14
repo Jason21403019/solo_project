@@ -78,22 +78,21 @@ $font_size12: 12px;
       }
     }
   }
-  button {
+  .login_a {
+    width: 36%;
+    display: block;
+    margin: 0 auto;
     color: $font_color;
     background-color: $bgc_1e;
-    outline: none;
-    border: none;
+    // border: 1px solid red;
     border-radius: 8px;
-  }
-  button:hover {
-    color: $yello;
-    transform: translateY(-4px);
-  }
-  & :nth-child(6) {
     padding: 0.5rem 3rem;
     font-size: 28px;
-    margin: 0 auto;
-    display: block;
-    cursor: pointer;
+    // outline: none;
+    // border: none;
+  }
+  a:hover {
+    color: $yello;
+    transform: translateY(-4px);
   }
 }
