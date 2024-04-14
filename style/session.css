@@ -33,13 +33,13 @@ body {
 }
 
 .session {
-  max-width: 90%;
-  margin: 0 auto;
+  max-width: 100%;
   letter-spacing: 1px;
   margin-bottom: 3rem;
 }
 .session .month {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3rem;
@@ -88,106 +88,72 @@ body {
 }
 
 .session_list {
-  display: flex;
-}
-.session_list .login_newm_area {
-  width: 346px;
-}
-.session_list .login_newm_area .login,
-.session_list .login_newm_area .newm {
-  width: 100%;
-  margin: 1.5rem 0;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  border-radius: 8px;
-}
-.session_list .login_newm_area .login a,
-.session_list .login_newm_area .newm a {
-  display: inline-block;
-  background-color: rgba(246, 246, 246, 0.8);
-  color: #1e1e1e;
-  font-size: 36px;
-  padding: 0.5rem;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  position: absolute;
-}
-.session_list .login_newm_area .login:before,
-.session_list .login_newm_area .newm:before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-}
-.session_list .login_newm_area .login {
-  background-image: url(../fitness_environment_img/FITNESS/session_login.jpg);
-  border: 1px solid #ffdd00;
-}
-.session_list .login_newm_area .login:hover {
-  box-shadow: 0px 0px 15px 1px #ffdd00;
-}
-.session_list .login_newm_area .newm {
-  background-image: url(../fitness_environment_img/FITNESS/session_register.jpg);
-  border: 1px solid #f6f6f6;
-}
-.session_list .login_newm_area .newm:hover {
-  box-shadow: 0px 0px 15px 1px #f6f6f6;
+  width: 80%;
+  margin: 0 auto;
 }
 .session_list .session_content {
   flex: auto;
-  margin-left: 4.6rem;
   height: 690px;
   overflow: scroll;
 }
 .session_list .session_content li {
   position: relative;
-  margin: 1.5rem 0;
   display: flex;
   align-items: center;
-  padding: 1.5rem 1rem;
+  justify-content: space-between;
   background-color: #f6f6f6;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.session_list .session_content p {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  margin-right: 1rem;
+}
+.session_list .session_content p::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  top: 0;
+  right: -11px;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(30, 30, 30, 0.5);
+}
+.session_list .session_content p:nth-last-child(1)::after {
+  display: none;
+}
+.session_list .session_content i {
+  margin-right: 0.15rem;
+}
+.session_list .session_content .title_info {
+  padding: 0.25rem 0;
+}
+.session_list .session_content img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 8px;
 }
 .session_list .session_content .session_name {
-  width: 520px;
-}
-.session_list .session_content h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-.session_list .session_content p {
-  font-size: 16px;
-  font-weight: bold;
-}
-.session_list .session_content a {
-  color: #1e1e1e;
-}
-.session_list .session_content .detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-left: 2px solid #1e1e1e;
-  padding-left: 1rem;
-}
-.session_list .session_content h6 {
-  font-size: 12px;
-  font-weight: bold;
-  margin-left: 0.5rem;
-}
-.session_list .session_content .address,
-.session_list .session_content .tianer_name {
   display: flex;
   align-items: center;
 }
-.session_list .session_content .address {
+.session_list .session_content h2 {
+  font-size: 28px;
+  font-weight: bold;
   margin-bottom: 1rem;
+}
+.session_list .session_content a {
+  display: block;
+  color: #1e1e1e;
+  padding: 0.75rem 1rem;
+  margin-right: 1rem;
+  background-color: #1e1e1e;
+  color: #f6f6f6;
+  border-radius: 8px;
 }/*# sourceMappingURL=session.css.map */

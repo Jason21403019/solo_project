@@ -82,14 +82,13 @@ $font_size12: 12px;
     width: 36%;
     display: block;
     margin: 0 auto;
+    text-align: center;
     color: $font_color;
     background-color: $bgc_1e;
     // border: 1px solid red;
     border-radius: 8px;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 0;
     font-size: 28px;
-    // outline: none;
-    // border: none;
   }
   a:hover {
     color: $yello;

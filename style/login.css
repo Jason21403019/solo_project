@@ -77,10 +77,11 @@
   width: 36%;
   display: block;
   margin: 0 auto;
+  text-align: center;
   color: #f6f6f6;
   background-color: #1e1e1e;
   border-radius: 8px;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 0;
   font-size: 28px;
 }
 .login_area a:hover {
