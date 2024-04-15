@@ -137,24 +137,27 @@ $font_size12: 12px;
         border: none;
         margin: 0;
         padding: 0;
-        padding: 0.25rem 0.25rem;
-        @include border-radius(4px);
+        padding: 0.45rem 0.45rem;
+        // @include border-radius(4px);
         background-color: $font_color;
         cursor: pointer;
       }
       .btn1 {
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      .btn2 {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
       }
       input[type="number"] {
         text-align: center;
-        margin-right: -5px;
-        margin-left: -5px;
+        margin-right: -6.5px;
+        margin-left: -6.5px;
         border: none;
         outline: none;
-        padding: 0.25rem 0;
+        padding: 0.45rem 0;
         background-color: $font_color;
-        @include border-radius(4px);
         width: 35px;
       }
       input[type="number"]::-webkit-inner-spin-button,

@@ -87,15 +87,16 @@ header .icons li a {
   position: relative;
 }
 header .icons li a .car_number {
-  content: "";
   position: absolute;
   width: 20px;
-  height: 20px;
+  line-height: 20px;
+  text-align: center;
   right: -10px;
   top: -8px;
+  color: #f6f6f6;
+  font-size: 12px;
+  background-color: #e00000;
   border-radius: 50%;
-  background-color: #f6f6f6;
-  display: none;
 }
 header .hamburger.active {
   position: fixed;

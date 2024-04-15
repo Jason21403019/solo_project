@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   let ularray = document.querySelector(".days_ul");
   // console.log(ularray);
-  let buttons = ularray.querySelectorAll("button");
+  let buttons = ularray.querySelector("button");
   // console.log(buttons);
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -197,17 +197,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   let navbar = document.querySelector("header");
-//   let lastScrollTop = 0;
-//   window.addEventListener("scroll", () => {
-//     let currentTop = window.pageYOffset || document.documentElement.scrollTop;
+document.addEventListener("DOMContentLoaded", function () {
+  let addToCar = document.querySelector(".add_to_cart");
+  let carIcon = document.querySelector(".car_number");
 
-//     if (currentTop > lastScrollTop) {
-//       navbar.classList.add(".hide_nav");
-//     } else {
-//       navbar.classList.remove(".hide-nav");
-//     }
-//     lastScrollTop = currentTop <= 0 ? 0 : currentTop;
-//   });
-// });
+  console.log(addToCar);
+  console.log(carIcon.textContent);
+  addToCar.addEventListener("click", () => {
+    let numberUP = parseInt(carIcon.textContent);
+    carIcon.textContent = numberUP + 1;
+    console.log(carIcon);
+  });
+});

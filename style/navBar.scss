@@ -105,15 +105,17 @@ header {
         color: $font_color;
         position: relative;
         .car_number {
-          content: "";
           position: absolute;
           width: 20px;
-          height: 20px;
+          line-height: 20px;
+          text-align: center;
           right: -10px;
           top: -8px;
+          color: $font_color;
+          font-size: 12px;
+          background-color: #e00000;
           @include border-radius(50%);
-          background-color: $font_color;
-          display: none;
+          // display: none;
         }
       }
     }
