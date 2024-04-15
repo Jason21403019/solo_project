@@ -59,11 +59,11 @@ $font_size12: 12px;
   }
   .strength_trainer {
     display: flex;
-    // justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
+    border: 1px solid red;
     li {
-      margin: 0 1.07rem;
+      margin: 1% 1.89%;
       border: 2px solid $font_color;
       @include border-radius(8px);
       .trainer_img {
@@ -86,16 +86,16 @@ $font_size12: 12px;
         display: none;
         @include border-radius(4px);
         h2 {
-          font-size: 28px;
+          font-size: 24px;
           padding: 1rem 0 1rem 0.5rem;
           font-weight: bold;
         }
         h3 {
-          font-size: 24px;
+          font-size: 18px;
           margin-left: 0.5rem;
         }
         p {
-          font-size: 16px;
+          font-size: 14px;
           line-height: 1.2;
           padding: 0.5rem;
         }
@@ -123,7 +123,7 @@ $font_size12: 12px;
     // justify-content: space-between;
     flex-wrap: wrap;
     li {
-      margin: 0 1.07rem;
+      margin: 1% 1.89%;
       border: 2px solid $font_color;
       @include border-radius(8px);
       .trainer_img {
@@ -147,16 +147,16 @@ $font_size12: 12px;
 
         @include border-radius(4px);
         h2 {
-          font-size: 28px;
+          font-size: 24px;
           padding: 1rem 0 1rem 0.5rem;
           font-weight: bold;
         }
         h3 {
-          font-size: 24px;
+          font-size: 18px;
           margin-left: 0.5rem;
         }
         p {
-          font-size: 16px;
+          font-size: 14px;
           line-height: 1.2;
           padding: 0.5rem;
         }
