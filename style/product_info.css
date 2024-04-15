@@ -19,7 +19,8 @@
 .product_info {
   max-width: 100%;
   display: flex;
-  padding: 3rem 6rem;
+  flex-wrap: wrap;
+  padding: 0rem 3rem 3rem 6rem;
 }
 .product_info .info_img {
   width: 100%;
@@ -38,8 +39,8 @@
   position: relative;
 }
 .product_info .info_img .main_img img {
-  width: 342px;
-  height: 342px;
+  width: 343px;
+  height: 343px;
   -o-object-position: center;
      object-position: center;
   -o-object-fit: cover;
@@ -91,22 +92,22 @@
   font-size: 16px;
 }
 .product_info .info_content {
-  flex: 1.5;
+  flex: 2;
   color: #f6f6f6;
   letter-spacing: 1px;
   padding-left: 2rem;
 }
 .product_info .info_content h1 {
-  font-size: 48px;
+  font-size: 32px;
   margin-bottom: 0.25rem;
   font-weight: bold;
 }
 .product_info .info_content h4 {
-  font-size: 18px;
+  font-size: 12px;
   margin-bottom: 3rem;
 }
 .product_info .info_content h2 {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 3rem;
 }
@@ -163,11 +164,10 @@
 }
 .product_info .info_content .bsbtn .add_to_cart,
 .product_info .info_content .bsbtn .buy_now {
-  margin: 0 auto;
   border: none;
   outline: none;
   border-radius: 8px;
-  font-size: 36px;
+  font-size: 28px;
   width: 70%;
   padding: 0.45rem 0rem;
   cursor: pointer;
@@ -178,7 +178,7 @@
 }
 .product_info .info_content .shipping_info,
 .product_info .info_content .return_info {
-  font-size: 24px;
+  font-size: 20px;
   width: 90%;
   border-bottom: 1px solid #f6f6f6;
   padding: 0.75rem 0;
