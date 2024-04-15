@@ -19,7 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {});
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navUl = document.querySelector(".nav-ul");
+  const navA = document.querySelectorAll(".nav-a");
+  //收合展開navBar
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    navUl.classList.toggle("active");
+  });
+
+  navA.forEach((n) =>
+    n.addEventListener("click", function () {
+      hamburger.classList.remove("active");
+      navUl.classList.toggle("active");
+    })
+  );
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   let fit_ness = document.querySelector(".fit_ness");

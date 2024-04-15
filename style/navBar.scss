@@ -2,6 +2,12 @@ $font_color: #f6f6f6;
 $bgc_1e: #1e1e1e;
 $sidebar_bgc: #c6bdac;
 $yello: #ffdd00;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
 header {
   // border: 1px solid red;
   display: flex;
@@ -97,11 +103,62 @@ header {
         height: 25px;
         margin: 10px 20px;
         color: $font_color;
+        position: relative;
+        .car_number {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          right: -10px;
+          top: -8px;
+          @include border-radius(50%);
+          background-color: $font_color;
+          display: none;
+        }
       }
     }
   }
+  .hamburger.active {
+    position: fixed;
+  }
+  .hamburger {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 20px;
+    // top: 50%;
+    // transform: translateY(-50%);
+    right: 1rem;
+    z-index: 4;
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      border-radius: 20px;
+      transition: all 0.2s ease-in-out;
+      background-color: $font_color;
+    }
+  }
+}
+// ANIMATIONS
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
 
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 1200px) {
+  header .hamburger {
+    display: block;
+  }
+}
 //-------------- hide_nav ---------------
 .hide_nav {
   top: 0px;

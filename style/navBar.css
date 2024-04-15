@@ -84,8 +84,57 @@ header .icons li a {
   height: 25px;
   margin: 10px 20px;
   color: #f6f6f6;
+  position: relative;
+}
+header .icons li a .car_number {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  top: -8px;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  display: none;
+}
+header .hamburger.active {
+  position: fixed;
+}
+header .hamburger {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+  z-index: 4;
+}
+header .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  background-color: #f6f6f6;
 }
 
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 1200px) {
+  header .hamburger {
+    display: block;
+  }
+}
 .hide_nav {
   top: 0px;
 }/*# sourceMappingURL=navBar.css.map */
