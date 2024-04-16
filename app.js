@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   let ularray = document.querySelector(".days_ul");
   // console.log(ularray);
-  let buttons = ularray.querySelector("button");
+  let buttons = document.querySelectorAll("button");
   // console.log(buttons);
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.classList.remove("changebgc");
       });
       button.classList.add("changebgc");
+      console.log(buttons);
     });
   });
 });
@@ -135,17 +136,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  let lastScrollTop = 0;
-  window.addEventListener("scroll", () => {
-    let currentTop = window.pageYOffset || document.documentElement.scrollTop;
+  // let lastScrollTop = 0;
+  // window.addEventListener("scroll", () => {
+  //   let currentTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentTop > lastScrollTop) {
-      headers.classList.add("hide_nav");
-    } else {
-      headers.classList.remove("hide-nav");
-    }
-    lastScrollTop = currentTop <= 0 ? 0 : currentTop;
-  });
+  //   if (currentTop > lastScrollTop) {
+  //     headers.classList.add("hide_nav");
+  //   } else {
+  //     headers.classList.remove("hide-nav");
+  //   }
+  //   lastScrollTop = currentTop <= 0 ? 0 : currentTop;
+  // });
 });
 
 //smooth a tags
@@ -201,11 +202,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let addToCar = document.querySelector(".add_to_cart");
   let carIcon = document.querySelector(".car_number");
 
-  console.log(addToCar);
-  console.log(carIcon.textContent);
+  // console.log(addToCar);
+  // console.log(carIcon.textContent);
   addToCar.addEventListener("click", () => {
     let numberUP = parseInt(carIcon.textContent);
     carIcon.textContent = numberUP + 1;
-    console.log(carIcon);
+    // console.log(carIcon);
   });
 });

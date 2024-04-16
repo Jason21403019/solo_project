@@ -191,4 +191,18 @@ body {
   background-color: #1e1e1e;
   color: #f6f6f6;
   border-radius: 8px;
+  animation: add_session 1s ease infinite;
+}
+
+@keyframes add_session {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    color: #ffdd00;
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=session.css.map */

@@ -231,6 +231,20 @@ body {
       background-color: $bgc_1e;
       color: $font_color;
       @include border-radius(8px);
+      animation: add_session 1s ease infinite;
     }
+  }
+}
+
+@keyframes add_session {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    color: $yello;
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -430,7 +430,7 @@ li:hover {
     justify-content: space-between;
     padding: 1rem 3rem;
     @include border-radius(8px);
-    border: 0.5px dashed $yello;
+    // border: 0.5px dashed $yello;
   }
   li {
     display: flex;
