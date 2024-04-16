@@ -188,7 +188,8 @@
   padding: 0.5rem;
 }
 .recent_area h3 {
-  text-align: center;
+  text-align: left;
+  line-height: 1.6;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }

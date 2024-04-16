@@ -40,7 +40,7 @@ $font_size12: 12px;
     // border: 1px solid red;
     height: fit-content;
     margin-right: 3rem;
-    padding: 1rem;
+    padding: 0.5rem;
     flex: 1;
     align-items: flex-start;
     background-color: $font_color;
@@ -52,8 +52,8 @@ $font_size12: 12px;
       position: relative;
 
       img {
-        width: 343px;
-        height: 343px;
+        width: 340px;
+        height: 340px;
         object-position: center;
         object-fit: cover;
       }
@@ -79,7 +79,7 @@ $font_size12: 12px;
         position: relative;
         margin-top: 1rem;
         img {
-          width: 117px;
+          width: 100px;
           height: 70px;
         }
         &:before {
@@ -202,6 +202,7 @@ $font_size12: 12px;
 
     .shipping_info_p,
     .return_info_p {
+      color: rgba($color: $font_color, $alpha: 0.5);
       display: none;
       font-size: 14px;
       width: 90%;

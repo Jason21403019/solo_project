@@ -27,7 +27,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin-right: 3rem;
-  padding: 1rem;
+  padding: 0.5rem;
   flex: 1;
   align-items: flex-start;
   background-color: #f6f6f6;
@@ -39,8 +39,8 @@
   position: relative;
 }
 .product_info .info_img .main_img img {
-  width: 343px;
-  height: 343px;
+  width: 340px;
+  height: 340px;
   -o-object-position: center;
      object-position: center;
   -o-object-fit: cover;
@@ -70,7 +70,7 @@
 .product_info .info_img .sub_img .img1 img,
 .product_info .info_img .sub_img .img2 img,
 .product_info .info_img .sub_img .img3 img {
-  width: 117px;
+  width: 100px;
   height: 70px;
 }
 .product_info .info_img .sub_img .img1:before,
@@ -186,6 +186,7 @@
 }
 .product_info .info_content .shipping_info_p,
 .product_info .info_content .return_info_p {
+  color: rgba(246, 246, 246, 0.5);
   display: none;
   font-size: 14px;
   width: 90%;
