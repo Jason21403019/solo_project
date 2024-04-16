@@ -78,20 +78,16 @@
 .product_area {
   display: flex;
   margin-left: 6%;
+  align-items: start;
 }
 
 .product_sidebar {
   width: 540px;
   position: sticky;
-  height: -moz-fit-content;
-  height: fit-content;
   top: 72px;
-  margin-top: 1rem;
+  margin-top: 1.85%;
   padding: 0.5rem;
   border-radius: 8px;
-}
-.product_sidebar .fit_ness_title {
-  display: flex;
 }
 .product_sidebar .plusbtn {
   width: 20px;

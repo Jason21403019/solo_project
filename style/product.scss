@@ -97,22 +97,17 @@ $font_size12: 12px;
 .product_area {
   display: flex;
   margin-left: 6%;
+  align-items: start;
 }
 .product_sidebar {
   //----------- product_sidebar -------
   width: 540px;
   position: sticky;
-  height: fit-content;
   top: 72px;
-  margin-top: 1rem;
+  margin-top: 1.85%;
   // border: 1px solid red;
   padding: 0.5rem;
   border-radius: 8px;
-  .fit_ness_title {
-    display: flex;
-    // border: 1px solid red;
-  }
-
   .plusbtn {
     // border: 1px solid blue;
     width: 20px;
@@ -235,7 +230,6 @@ $font_size12: 12px;
 
   a {
     display: block;
-    // width: 20%;
     .product_bg {
       width: 228px;
       height: 204px;

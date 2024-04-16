@@ -31,6 +31,7 @@
 .my_session {
   max-width: 60%;
   margin: 0 auto;
+  border: 1px solid red;
   letter-spacing: 1px;
   margin-bottom: 3rem;
 }
@@ -70,6 +71,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid red;
 }
 .my_session .session_days_ul p {
   line-height: 1.2;

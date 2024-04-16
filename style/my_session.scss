@@ -46,7 +46,7 @@ $font_size12: 12px;
 .my_session {
   max-width: 60%;
   margin: 0 auto;
-  //   border: 1px solid red;
+  border: 1px solid red;
   letter-spacing: 1px;
   margin-bottom: 3rem;
   .mysession_month {
@@ -85,7 +85,7 @@ $font_size12: 12px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      //   border: 1px solid red;
+      border: 1px solid red;
     }
     p {
       line-height: 1.2;
