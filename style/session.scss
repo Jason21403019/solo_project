@@ -84,25 +84,25 @@ body {
     //   cursor: pointer;
     // }
   }
-  .weeks {
-    display: flex;
-    align-items: center;
-    @include border-radius(8px);
-    margin-right: 1.5rem;
-    // border: 1px solid red;
-    // position: relative;
-    &:last-child {
-      margin-right: 0;
-    }
-    option {
-      font-weight: 600;
-    }
-    // i {
-    //   position: absolute;
-    //   right: 20px;
-    //   cursor: pointer;
-    // }
-  }
+  // .weeks {
+  //   display: flex;
+  //   align-items: center;
+  //   @include border-radius(8px);
+  //   margin-right: 1.5rem;
+  //   // border: 1px solid red;
+  //   // position: relative;
+  //   &:last-child {
+  //     margin-right: 0;
+  //   }
+  //   option {
+  //     font-weight: 600;
+  //   }
+  //   // i {
+  //   //   position: absolute;
+  //   //   right: 20px;
+  //   //   cursor: pointer;
+  //   // }
+  // }
   .month,
   .week {
     padding: 0.9rem 1rem 0.9rem 1rem;
@@ -171,7 +171,7 @@ body {
       justify-content: space-between;
       background-color: $font_color;
       padding: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
       @include border-radius(8px);
       // border: 1px solid red;
     }

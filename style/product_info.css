@@ -131,11 +131,11 @@
   background-color: #f6f6f6;
   cursor: pointer;
 }
-.product_info .info_content .quantity_btn .btn1 {
+.product_info .info_content .quantity_btn .quantity_minusBtn {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
-.product_info .info_content .quantity_btn .btn2 {
+.product_info .info_content .quantity_btn .quantity_plusBtn {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
