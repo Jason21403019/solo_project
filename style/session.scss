@@ -55,7 +55,7 @@ body {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin-bottom: 3rem;
   position: sticky;
@@ -84,27 +84,8 @@ body {
     //   cursor: pointer;
     // }
   }
-  // .weeks {
-  //   display: flex;
-  //   align-items: center;
-  //   @include border-radius(8px);
-  //   margin-right: 1.5rem;
-  //   // border: 1px solid red;
-  //   // position: relative;
-  //   &:last-child {
-  //     margin-right: 0;
-  //   }
-  //   option {
-  //     font-weight: 600;
-  //   }
-  //   // i {
-  //   //   position: absolute;
-  //   //   right: 20px;
-  //   //   cursor: pointer;
-  //   // }
-  // }
-  .month,
-  .week {
+
+  .month {
     padding: 0.9rem 1rem 0.9rem 1rem;
     border: none;
     outline: none;
@@ -129,6 +110,12 @@ body {
     align-items: center;
     // flex: auto;
     // border: 1px solid blue;
+  }
+  .date_left_arrow,
+  .date_right_arrow {
+    i {
+      cursor: pointer;
+    }
   }
   li {
     margin-left: 1.5rem;
