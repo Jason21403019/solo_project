@@ -2,20 +2,20 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.product_title {
+.session_title {
   max-width: 100%;
 }
-.product_title h1 {
+.session_title h1 {
   margin: 0 auto;
   width: -moz-fit-content;
   width: fit-content;
   padding: 2rem 0;
-  font-size: 40px;
+  font-size: 3rem;
   color: #f6f6f6;
   font-weight: bold;
   position: relative;
 }
-.product_title h1:before, .product_title h1:after {
+.session_title h1:before, .session_title h1:after {
   position: absolute;
   content: "";
   top: 50%;
@@ -25,10 +25,10 @@ body {
   border-radius: 8px;
   transform: translateY(-50%);
 }
-.product_title h1:before {
+.session_title h1:before {
   left: -220px;
 }
-.product_title h1:after {
+.session_title h1:after {
   right: -220px;
 }
 
@@ -91,7 +91,7 @@ body {
   align-items: center;
 }
 .month_choose .days_ul li {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,5 +198,135 @@ body {
   }
   100% {
     transform: scale(1);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .session .month_choose {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .session .month_choose {
+    width: 95%;
+  }
+  .session .session_list {
+    width: 80%;
+  }
+  .session .session_list .session_content h2 {
+    font-size: 24px;
+  }
+  .session .session_list .session_content a {
+    font-size: 18px;
+    padding: 0.5rem 0.75rem;
+  }
+}
+@media screen and (max-width: 910px) {
+  .session .month_choose {
+    width: 100%;
+  }
+  .session .session_list {
+    width: 80%;
+  }
+  .session .session_list .session_content h2 {
+    font-size: 20px;
+  }
+  .session .session_list .session_content p {
+    font-size: 14px;
+  }
+  .session .session_list .session_content a {
+    font-size: 18px;
+    padding: 0.5rem 0.75rem;
+  }
+}
+@media screen and (max-width: 820px) {
+  .session_title h1 {
+    font-size: 2rem;
+  }
+  .session .month_choose .months {
+    margin-right: 0rem;
+    margin-top: 0.75rem;
+  }
+  .session .session_list {
+    width: 75%;
+  }
+  .session .session_list .session_content h2 {
+    font-size: 20px;
+  }
+  .session .session_list .session_content p {
+    font-size: 14px;
+  }
+  .session .session_list .session_content a {
+    text-align: center;
+    font-size: 20px;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .session_title h1 {
+    font-size: 1.5rem;
+  }
+  .session_title h1:before, .session_title h1:after {
+    width: 150px;
+  }
+  .session_title h1:before {
+    left: -170px;
+  }
+  .session_title h1:after {
+    right: -170px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .session_title h1 {
+    font-size: 1.25rem;
+  }
+  .session_title h1:before, .session_title h1:after {
+    width: 80px;
+  }
+  .session_title h1:before {
+    left: -100px;
+  }
+  .session_title h1:after {
+    right: -100px;
+  }
+  .session .month_choose .month {
+    padding: 0.45rem 0.5rem 0.45rem 0.5rem;
+  }
+  .session .month_choose .days_ul li {
+    margin-left: 0.55rem;
+  }
+  .session .month_choose .days_ul p {
+    line-height: 1;
+    font-size: 14px;
+  }
+  .session .month_choose .days_ul button {
+    padding: 0.25rem 0.25rem;
+  }
+  .session .session_list {
+    width: 95%;
+    overflow-x: hidden;
+  }
+  .session .session_list .session_content li {
+    margin-bottom: 1.5rem;
+  }
+  .session .session_list .session_content h2 {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+  .session .session_list .session_content p {
+    font-size: 10px;
+    margin-right: 0.15rem;
+  }
+  .session .session_list .session_content a {
+    text-align: center;
+    font-size: 14px;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0;
+  }
+  .session .session_list .session_content img {
+    width: 50px;
+    height: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }/*# sourceMappingURL=session.css.map */
