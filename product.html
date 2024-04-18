@@ -57,7 +57,10 @@
       <!-- icons-carts & login -->
       <ul class="icons">
         <li>
-          <a href="carts.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="carts.html"
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span class="car_number">0</span></a
+          >
         </li>
         <li>
           <a href="login.html"
@@ -425,7 +428,6 @@
       </div>
     </footer>
   </body>
-  <script src="./app.js"></script>
   <script>
     function doFirst() {
       //product sidebar close
@@ -478,5 +480,9 @@
       });
     }
     window.addEventListener("load", doFirst);
+    //cart_number
+    document.querySelector(".car_number").innerText =
+      localStorage.getItem("count");
   </script>
+  <script src="./app.js"></script>
 </html>
