@@ -48,8 +48,11 @@ body {
   position: sticky;
   top: 72px;
   z-index: 10;
-  background-color: #c6bdac;
-  box-shadow: 0px 5px 10px 5px;
+  background: rgba(198, 189, 172, 0.79);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
   border-radius: 8px;
 }
 .month_choose .months {
@@ -87,34 +90,34 @@ body {
   justify-content: center;
   align-items: center;
 }
-.month_choose .date_left_arrow i,
-.month_choose .date_right_arrow i {
-  cursor: pointer;
-}
-.month_choose li {
+.month_choose .days_ul li {
   margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.month_choose li:first-child {
+.month_choose .days_ul li:first-child {
   margin-left: 0;
 }
-.month_choose li p {
+.month_choose .days_ul li p {
   line-height: 1.2;
   font-size: 16px;
   font-weight: 500;
 }
-.month_choose li button {
+.month_choose .days_ul li button {
   border: none;
   background-color: #f6f6f6;
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }
-.month_choose li .changebgc {
+.month_choose .days_ul li .changebgc {
   background-color: #ffdd00;
+}
+.month_choose .date_left_arrow i,
+.month_choose .date_right_arrow i {
+  cursor: pointer;
 }
 
 .session_list {

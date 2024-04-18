@@ -5,7 +5,9 @@ header {
   top: 0;
   z-index: 50;
   background-color: #1e1e1e;
-  transition: 0.35s ease;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  transition: 0.3s ease;
 }
 header .log {
   display: flex;
@@ -137,6 +139,13 @@ header .hamburger .bar {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+@media (max-width: 1200px) {
+  header .hamburger {
+    display: block;
+  }
+}
 .hide_nav {
-  top: 0px;
+  opacity: 1;
+  transition: 0.3s ease;
+  position: sticky;
 }/*# sourceMappingURL=navBar.css.map */

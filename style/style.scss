@@ -96,13 +96,16 @@ body {
   // outline: 1px solid blue;
   display: flex;
   width: 100%;
-  flex: 1;
-  margin-top: -85px;
+  top: -140px;
+  position: relative;
+  padding: 4rem 8rem;
   li {
     border: 1px solid $font_color;
-    margin: 0 3rem;
+    margin: 0 1rem;
     @include border-radius(8px);
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
     &::before {
       position: absolute;
@@ -136,7 +139,7 @@ body {
     color: $font_color;
     font-weight: 700;
     letter-spacing: 2px;
-    font-size: 48px;
+    font-size: 40px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -144,7 +147,6 @@ body {
   }
   img {
     width: 100%;
-    height: 100%;
     display: block;
     @include border-radius(8px);
     z-index: -1;
@@ -154,7 +156,7 @@ body {
     display: block;
     text-align: center;
     font-size: 28px;
-    padding: 1.5rem 0 0rem 0;
+    padding: 1rem 0 0.5rem 0;
     font-weight: bold;
     color: $bgc_1e;
     text-decoration: underline;
@@ -163,11 +165,12 @@ body {
     }
   }
   p {
-    font-size: 16px;
+    font-size: 1.2vw;
     // padding: 1rem;
     letter-spacing: 1px;
-    line-height: 1.6;
-    padding: 1rem;
+    line-height: 1.7;
+    padding: 0.5rem;
+    // border: 1px solid red;
   }
   & > h3,
   p {
@@ -178,9 +181,9 @@ li:hover {
   .trainer_column_content {
     opacity: 1;
   }
-  li:nth-child(2) {
-    margin: 0rem;
-  }
+}
+li:nth-child(2) {
+  margin: 0rem;
 }
 
 //--------------ftandm---------------//
@@ -653,4 +656,156 @@ li:hover {
 .show {
   opacity: 1;
   transform: translateX(0);
+}
+
+@media (max-width: 1250px) {
+  .column_sections {
+    padding: 4rem 8rem;
+    top: -120px;
+    li {
+      margin: 0 1.75rem;
+    }
+    li:nth-child(2) {
+      margin: 0rem;
+    }
+    h3 {
+      font-size: 32px;
+    }
+  }
+  .trainer_column_content {
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    a {
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .column_sections {
+    padding: 2rem 6rem;
+    top: -100px;
+  }
+  .column_sections {
+    li {
+      margin: 0 1.5rem;
+    }
+    li:nth-child(2) {
+      margin: 0rem;
+    }
+    h3 {
+      font-size: 32px;
+    }
+  }
+  .trainer_column_content {
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .column_sections {
+    padding: 1rem 4rem;
+    top: -80px;
+  }
+  .column_sections {
+    li {
+      margin: 0 1.25rem;
+    }
+    li:nth-child(2) {
+      margin: 0rem;
+    }
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .trainer_column_content {
+    a {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .column_sections {
+    padding: 0.25rem 1rem;
+    top: -60px;
+  }
+  .column_sections {
+    li {
+      margin: 0 1rem;
+    }
+    li:nth-child(2) {
+      margin: 0rem;
+    }
+    h3 {
+      font-size: 18px;
+    }
+  }
+  .trainer_column_content {
+    a {
+      padding: 0.5rem 0 0 0;
+      font-size: 18px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 1.6;
+      padding: 0.25rem;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .column_sections {
+    padding: 0rem 0.25rem;
+    top: 0px;
+  }
+  .column_sections {
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      margin: 0 0.125rem;
+      width: 53%;
+      margin-bottom: 0.5rem;
+    }
+    li:nth-child(2) {
+      margin-bottom: 0.5rem;
+      position: relative;
+      left: -100px;
+    }
+    li:nth-child(odd) {
+      position: relative;
+      right: -100px;
+    }
+    li::before {
+      opacity: 0;
+    }
+    li:hover .trainer_column_content {
+      opacity: 1;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+  .trainer_column_img {
+    opacity: 0;
+  }
+  .column_sections .trainer_column_content {
+    opacity: 1;
+
+    a {
+      padding: 0.5rem 0 0 0;
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 1.6;
+      padding: 0.25rem;
+    }
+  }
 }

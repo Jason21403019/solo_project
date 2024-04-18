@@ -61,8 +61,13 @@ body {
   position: sticky;
   top: 72px;
   z-index: 10;
-  background-color: rgba($color: $sidebar_bgc, $alpha: 1);
-  box-shadow: 0px 5px 10px 5px;
+  background: rgba(198, 189, 172, 0.79);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  // background-color: rgba($color: $sidebar_bgc, $alpha: 1);
+  // box-shadow: 0px 5px 10px 5px;
   @include border-radius(8px);
   // border: 1px solid red;
   .months {
@@ -110,37 +115,37 @@ body {
     align-items: center;
     // flex: auto;
     // border: 1px solid blue;
+    li {
+      margin-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &:first-child {
+        margin-left: 0;
+      }
+      //   border: 1px solid red;
+      p {
+        line-height: 1.2;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      button {
+        border: none;
+        background-color: $font_color;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        @include border-radius(8px);
+      }
+      .changebgc {
+        background-color: $yello;
+      }
+    }
   }
   .date_left_arrow,
   .date_right_arrow {
     i {
       cursor: pointer;
-    }
-  }
-  li {
-    margin-left: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &:first-child {
-      margin-left: 0;
-    }
-    //   border: 1px solid red;
-    p {
-      line-height: 1.2;
-      font-size: 16px;
-      font-weight: 500;
-    }
-    button {
-      border: none;
-      background-color: $font_color;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      @include border-radius(8px);
-    }
-    .changebgc {
-      background-color: $yello;
     }
   }
 }

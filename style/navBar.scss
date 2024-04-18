@@ -16,7 +16,8 @@ header {
   top: 0;
   z-index: 50;
   background-color: $bgc_1e;
-  transition: 0.35s ease;
+  backdrop-filter: blur(2px);
+  transition: 0.3s ease;
   .log {
     // outline: 1px solid red;
     display: flex;
@@ -161,12 +162,14 @@ header {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-// @media (max-width: 1200px) {
-//   header .hamburger {
-//     display: block;
-//   }
-// }
+@media (max-width: 1200px) {
+  header .hamburger {
+    display: block;
+  }
+}
 //-------------- hide_nav ---------------
 .hide_nav {
-  top: 0px;
+  opacity: 1;
+  transition: 0.3s ease;
+  position: sticky;
 }

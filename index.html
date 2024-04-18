@@ -396,15 +396,17 @@
     </footer>
   </body>
   <script>
-    const h3Element = document.querySelector("h3");
+    document.querySelector(".car_number").innerText =
+      localStorage.getItem("count");
+    // const h3Element = document.querySelector("h3");
 
-    window.addEventListener("scroll", () => {
-      const rect = h3Element.getBoundingClientRect();
+    // window.addEventListener("scroll", () => {
+    //   const rect = h3Element.getBoundingClientRect();
 
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        h3Element.classList.add("h3");
-      }
-    });
+    //   if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    //     h3Element.classList.add("h3");
+    //   }
+    // });
   </script>
   <script src="./app.js"></script>
 </html>
