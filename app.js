@@ -56,18 +56,6 @@ function doFirst() {
   //   fit.style.display = fit.style.display === "block" ? "none" : "block";
   //   fg.classList.toggle("plus");
   // });
-
-  // window.addEventListener("scroll", () => {
-  //   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  //     anchor.addEventListener("click", function (e) {
-  //       e.preventDefault();
-
-  //       document.querySelector(this.getAttribute("href")).scrollIntoView({
-  //         behavior: "smooth",
-  //       });
-  //     });
-  //   });
-  // });
 }
 
 window.addEventListener("load", doFirst);
@@ -117,21 +105,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//plus btn
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
-  const navUl = document.querySelector(".nav-ul");
-  const navA = document.querySelectorAll(".nav-a");
+  const navUl = document.querySelector("nav");
+  const navA = document.querySelectorAll("nav ul li a");
   //收合展開navBar
+
   hamburger.addEventListener("click", function () {
+    // console.log(navA);
     hamburger.classList.toggle("active");
-    navUl.classList.toggle("active");
+    // navUl.style.display = navUl.style.display === "block" ? "none" : "block";
+    navUl.classList.toggle("nav_show");
   });
 
   navA.forEach((n) =>
     n.addEventListener("click", function () {
       hamburger.classList.remove("active");
-      navUl.classList.toggle("active");
+      navUl.classList.remove("nav_show");
+      // navUl.classList.toggle("active");
     })
   );
 });
@@ -259,18 +250,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// //smooth a tags
-// window.addEventListener("scroll", () => {
-//   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-//     anchor.addEventListener("click", function (e) {
-//       e.preventDefault();
+//smooth a tags
+window.addEventListener("scroll", () => {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
 
-//       document.querySelector(this.getAttribute("href")).scrollIntoView({
-//         behavior: "smooth",
-//       });
-//     });
-//   });
-// });
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+});
 //animation
 document.addEventListener("DOMContentLoaded", function () {
   let observer = new IntersectionObserver((entries) => {

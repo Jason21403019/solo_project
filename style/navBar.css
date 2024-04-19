@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 header {
   display: flex;
   max-width: 100%;
@@ -73,7 +77,8 @@ header .icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex: 0.75;
+  position: relative;
 }
 header .icons li {
   display: flex;
@@ -108,16 +113,12 @@ header .icons li a .car_number {
   background-color: #e00000;
   border-radius: 50%;
 }
-header .hamburger.active {
-  position: fixed;
-}
-header .hamburger {
+header .icons .hamburger {
   cursor: pointer;
   display: none;
-  position: absolute;
   z-index: 4;
 }
-header .hamburger .bar {
+header .icons .hamburger .bar {
   display: block;
   width: 25px;
   height: 3px;
@@ -139,13 +140,69 @@ header .hamburger .bar {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 1200px) {
-  header .hamburger {
-    display: block;
-  }
-}
 .hide_nav {
   opacity: 1;
   transition: 0.3s ease;
   position: sticky;
+}
+
+@media screen and (max-width: 820px) {
+  header {
+    position: relative;
+    justify-content: space-between;
+    height: 72px;
+  }
+  header .log {
+    flex: 0.35;
+  }
+  header nav {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background: rgba(30, 30, 30, 0.87);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.7px);
+    -webkit-backdrop-filter: blur(16.7px);
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transform: translateY(-120%);
+    transition: all 0.5s cubic-bezier(0.17, 0.82, 0.92, 0.21);
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: normal;
+  }
+  header nav ul li {
+    width: 100%;
+  }
+  header nav ul li a {
+    color: #f6f6f6;
+    width: 100vw;
+  }
+  header nav.nav_show {
+    transform: translateY(0%);
+  }
+  header .icons {
+    flex: 0.3;
+  }
+  header .icons .hamburger {
+    display: block;
+    margin: 0 1rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  header .log {
+    flex: 0.8;
+  }
+  header .icons li a {
+    margin: 0 1rem;
+    display: flex;
+  }
+  header .icons .hamburger {
+    display: block;
+    margin: 0 1rem;
+  }
 }/*# sourceMappingURL=navBar.css.map */

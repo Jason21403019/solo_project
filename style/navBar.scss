@@ -8,6 +8,9 @@ $yello: #ffdd00;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+body {
+  overflow-x: hidden;
+}
 header {
   // border: 1px solid red;
   display: flex;
@@ -91,7 +94,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex: 0.75;
+    position: relative;
 
     li {
       // border: 1px solid red;
@@ -129,23 +133,21 @@ header {
         }
       }
     }
-  }
-  .hamburger.active {
-    position: fixed;
-  }
-  .hamburger {
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    z-index: 4;
-    .bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      border-radius: 20px;
-      transition: all 0.2s ease-in-out;
-      background-color: $font_color;
+
+    .hamburger {
+      // border: 1px solid red;
+      cursor: pointer;
+      display: none;
+      z-index: 4;
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        border-radius: 20px;
+        transition: all 0.2s ease-in-out;
+        background-color: $font_color;
+      }
     }
   }
 }
@@ -162,14 +164,77 @@ header {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 1200px) {
-  header .hamburger {
-    display: block;
-  }
-}
 //-------------- hide_nav ---------------
 .hide_nav {
   opacity: 1;
   transition: 0.3s ease;
   position: sticky;
+}
+
+@media screen and (max-width: 820px) {
+  header {
+    position: relative;
+    justify-content: space-between;
+    height: 72px;
+    .log {
+      flex: 0.35;
+    }
+    nav {
+      // display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 72px;
+      right: 0;
+      background: rgba(30, 30, 30, 0.87);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(16.7px);
+      -webkit-backdrop-filter: blur(16.7px);
+      width: 100%;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      transform: translateY(-120%);
+      transition: all 0.5s cubic-bezier(0.17, 0.82, 0.92, 0.21);
+      ul {
+        flex-direction: column;
+        align-items: normal;
+        li {
+          width: 100%;
+          a {
+            color: $font_color;
+            width: 100vw;
+          }
+        }
+      }
+    }
+    nav.nav_show {
+      transform: translateY(0%);
+    }
+    .icons {
+      flex: 0.3;
+      .hamburger {
+        display: block;
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  header {
+    .log {
+      flex: 0.8;
+    }
+    .icons {
+      li {
+        a {
+          margin: 0 1rem;
+          display: flex;
+        }
+      }
+      .hamburger {
+        display: block;
+        margin: 0 1rem;
+      }
+    }
+  }
 }
