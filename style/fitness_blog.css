@@ -1,17 +1,17 @@
-.product_title {
+.fitness_blog_title {
   max-width: 100%;
 }
-.product_title h1 {
+.fitness_blog_title h1 {
   margin: 0 auto;
   width: -moz-fit-content;
   width: fit-content;
   padding: 2rem 0;
-  font-size: 40px;
+  font-size: 3rem;
   color: #f6f6f6;
   font-weight: bold;
   position: relative;
 }
-.product_title h1:before, .product_title h1:after {
+.fitness_blog_title h1:before, .fitness_blog_title h1:after {
   position: absolute;
   content: "";
   top: 50%;
@@ -21,10 +21,10 @@
   border-radius: 8px;
   transform: translateY(-50%);
 }
-.product_title h1:before {
+.fitness_blog_title h1:before {
   left: -220px;
 }
-.product_title h1:after {
+.fitness_blog_title h1:after {
   right: -220px;
 }
 
@@ -53,7 +53,7 @@
   max-width: 75%;
   margin: 0 auto;
 }
-.fitness_blog li {
+.fitness_blog .blog_content li {
   margin-bottom: 2rem;
 }
 .fitness_blog a {
@@ -67,14 +67,14 @@
   display: flex;
 }
 .fitness_blog .img {
-  width: 371px;
-  height: 255px;
+  width: 351px;
+  height: 235px;
   flex: 1;
   position: relative;
 }
 .fitness_blog .img img {
-  width: 371px;
-  height: 255px;
+  width: 351px;
+  height: 235px;
   display: block;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -97,7 +97,7 @@
   letter-spacing: 1px;
 }
 .fitness_blog .contents h4 {
-  font-size: 16px;
+  font-size: 0.55rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -107,12 +107,95 @@
   margin-left: 0.25rem;
 }
 .fitness_blog .contents h2 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 900;
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
 .fitness_blog .contents p {
   line-height: 1.2;
-  font-size: 18px;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .sort_by_area {
+    width: 85%;
+  }
+  .fitness_blog {
+    max-width: 85%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .sort_by_area {
+    width: 90%;
+  }
+  .fitness_blog {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 820px) {
+  .fitness_blog_title h1 {
+    font-size: 2rem;
+  }
+  .fitness_blog .img {
+    width: 281px;
+    height: 205px;
+  }
+  .fitness_blog .img img {
+    width: 281px;
+    height: 205px;
+  }
+  .fitness_blog .contents h2 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .fitness_blog_title h1 {
+    font-size: 1.5rem;
+  }
+  .fitness_blog_title h1:before, .fitness_blog_title h1:after {
+    width: 150px;
+  }
+  .fitness_blog_title h1:before {
+    left: -170px;
+  }
+  .fitness_blog_title h1:after {
+    right: -170px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .fitness_blog_title h1 {
+    font-size: 1.25rem;
+  }
+  .fitness_blog_title h1:before, .fitness_blog_title h1:after {
+    width: 80px;
+  }
+  .fitness_blog_title h1:before {
+    left: -100px;
+  }
+  .fitness_blog_title h1:after {
+    right: -100px;
+  }
+  .fitness_blog .blog_content .blog_link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .fitness_blog .img {
+    width: 391px;
+    height: 285px;
+  }
+  .fitness_blog .img img {
+    width: 391px;
+    height: 285px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
+  }
+  .fitness_blog .img:before {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
+  }
+  .fitness_blog .contents h2 {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=fitness_blog.css.map */

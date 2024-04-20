@@ -10,7 +10,7 @@ $font_size12: 12px;
 }
 
 //---------------- blog_title --------------
-.product_title {
+.fitness_blog_title {
   max-width: 100%;
   //   border: 1px solid red;
   h1 {
@@ -18,7 +18,7 @@ $font_size12: 12px;
     // border: 1px solid red;
     width: fit-content;
     padding: 2rem 0;
-    font-size: 40px;
+    font-size: 3rem;
     color: $font_color;
     font-weight: bold;
     position: relative;
@@ -69,8 +69,10 @@ $font_size12: 12px;
   display: flex;
   max-width: 75%;
   margin: 0 auto;
-  li {
-    margin-bottom: 2rem;
+  .blog_content {
+    li {
+      margin-bottom: 2rem;
+    }
   }
   a {
     width: 100%;
@@ -84,14 +86,14 @@ $font_size12: 12px;
     // border: 1px solid red;
   }
   .img {
-    width: 371px;
-    height: 255px;
+    width: 351px;
+    height: 235px;
     flex: 1;
     //   border: 1px solid blue;
     position: relative;
     img {
-      width: 371px;
-      height: 255px;
+      width: 351px;
+      height: 235px;
       display: block;
       border-top-left-radius: 8px;
       border-bottom-left-radius: 8px;
@@ -115,7 +117,7 @@ $font_size12: 12px;
     letter-spacing: 1px;
 
     h4 {
-      font-size: 16px;
+      font-size: 0.55rem;
       font-weight: bold;
       margin-bottom: 1rem;
       span {
@@ -126,14 +128,118 @@ $font_size12: 12px;
     }
 
     h2 {
-      font-size: 24px;
-      font-weight: bold;
+      font-size: 1.25rem;
+      font-weight: 900;
       line-height: 1.2;
       margin-bottom: 0.5rem;
     }
     p {
       line-height: 1.2;
-      font-size: 18px;
+      font-size: 0.75rem;
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .sort_by_area {
+    width: 85%;
+  }
+  .fitness_blog {
+    max-width: 85%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .sort_by_area {
+    width: 90%;
+  }
+  .fitness_blog {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .fitness_blog_title {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .fitness_blog {
+    .img {
+      width: 281px;
+      height: 205px;
+      img {
+        width: 281px;
+        height: 205px;
+      }
+    }
+    .contents {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .fitness_blog_title {
+    h1 {
+      font-size: 1.5rem;
+      &:before,
+      &:after {
+        width: 150px;
+      }
+      &:before {
+        left: -170px;
+      }
+      &:after {
+        right: -170px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  .fitness_blog_title {
+    h1 {
+      font-size: 1.25rem;
+      &:before,
+      &:after {
+        width: 80px;
+      }
+      &:before {
+        left: -100px;
+      }
+      &:after {
+        right: -100px;
+      }
+    }
+  }
+  .fitness_blog {
+    .blog_content {
+      .blog_link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .img {
+      width: 391px;
+      height: 285px;
+
+      img {
+        width: 391px;
+        height: 285px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 8px;
+      }
+      &:before {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 8px;
+      }
+    }
+    .contents {
+      h2 {
+        font-size: 1rem;
+      }
     }
   }
 }
