@@ -20,12 +20,8 @@ function doFirst() {
       logo.src = "./Logo_Img/yellow_logo.svg";
     }
   });
-}
 
-window.addEventListener("load", doFirst);
-
-//cart count number
-document.addEventListener("DOMContentLoaded", function () {
+  //cart count number
   let btn1 = document.querySelector(".btn1");
   let btn2 = document.querySelector(".btn2");
   let n = document.querySelector("#number");
@@ -33,21 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
   btn2.addEventListener("click", () => {
     // console.log(btn2);
     let nplus = parseInt(n.value);
-
     nplus++;
     n.value = nplus;
   });
   btn1.addEventListener("click", () => {
     let nminus = parseInt(n.value);
-
     if (nminus > 0) {
       nminus--;
       n.value = nminus;
     }
   });
-});
-//product_info add to car number
-document.addEventListener("DOMContentLoaded", function () {
+
+  //product_info add to car number
   let q_minusbtn = document.querySelector(".quantity_minusBtn");
   let q_plusbtn = document.querySelector(".quantity_plusBtn");
   let q_number = document.querySelector("#quantity_number");
@@ -67,7 +60,55 @@ document.addEventListener("DOMContentLoaded", function () {
       q_number.value = nminus;
     }
   });
-});
+}
+
+window.addEventListener("load", doFirst);
+
+//cart count number
+// document.addEventListener("DOMContentLoaded", function () {
+//   let btn1 = document.querySelector(".btn1");
+//   let btn2 = document.querySelector(".btn2");
+//   let n = document.querySelector("#number");
+
+//   btn2.addEventListener("click", () => {
+//     // console.log(btn2);
+//     let nplus = parseInt(n.value);
+
+//     nplus++;
+//     n.value = nplus;
+//   });
+//   btn1.addEventListener("click", () => {
+//     let nminus = parseInt(n.value);
+
+//     if (nminus > 0) {
+//       nminus--;
+//       n.value = nminus;
+//     }
+//   });
+// });
+
+//product_info add to car number
+// document.addEventListener("DOMContentLoaded", function () {
+//   let q_minusbtn = document.querySelector(".quantity_minusBtn");
+//   let q_plusbtn = document.querySelector(".quantity_plusBtn");
+//   let q_number = document.querySelector("#quantity_number");
+
+//   q_plusbtn.addEventListener("click", () => {
+//     // console.log(btn2);
+//     let nplus = parseInt(q_number.value);
+
+//     nplus++;
+//     q_number.value = nplus;
+//   });
+//   q_minusbtn.addEventListener("click", () => {
+//     let nminus = parseInt(q_number.value);
+
+//     if (nminus > 0) {
+//       nminus--;
+//       q_number.value = nminus;
+//     }
+//   });
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
@@ -158,9 +199,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //session date bgc change
 document.addEventListener("DOMContentLoaded", function () {
   let ularray = document.querySelector(".days_ul");
-  console.log(ularray);
+  // console.log(ularray);
   let buttons = document.querySelectorAll("button");
-  console.log(buttons);
+  // console.log(buttons);
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       buttons.forEach((btn) => {
@@ -263,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//add to car
+// add to car
 document.addEventListener("DOMContentLoaded", function () {
   let addToCar = document.querySelector(".add_to_cart");
   let carIcon = document.querySelector(".car_number");

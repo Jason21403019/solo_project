@@ -119,4 +119,10 @@ footer .project_statemen p {
   line-height: 2;
   letter-spacing: 1px;
   color: #f6f6f6;
+}
+
+@media screen and (max-width: 910px) {
+  footer {
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  }
 }/*# sourceMappingURL=footer.css.map */

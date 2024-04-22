@@ -110,43 +110,43 @@
             </div>
           </li>
           <li>
-            <button>
+            <button id="d1">
               <p>MON</p>
               <p>7 / 1</p>
             </button>
           </li>
           <li>
-            <button>
+            <button id="d2">
               <p>TUE</p>
               <p>7 / 2</p>
             </button>
           </li>
           <li>
-            <button>
+            <button id="d3">
               <p>WEN</p>
               <p>7 / 3</p>
             </button>
           </li>
           <li>
-            <button>
+            <button id="d4">
               <p>THU</p>
               <p>7 / 4</p>
             </button>
           </li>
           <li>
-            <button>
+            <button id="d5">
               <p>FRI</p>
               <p>7 / 5</p>
             </button>
           </li>
           <li>
-            <button>
+            <button id="d6">
               <p>SAT</p>
               <p>7 / 6</p>
             </button>
           </li>
           <li>
-            <button>
+            <button id="d7">
               <p>SUN</p>
               <p>7 / 7</p>
             </button>
@@ -171,7 +171,6 @@
               <div class="session_title">
                 <h2>Building Power and Muscle</h2>
                 <div class="title_info">
-                  <span>7:00~9:00</span>
                   <p>7:00~9:00</p>
                   <p>
                     <i
@@ -194,7 +193,7 @@
               <a href="" class="check_btn">Add</a>
             </div>
           </li>
-          <li class="slide-right">
+          <!-- <li class="slide-right">
             <div class="session_name">
               <img
                 src="./fitness_environment_img/TRAINER/trainer2.jpg"
@@ -410,7 +409,7 @@
             <div class="check_btndiv">
               <a href="" class="check_btn">Add</a>
             </div>
-          </li>
+          </li> -->
         </ul>
       </section>
     </main>
@@ -488,9 +487,20 @@
       </div>
     </footer>
   </body>
+  <script src="./session_data.js"></script>
   <script>
     document.querySelector(".car_number").innerText =
       localStorage.getItem("count");
+
+    let currentDate = new Date();
+    let month = currentDate.getMonth() + 1;
+    document.querySelector(".month").selectedIndex = month;
+
+    let d1 = document.querySelector("#d1");
+    d1.addEventListener("click", () => {
+      const targetItem = session.filter((item) => item.date == "4/29");
+      console.log(targetItem);
+    });
   </script>
   <script src="./app.js"></script>
 </html>

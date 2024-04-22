@@ -34,6 +34,10 @@ function doFirst() {
     fit.style.display = fit.style.display === "block" ? "none" : "block";
     fg.classList.toggle("plus");
   });
+
+  //cartnumber
+  document.querySelector(".car_number").innerText =
+    localStorage.getItem("count");
 }
 
 window.addEventListener("load", doFirst);
