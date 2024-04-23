@@ -21,96 +21,7 @@ function doFirst() {
     }
   });
 
-  //cart count number
-  let btn1 = document.querySelector(".btn1");
-  let btn2 = document.querySelector(".btn2");
-  let n = document.querySelector("#number");
-
-  btn2.addEventListener("click", () => {
-    // console.log(btn2);
-    let nplus = parseInt(n.value);
-    nplus++;
-    n.value = nplus;
-  });
-  btn1.addEventListener("click", () => {
-    let nminus = parseInt(n.value);
-    if (nminus > 0) {
-      nminus--;
-      n.value = nminus;
-    }
-  });
-
-  //product_info add to car number
-  let q_minusbtn = document.querySelector(".quantity_minusBtn");
-  let q_plusbtn = document.querySelector(".quantity_plusBtn");
-  let q_number = document.querySelector("#quantity_number");
-
-  q_plusbtn.addEventListener("click", () => {
-    // console.log(btn2);
-    let nplus = parseInt(q_number.value);
-
-    nplus++;
-    q_number.value = nplus;
-  });
-  q_minusbtn.addEventListener("click", () => {
-    let nminus = parseInt(q_number.value);
-
-    if (nminus > 0) {
-      nminus--;
-      q_number.value = nminus;
-    }
-  });
-}
-
-window.addEventListener("load", doFirst);
-
-//cart count number
-// document.addEventListener("DOMContentLoaded", function () {
-//   let btn1 = document.querySelector(".btn1");
-//   let btn2 = document.querySelector(".btn2");
-//   let n = document.querySelector("#number");
-
-//   btn2.addEventListener("click", () => {
-//     // console.log(btn2);
-//     let nplus = parseInt(n.value);
-
-//     nplus++;
-//     n.value = nplus;
-//   });
-//   btn1.addEventListener("click", () => {
-//     let nminus = parseInt(n.value);
-
-//     if (nminus > 0) {
-//       nminus--;
-//       n.value = nminus;
-//     }
-//   });
-// });
-
-//product_info add to car number
-// document.addEventListener("DOMContentLoaded", function () {
-//   let q_minusbtn = document.querySelector(".quantity_minusBtn");
-//   let q_plusbtn = document.querySelector(".quantity_plusBtn");
-//   let q_number = document.querySelector("#quantity_number");
-
-//   q_plusbtn.addEventListener("click", () => {
-//     // console.log(btn2);
-//     let nplus = parseInt(q_number.value);
-
-//     nplus++;
-//     q_number.value = nplus;
-//   });
-//   q_minusbtn.addEventListener("click", () => {
-//     let nminus = parseInt(q_number.value);
-
-//     if (nminus > 0) {
-//       nminus--;
-//       q_number.value = nminus;
-//     }
-//   });
-// });
-
-document.addEventListener("DOMContentLoaded", function () {
+  //hamburger active
   const hamburger = document.querySelector(".hamburger");
   const navUl = document.querySelector("nav");
   const navA = document.querySelectorAll("nav ul li a");
@@ -130,129 +41,55 @@ document.addEventListener("DOMContentLoaded", function () {
       // navUl.classList.toggle("active");
     })
   );
-});
-
-//product sidebar close
-// document.addEventListener("DOMContentLoaded", function () {
-//   let fit_ness = document.querySelector(".fit_ness");
-//   let fitness = document.querySelector(".fitness_equipment_product");
-//   let proteins = document.querySelector(".proteins");
-//   let protein = document.querySelector(".protein_powder_product");
-//   let healths = document.querySelector(".healths");
-//   let health = document.querySelector(".health_Supplements_product");
-//   let fits = document.querySelector(".fits");
-//   let fit = document.querySelector(".fit_gear_product");
-//   // let plusbtn = document.querySelector(".plusbtn");
-//   let fe = document.querySelector(".fitness_equipment");
-//   let pp = document.querySelector(".protein_powder");
-//   let hs = document.querySelector(".health_supplments");
-//   let fg = document.querySelector(".fit_gear");
-
-//   fit_ness.addEventListener("click", () => {
-//     fitness.style.display =
-//       fitness.style.display === "block" ? "none" : "block";
-//     fe.classList.toggle("plus");
-//   });
-
-//   proteins.addEventListener("click", () => {
-//     protein.style.display =
-//       protein.style.display === "block" ? "none" : "block";
-//     pp.classList.toggle("plus");
-//   });
-//   healths.addEventListener("click", () => {
-//     health.style.display = health.style.display === "block" ? "none" : "block";
-//     hs.classList.toggle("plus");
-//   });
-
-//   fits.addEventListener("click", () => {
-//     fit.style.display = fit.style.display === "block" ? "none" : "block";
-//     fg.classList.toggle("plus");
-//   });
-// });
-
-//shopping info and return info
-document.addEventListener("DOMContentLoaded", function () {
-  let shipping = document.querySelector(".shipping_info");
-  let shipping_p = document.querySelector(".shipping_info_p");
-  let return_info = document.querySelector(".return_info");
-  let return_info_p = document.querySelector(".return_info_p");
-
-  let isVisible = false;
-  shipping.addEventListener("click", () => {
-    if (isVisible) {
-      shipping_p.style.display = "none";
-    } else {
-      shipping_p.style.display = "block";
-    }
-    isVisible = !isVisible;
-  });
-  return_info.addEventListener("click", () => {
-    if (isVisible) {
-      return_info_p.style.display = "none";
-    } else {
-      return_info_p.style.display = "block";
-    }
-    isVisible = !isVisible;
-  });
-});
-
-//session date bgc change
-document.addEventListener("DOMContentLoaded", function () {
-  let ularray = document.querySelector(".days_ul");
-  // console.log(ularray);
-  let buttons = document.querySelectorAll("button");
-  // console.log(buttons);
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      buttons.forEach((btn) => {
-        btn.classList.remove("changebgc");
-      });
-      button.classList.add("changebgc");
-      // console.log(buttons);
-    });
-  });
-});
+}
 
 //navbar sticky
-document.addEventListener("DOMContentLoaded", function () {
-  let headers = document.querySelector("header");
-  let headerA = document.querySelectorAll("header ul li a");
-  let logo = document.querySelector("#logo");
+let headers = document.querySelector("header");
+let headerA = document.querySelectorAll("header ul li a");
+let logo = document.querySelector("#logo");
+let hamgurger = document.querySelectorAll(".bar");
 
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset != 0) {
-      headers.style.backgroundColor = "rgba(246,246,246,0.9)";
-      headers.style.color = "#f6f6f6";
-      headerA.forEach((a) => {
-        a.style.color = "#1e1e1e";
-        logo.src = "./Logo_Img/black_logo.svg";
-      });
-    } else {
-      headers.style = "";
-      headerA.forEach((a) => {
-        a.style.color = "#f6f6f6";
-      });
-      logo.src = "./Logo_Img/yellow_logo.svg";
-    }
-  });
+console.log(hamgurger);
+window.addEventListener("scroll", () => {
+  if (window.scrollY != 0) {
+    headers.style.backgroundColor = "rgba(246,246,246,0.9)";
+    headers.style.color = "#f6f6f6";
+    hamgurger.forEach((ham) => {
+      ham.style.backgroundColor = "#1e1e1e";
+    });
+    headerA.forEach((a) => {
+      console.log(a);
+      a.style.color = "#f6f6f6";
+      logo.src = "./Logo_Img/black_logo.svg";
+    });
+  } else {
+    headers.style = "";
+    hamgurger.forEach((ham) => {
+      ham.style.backgroundColor = "#f6f6f6";
+    });
+    headerA.forEach((a) => {
+      a.style.color = "#f6f6f6";
+    });
+    logo.src = "./Logo_Img/yellow_logo.svg";
+  }
+});
 
-  let lastScrollTop = 0;
-  window.addEventListener("scroll", () => {
-    let currentTop = window.scrollY || document.documentElement.scrollTop;
+let lastScrollTop = 0;
+window.addEventListener("scroll", () => {
+  let currentTop = window.scrollY || document.documentElement.scrollTop;
 
-    if (currentTop > lastScrollTop) {
-      headers.classList.add("hide_nav");
-      headers.style.position = "sticky";
-      headers.style.opacity = 1;
-      headers.style.transition = "all 0.3s ";
-    } else {
-      // headers.classList.remove("hide-nav");
-      headers.style.opacity = 0;
-      headers.style.transition = "all 0.3s ";
-      headers.style.position = "static";
-    }
-    lastScrollTop = currentTop <= 0 ? 0 : currentTop;
-  });
+  if (currentTop > lastScrollTop) {
+    headers.classList.add("hide_nav");
+    headers.style.position = "sticky";
+    headers.style.opacity = 1;
+    headers.style.transition = "all 0.5s ease";
+  } else {
+    // headers.classList.remove("hide-nav");
+    headers.style.opacity = 0;
+    headers.style.transition = "all 0.5s ease";
+    headers.style.position = "static";
+  }
+  lastScrollTop = currentTop <= 0 ? 0 : currentTop;
 });
 
 //smooth a tags
@@ -267,6 +104,7 @@ window.addEventListener("scroll", () => {
     });
   });
 });
+
 //animation
 document.addEventListener("DOMContentLoaded", function () {
   let observer = new IntersectionObserver((entries) => {
@@ -304,17 +142,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// add to car
-document.addEventListener("DOMContentLoaded", function () {
-  let addToCar = document.querySelector(".add_to_cart");
-  let carIcon = document.querySelector(".car_number");
-
-  // console.log(addToCar);
-  // console.log(carIcon.textContent);
-  addToCar.addEventListener("click", () => {
-    let numberUP = parseInt(carIcon.textContent);
-    carIcon.textContent = numberUP + 1;
-    // console.log(carIcon);
-    localStorage.setItem("count", carIcon.textContent);
-  });
-});
+window.addEventListener("load", doFirst);
