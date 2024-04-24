@@ -110,9 +110,9 @@
             </div>
           </li>
           <li>
-            <button id="d1">
+            <button id="d1" data-mon="4/29">
               <p>MON</p>
-              <p>7 / 1</p>
+              <p>4 / 29</p>
             </button>
           </li>
           <li>
@@ -146,7 +146,7 @@
             </button>
           </li>
           <li>
-            <button id="d7">
+            <button id="d7" data-mon="4/30">
               <p>SUN</p>
               <p>7 / 7</p>
             </button>
@@ -491,16 +491,6 @@
   <script>
     document.querySelector(".car_number").innerText =
       localStorage.getItem("count");
-
-    let currentDate = new Date();
-    let month = currentDate.getMonth() + 1;
-    document.querySelector(".month").selectedIndex = month;
-
-    let d1 = document.querySelector("#d1");
-    d1.addEventListener("click", () => {
-      const targetItem = session.filter((item) => item.date == "4/29");
-      console.log(targetItem);
-    });
   </script>
   <script src="./session.js"></script>
   <script src="./app.js"></script>

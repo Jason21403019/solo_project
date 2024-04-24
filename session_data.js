@@ -399,3 +399,52 @@ const session = [
     instructor: "Iron Warrior",
   },
 ];
+
+// const all = {
+//   "4/29": [],
+//   "5/1": [],
+// };
+
+// for (let index = 0; index < session.length; index++) {
+//   const element = session[index];
+
+//   if (element.date === "4/29") {
+//     let li = ``;
+
+//     console.log(
+//       `
+//       <li class="slide-right">
+//       <div class="session_name">
+//         <img
+//           src="${element.name}"
+//           alt=""
+//         />
+//         <div class="session_title">
+//           <h2>Building Power and Muscle</h2>
+//           <div class="title_info">
+//             <p>${element.date}</p>
+//             <p>
+//               <i
+//                 class="fa-solid fa-location-dot fa-sm"
+//                 style="color: #1e1e1e"
+//               ></i
+//               >Xinyi
+//             </p>
+//             <p>
+//               <i
+//                 class="fa-solid fa-user fa-sm"
+//                 style="color: #1e1e1e"
+//               ></i>
+//               Jack Irons
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//       <div class="check_btndiv">
+//         <a href="" class="check_btn">Add</a>
+//       </div>
+//       </li>
+//       `
+//     );
+//   }
+// }

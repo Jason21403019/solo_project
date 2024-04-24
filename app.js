@@ -58,7 +58,7 @@ window.addEventListener("scroll", () => {
       ham.style.backgroundColor = "#1e1e1e";
     });
     headerA.forEach((a) => {
-      console.log(a);
+      // console.log(a);
       a.style.color = "#f6f6f6";
       logo.src = "./Logo_Img/black_logo.svg";
     });
