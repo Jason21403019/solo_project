@@ -145,7 +145,7 @@ footer .project_statemen p {
 }
 @media screen and (max-width: 430px) {
   footer {
-    padding-top: 1rem;
+    padding: 0;
   }
   footer .footer_ul .no_text_logo {
     width: 40%;
@@ -155,11 +155,11 @@ footer .project_statemen p {
     align-items: center;
   }
   footer .footer_ul li h4 {
-    font-size: 0.75rem;
+    font-size: 0.95rem;
   }
   footer .footer_ul li a {
     text-align: center;
-    font-size: 0.55rem;
+    font-size: 0.65rem;
   }
   footer .footer_register_content {
     margin-bottom: 0.5rem;
@@ -169,6 +169,8 @@ footer .project_statemen p {
   }
   footer .footer_register_content p {
     font-size: 14px;
+    line-height: 1.4;
+    padding: 0 2rem;
   }
   footer .footer_register_content a {
     padding: 0.75rem 1rem;
@@ -178,5 +180,6 @@ footer .project_statemen p {
   }
   footer .project_statemen p {
     line-height: 1.4;
+    padding: 0 0.5rem;
   }
 }/*# sourceMappingURL=footer.css.map */

@@ -178,7 +178,7 @@ footer {
 }
 @media screen and (max-width: 430px) {
   footer {
-    padding-top: 1rem;
+    padding: 0;
     .footer_ul {
       .no_text_logo {
         width: 40%;
@@ -187,11 +187,11 @@ footer {
       li {
         align-items: center;
         h4 {
-          font-size: 0.75rem;
+          font-size: 0.95rem;
         }
         a {
           text-align: center;
-          font-size: 0.55rem;
+          font-size: 0.65rem;
         }
       }
     }
@@ -202,6 +202,8 @@ footer {
       }
       p {
         font-size: 14px;
+        line-height: 1.4;
+        padding: 0 2rem;
       }
       a {
         padding: 0.75rem 1rem;
@@ -213,6 +215,7 @@ footer {
     .project_statemen {
       p {
         line-height: 1.4;
+        padding: 0 0.5rem;
       }
     }
   }
