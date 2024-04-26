@@ -74,23 +74,23 @@ window.addEventListener("scroll", () => {
   }
 });
 
-let lastScrollTop = 0;
-window.addEventListener("scroll", () => {
-  let currentTop = window.scrollY || document.documentElement.scrollTop;
+// let lastScrollTop = 0;
+// window.addEventListener("scroll", () => {
+//   let currentTop = window.scrollY || document.documentElement.scrollTop;
 
-  if (currentTop > lastScrollTop) {
-    headers.classList.add("hide_nav");
-    headers.style.position = "sticky";
-    headers.style.opacity = 1;
-    headers.style.transition = "all 0.5s ease";
-  } else {
-    // headers.classList.remove("hide-nav");
-    headers.style.opacity = 0;
-    headers.style.transition = "all 0.5s ease";
-    headers.style.position = "static";
-  }
-  lastScrollTop = currentTop <= 0 ? 0 : currentTop;
-});
+//   if (currentTop > lastScrollTop) {
+//     headers.classList.add("hide_nav");
+//     headers.style.position = "sticky";
+//     headers.style.opacity = 1;
+//     headers.style.transition = "all 0.5s ease";
+//   } else {
+//     // headers.classList.remove("hide-nav");
+//     headers.style.opacity = 0;
+//     headers.style.transition = "all 0.5s ease";
+//     headers.style.position = "static";
+//   }
+//   lastScrollTop = currentTop <= 0 ? 0 : currentTop;
+// });
 
 //smooth a tags
 window.addEventListener("scroll", () => {
