@@ -177,14 +177,20 @@
   .fitness_blog_title h1:after {
     right: -100px;
   }
+  .sort_by_area {
+    width: 86%;
+  }
+  .fitness_blog {
+    width: 370px;
+  }
   .fitness_blog .blog_content .blog_link {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
   .fitness_blog .img {
-    width: 391px;
-    height: 285px;
+    width: 100%;
+    height: 100%;
   }
   .fitness_blog .img img {
     width: 100%;
