@@ -90,7 +90,7 @@ body {
 .column_section_area {
   // outline: 1px solid red;
   max-width: 100%;
-  margin-bottom: 10rem;
+  // margin-bottom: 3rem;
 }
 .column_sections {
   // outline: 1px solid blue;
@@ -190,7 +190,6 @@ li:nth-child(2) {
 .ftandm {
   // border: 1px solid red;
   width: 1000px;
-  background-color: #c6bdac;
   margin: 0 auto;
   display: flex;
   border-top-left-radius: 8px;
@@ -313,7 +312,7 @@ li:nth-child(2) {
   margin-bottom: 200px;
   display: flex;
   justify-content: end;
-  img {
+  .post_1_img {
     width: 850px;
     height: 550px;
     @include border-radius(8px);
@@ -342,6 +341,7 @@ li:nth-child(2) {
       height: 95%;
       object-fit: fill;
       display: block;
+      @include border-radius(8px);
     }
   }
   .contents {
@@ -370,7 +370,7 @@ li:nth-child(2) {
   margin-bottom: 200px;
   display: flex;
   justify-content: start;
-  img {
+  .post_2_img {
     width: 850px;
     height: 550px;
     @include border-radius(8px);
@@ -400,6 +400,7 @@ li:nth-child(2) {
       height: 95%;
       object-fit: cover;
       display: block;
+      @include border-radius(8px);
     }
   }
   .contents {
@@ -432,7 +433,7 @@ li:nth-child(2) {
     justify-content: center;
     justify-content: space-between;
     padding: 1rem 3rem;
-    @include border-radius(8px);
+    // @include border-radius(8px);
     // border: 0.5px dashed $yello;
   }
   li {
@@ -494,7 +495,7 @@ li:nth-child(2) {
     max-width: 100%;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    overflow: scroll;
     li {
       background-color: $font_color;
       margin: 1rem;
@@ -699,13 +700,13 @@ li:nth-child(2) {
     }
   }
   .sharepost1 {
-    img {
+    .post_1_img {
       width: 740px;
       height: 470px;
     }
   }
   .sharepost2 {
-    img {
+    .post_2_img {
       width: 740px;
       height: 470px;
     }
@@ -738,13 +739,21 @@ li:nth-child(2) {
     }
   }
   .sharepost1 {
+    .post_1_img {
+      width: 650px;
+      height: 530px;
+    }
     .postArea1 {
-      top: 50px;
+      width: 330px;
     }
   }
   .sharepost2 {
+    .post_2_img {
+      width: 650px;
+      height: 500px;
+    }
     .postArea2 {
-      top: 50px;
+      width: 330px;
     }
   }
   .trainer_column_content {
@@ -773,15 +782,37 @@ li:nth-child(2) {
       margin: 0 4rem;
     }
   }
+  .top_sale_area {
+    margin-bottom: 4rem;
+    .products {
+      li {
+        margin: 0.5rem;
+      }
+      a {
+        .product_bg {
+          width: 212px;
+          height: 184px;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 820px) {
+  .section1_bg {
+    .section1_img_filter {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  }
   .column_sections {
-    padding: 1rem 4rem;
+    // border: 1px solid red;
+    padding: 0.5rem;
     top: -80px;
   }
   .column_sections {
     li {
-      margin: 0 1.25rem;
+      margin: 0 1rem;
     }
     li:nth-child(2) {
       margin: 0rem;
@@ -792,11 +823,53 @@ li:nth-child(2) {
   }
   .trainer_column_content {
     a {
-      font-size: 18px;
+      font-size: 20px;
     }
     p {
       font-size: 14px;
       line-height: 1.3;
+    }
+  }
+  .fslogan {
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .sharepost1 {
+    .post_1_img {
+      width: 550px;
+      height: 480px;
+    }
+    .postArea1 {
+      top: 25px;
+      .postArea1_img {
+        height: 200px;
+      }
+    }
+  }
+  .sharepost2 {
+    .post_2_img {
+      width: 550px;
+      height: 480px;
+    }
+    .postArea2 {
+      top: 25px;
+      .postArea2_img {
+        height: 200px;
+      }
+    }
+  }
+  .slogan2 {
+    margin: 5rem 2rem;
+
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 18px;
     }
   }
 }
@@ -829,52 +902,204 @@ li:nth-child(2) {
   }
 }
 @media (max-width: 430px) {
-  .column_sections {
-    padding: 0rem 0.25rem;
-    top: 0px;
+  .section1_bg {
+    .section1_img_filter {
+      padding-bottom: 3rem;
+      h1 {
+        font-size: 32px;
+        margin-bottom: 5rem;
+      }
+    }
   }
   .column_sections {
+    top: 0px;
+    .trainer_column_content {
+    }
+  }
+  .column_sections {
+    // border: 1px solid blue;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 2rem;
+    .trainer_column_img {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      img {
+        border: 4px solid $font_color;
+        width: 90%;
+      }
+    }
     li {
-      margin: 0 0.125rem;
-      width: 53%;
-      margin-bottom: 0.5rem;
+      margin: 1.5rem 0;
+      border: 1.5px solid $yello;
+      // animation: scale 2s infinite alternate;
+      width: 90%;
     }
-    li:nth-child(2) {
-      margin-bottom: 0.5rem;
-      position: relative;
-      left: -100px;
-    }
-    li:nth-child(odd) {
-      position: relative;
-      right: -100px;
-    }
-    li::before {
-      opacity: 0;
-    }
+
     li:hover .trainer_column_content {
       opacity: 1;
     }
 
     h3 {
-      font-size: 18px;
+      font-size: 32px;
     }
   }
-  .trainer_column_img {
-    opacity: 0;
-  }
-  .column_sections .trainer_column_content {
-    opacity: 1;
 
+  .column_sections .trainer_column_content {
+    background: rgba(198, 189, 172, 0.79);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.3px);
+    -webkit-backdrop-filter: blur(8.3px);
     a {
-      padding: 0.5rem 0 0 0;
-      font-size: 14px;
+      padding-top: 1.25rem;
+      font-size: 32px;
+      font-weight: 700;
     }
     p {
-      font-size: 12px;
+      font-size: 18px;
       line-height: 1.6;
-      padding: 0.25rem;
+      padding: 1rem;
     }
+  }
+  .member_number {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    ul {
+      padding: 0;
+      li {
+        padding: 0;
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .fslogan {
+    margin: 7rem 0;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin: 0 1rem;
+    }
+  }
+  .ftandm {
+    width: 380px;
+    flex-direction: column;
+    .firstTime_bg {
+      width: 380px;
+      margin-bottom: 2rem;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      h1 {
+        font-size: 28px;
+        padding-top: 5rem;
+      }
+      p {
+        margin-bottom: 5rem;
+      }
+    }
+    .firstTime_filter {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    .member_bg {
+      width: 380px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+
+      h1 {
+        padding-top: 5rem;
+        font-size: 28px;
+      }
+      p {
+        margin-bottom: 5rem;
+      }
+    }
+    .member_filter {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
+  .sharepost1 {
+    margin-bottom: 7rem;
+    .post_1_img {
+      position: relative;
+      top: 130px;
+      left: -10px;
+      width: 210px;
+      height: 210px;
+      z-index: -1;
+    }
+    .postArea1 {
+      top: -25px;
+      right: -10px;
+      .contents {
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 12px;
+          line-height: 1.2;
+        }
+      }
+      .postArea1_img {
+        height: 150px;
+      }
+    }
+  }
+  .sharepost2 {
+    margin-bottom: 7rem;
+    .post_2_img {
+      position: relative;
+      top: 120px;
+      right: -10px;
+      width: 210px;
+      height: 210px;
+    }
+    .postArea2 {
+      top: -25px;
+      left: -10px;
+      .contents {
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 12px;
+          line-height: 1.2;
+        }
+      }
+      .postArea2_img {
+        height: 150px;
+      }
+    }
+  }
+  .slogan2 {
+    margin: 5rem 0;
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      margin: 0 1rem;
+    }
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -7,11 +7,11 @@ function doFirst() {
   window.addEventListener("scroll", () => {
     if (window.pageYOffset != 0) {
       headers.style.backgroundColor = "rgba(246,246,246,0.9)";
-      headers.style.color = "#f6f6f6";
+
       headerA.forEach((a) => {
         a.style.color = "#1e1e1e";
-        logo.src = "./Logo_Img/black_logo.svg";
       });
+      logo.src = "./Logo_Img/black_logo.svg";
     } else {
       headers.style = "";
       headerA.forEach((a) => {
