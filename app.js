@@ -1,4 +1,11 @@
 function doFirst() {
+  const cart_count = localStorage.getItem("count");
+  if (cart_count) {
+    document.querySelector(".car_number").innerText =
+      localStorage.getItem("count");
+  } else {
+    document.querySelector(".car_number").innerText = "0";
+  }
   //navbar sticky
   headers = document.querySelector("header");
   headerA = document.querySelectorAll("header ul li a");
@@ -104,9 +111,7 @@ window.addEventListener("scroll", () => {
     });
   });
 });
-
-//animation
-document.addEventListener("DOMContentLoaded", function () {
+function animation() {
   let observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -140,6 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
   slideDown.forEach((el) => {
     observer.observe(el);
   });
+}
+//animation
+document.addEventListener("DOMContentLoaded", function () {
+  animation();
 });
 
 window.addEventListener("load", doFirst);

@@ -20,7 +20,7 @@ function doFirst() {
       for (let item of list) {
         sessionUl.insertAdjacentHTML(
           "beforeend",
-          `<li class="slide-right">
+          `<li class="slide-right show">
              <div class="session_name">
                <img
                   src="./fitness_environment_img/TRAINER/trainer8.jpg"
@@ -53,6 +53,7 @@ function doFirst() {
         </li>`
         );
       }
+      animation();
     });
   });
 
