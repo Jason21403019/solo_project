@@ -44,7 +44,7 @@ function doFirst() {
     isVisible = !isVisible;
   });
 
-  // add to car
+  // // add to car
   let addToCar = document.querySelector(".add_to_cart");
   let carIcon = document.querySelector(".car_number");
 

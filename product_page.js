@@ -35,9 +35,9 @@ function doFirst() {
     fg.classList.toggle("plus");
   });
 
-  //cartnumber
-  document.querySelector(".car_number").innerText =
-    localStorage.getItem("count");
+  // //cartnumber
+  // document.querySelector(".car_number").innerText =
+  //   localStorage.getItem("count");
 }
 
 window.addEventListener("load", doFirst);
