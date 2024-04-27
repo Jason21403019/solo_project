@@ -147,6 +147,7 @@ $font_size12: 12px;
     }
     .btns_area {
       .cancle {
+        color: $bgc_1e;
         border: 2px solid $bgc_1e;
         @include border-radius(8px);
       }

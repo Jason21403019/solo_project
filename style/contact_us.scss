@@ -44,6 +44,7 @@ $font_size12: 12px;
     // border: 1px solid red;
   }
   h1 {
+    font-weight: 700;
     font-size: 36px;
     margin-bottom: 1rem;
   }
@@ -60,6 +61,7 @@ $font_size12: 12px;
     font-size: 16px;
     padding: 0.5rem 0.75rem;
     border: 1px solid $bgc_1e;
+    color: $bgc_1e;
     outline: none;
     background-color: $font_color;
     @include border-radius(4px);
@@ -132,6 +134,7 @@ $font_size12: 12px;
   font-size: 16px;
   padding: 0.5rem 0.75rem;
   border: 1px solid $bgc_1e;
+  color: $bgc_1e;
   outline: none;
   background-color: $font_color;
   @include border-radius(4px);

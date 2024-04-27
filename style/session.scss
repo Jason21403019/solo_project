@@ -52,6 +52,8 @@ body {
   margin-bottom: 3rem;
 }
 .month_choose {
+  color: $bgc_1e;
+  text-align: center;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -81,6 +83,7 @@ body {
       margin-right: 0;
     }
     option {
+      color: $bgc_1e;
       font-weight: 600;
     }
     // i {
@@ -361,11 +364,17 @@ body {
       }
       .days_ul {
         li {
-          margin-left: 0.55rem;
+          &:first-child {
+            display: none;
+          }
+          &:last-child {
+            display: none;
+          }
+          margin: 0 0.45rem;
         }
         p {
           line-height: 1;
-          font-size: 14px;
+          font-size: 12px;
         }
         button {
           padding: 0.25rem 0.25rem;

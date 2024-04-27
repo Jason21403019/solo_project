@@ -33,6 +33,7 @@
   width: 80%;
 }
 .info h1 {
+  font-weight: 700;
   font-size: 36px;
   margin-bottom: 1rem;
 }
@@ -49,6 +50,7 @@
   font-size: 16px;
   padding: 0.5rem 0.75rem;
   border: 1px solid #1e1e1e;
+  color: #1e1e1e;
   outline: none;
   background-color: #f6f6f6;
   border-radius: 4px;
@@ -126,6 +128,7 @@
   font-size: 16px;
   padding: 0.5rem 0.75rem;
   border: 1px solid #1e1e1e;
+  color: #1e1e1e;
   outline: none;
   background-color: #f6f6f6;
   border-radius: 4px;

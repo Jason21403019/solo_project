@@ -39,6 +39,8 @@ body {
 }
 
 .month_choose {
+  color: #1e1e1e;
+  text-align: center;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -65,6 +67,7 @@ body {
   margin-right: 0;
 }
 .month_choose .months option {
+  color: #1e1e1e;
   font-weight: 600;
 }
 .month_choose .month {
@@ -293,11 +296,17 @@ body {
     padding: 0.45rem 0.5rem 0.45rem 0.5rem;
   }
   .session .month_choose .days_ul li {
-    margin-left: 0.55rem;
+    margin: 0 0.45rem;
+  }
+  .session .month_choose .days_ul li:first-child {
+    display: none;
+  }
+  .session .month_choose .days_ul li:last-child {
+    display: none;
   }
   .session .month_choose .days_ul p {
     line-height: 1;
-    font-size: 14px;
+    font-size: 12px;
   }
   .session .month_choose .days_ul button {
     padding: 0.25rem 0.25rem;

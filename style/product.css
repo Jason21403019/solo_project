@@ -354,6 +354,10 @@
   }
 }
 @media screen and (max-width: 430px) {
+  .search_bar input {
+    width: 195px;
+    height: 34px;
+  }
   .product_title h1 {
     font-size: 1.25rem;
   }
@@ -381,6 +385,10 @@
   }
 }
 @media screen and (max-width: 414px) {
+  .search_bar input {
+    width: 195px;
+    height: 34px;
+  }
   .product_title h1 {
     font-size: 1.25rem;
   }
@@ -408,6 +416,10 @@
   }
 }
 @media screen and (max-width: 390px) {
+  .search_bar input {
+    width: 195px;
+    height: 34px;
+  }
   .product_title h1 {
     font-size: 1.25rem;
   }

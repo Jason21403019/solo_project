@@ -131,6 +131,7 @@
   padding: 0.5rem 0.75rem;
 }
 .comments_area .comments_footer .btns_area .cancle {
+  color: #1e1e1e;
   border: 2px solid #1e1e1e;
   border-radius: 8px;
 }

@@ -38,6 +38,9 @@ function doFirst() {
   // //cartnumber
   // document.querySelector(".car_number").innerText =
   //   localStorage.getItem("count");
+
+  let search = document.querySelector("#search");
+  console.log(search);
 }
 
 window.addEventListener("load", doFirst);

@@ -56,6 +56,7 @@ $font_size12: 12px;
       letter-spacing: 2px;
     }
     select {
+      color: $bgc_1e;
       border: none;
       outline: none;
       @include border-radius(4px);
