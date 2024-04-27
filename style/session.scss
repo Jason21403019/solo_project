@@ -52,8 +52,6 @@ body {
   margin-bottom: 3rem;
 }
 .month_choose {
-  color: $bgc_1e;
-  text-align: center;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -73,6 +71,8 @@ body {
   @include border-radius(8px);
   // border: 1px solid red;
   .months {
+    color: $bgc_1e;
+    text-align: center;
     display: flex;
     align-items: center;
     @include border-radius(8px);
@@ -129,6 +129,7 @@ body {
       }
       //   border: 1px solid red;
       p {
+        color: $bgc_1e;
         line-height: 1.2;
         font-size: 16px;
         font-weight: 500;
@@ -390,11 +391,10 @@ body {
         }
         h2 {
           font-size: 16px;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.25rem;
         }
         p {
-          font-size: 10px;
-          margin-right: 0.15rem;
+          font-size: 12px;
         }
         a {
           text-align: center;
