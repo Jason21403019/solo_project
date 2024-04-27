@@ -824,7 +824,7 @@ li:nth-child(2) {
   }
   .column_sections li {
     margin: 1.5rem 0;
-    border: 1.5px solid #ffdd00;
+    border: 0;
     width: 90%;
   }
   .column_sections li:hover .trainer_column_content {
@@ -834,10 +834,9 @@ li:nth-child(2) {
     font-size: 32px;
   }
   .column_sections .trainer_column_content {
-    background: rgba(198, 189, 172, 0.79);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.3px);
-    -webkit-backdrop-filter: blur(8.3px);
+    opacity: 1;
+    padding: 0.25rem;
+    background: rgba(198, 189, 172, 0.89);
   }
   .column_sections .trainer_column_content a {
     padding-top: 1.25rem;
@@ -845,7 +844,7 @@ li:nth-child(2) {
     font-weight: 700;
   }
   .column_sections .trainer_column_content p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     padding: 1rem;
   }

@@ -2,46 +2,61 @@ body {
   overflow-x: hidden;
 }
 
-header {
+.header {
   display: flex;
   max-width: 100%;
   position: sticky;
   top: 0;
   z-index: 50;
   background-color: #1e1e1e;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   transition: 0.3s ease;
 }
-header .log {
+
+.header__log {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
 }
-header .log a {
+.header__log-a {
   display: flex;
   justify-content: center;
 }
-header .log img {
+.header__log-a.yellow-logo {
+  display: none;
+}
+.offset-0 .header__log-a.yellow-logo {
+  display: block;
+}
+.header__log-a .black-logo {
+  display: none;
+}
+.offset-0 .header__log-a .black-logo {
+  display: none;
+}
+.header__log .yellow-logo {
   display: block;
   width: 70%;
 }
-header nav {
+
+.header__nav {
   flex: 3;
 }
-header nav ul {
+
+.header__nav-ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header nav ul li {
+.header__nav-ul li {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
   position: relative;
 }
-header nav ul li a {
+.header__nav-ul .header__nav-ul-a {
   height: 72px;
   line-height: 72px;
   display: block;
@@ -50,10 +65,10 @@ header nav ul li a {
   letter-spacing: 4px;
   font-weight: 800;
 }
-header nav ul li a:hover {
+.header__nav-ul .header__nav-ul-a:hover {
   color: #1e1e1e;
 }
-header nav ul li a::before {
+.header__nav-ul .header__nav-ul-a::before {
   content: "";
   left: 0px;
   height: 2px;
@@ -66,30 +81,31 @@ header nav ul li a::before {
   transition: 0.3s ease;
   z-index: -1;
 }
-header nav ul li a:hover::before {
+.header__nav-ul .header__nav-ul-a:hover::before {
   position: absolute;
   width: 100%;
   height: 100%;
   color: #1e1e1e;
   background-color: #ffdd00;
 }
-header .icons {
+
+.icons {
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 0.75;
   position: relative;
 }
-header .icons li {
+.icons li {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-header .icons li:nth-child(3) {
+.icons li:nth-child(3) {
   width: auto;
 }
-header .icons li a {
+.icons li .icons__a {
   display: flex;
   align-items: center;
   width: 25px;
@@ -98,10 +114,10 @@ header .icons li a {
   color: #f6f6f6;
   position: relative;
 }
-header .icons li a i {
+.icons li .icons__a i {
   font-size: 24px;
 }
-header .icons li a .car_number {
+.icons li .icons__a .car_number {
   position: absolute;
   width: 20px;
   line-height: 20px;
@@ -113,12 +129,12 @@ header .icons li a .car_number {
   background-color: #e00000;
   border-radius: 50%;
 }
-header .icons .hamburger {
+.icons .hamburger {
   cursor: pointer;
   display: none;
   z-index: 4;
 }
-header .icons .hamburger .bar {
+.icons .hamburger .bar {
   display: block;
   width: 25px;
   height: 3px;
@@ -149,10 +165,11 @@ header .icons .hamburger .bar {
 @media screen and (max-width: 820px) {
   header {
     position: relative;
+    position: sticky;
     justify-content: space-between;
     height: 72px;
   }
-  header .log {
+  header .header__log {
     flex: 0.35;
   }
   header nav {
@@ -186,7 +203,7 @@ header .icons .hamburger .bar {
     transform: translateY(0%);
   }
   header .icons {
-    flex: 0.3;
+    flex: 0.35;
   }
   header .icons .hamburger {
     display: block;
@@ -194,7 +211,7 @@ header .icons .hamburger .bar {
   }
 }
 @media screen and (max-width: 430px) {
-  header .log {
+  header .header__log {
     flex: 0.8;
   }
   header .icons li a {

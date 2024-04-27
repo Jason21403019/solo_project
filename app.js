@@ -6,38 +6,33 @@ function doFirst() {
   } else {
     document.querySelector(".car_number").innerText = "0";
   }
-  //navbar sticky
-  headers = document.querySelector("header");
-  headerA = document.querySelectorAll("header ul li a");
-  logo = document.querySelector("#logo");
+
+  //-------------- navbar sticky -----------------------
+  headers = document.querySelector(".header");
+  headerA = document.querySelectorAll(".header ul li a");
+  yellow_logo = document.querySelector(".yellow-logo");
+  console.log(headers);
+  console.log(headerA);
+  console.log(yellow_logo);
 
   window.addEventListener("scroll", () => {
-    if (window.pageYOffset != 0) {
-      headers.style.backgroundColor = "rgba(246,246,246,0.9)";
-
-      headerA.forEach((a) => {
-        a.style.color = "#1e1e1e";
-      });
-      logo.src = "./Logo_Img/black_logo.svg";
+    if (window.scrollY != 0) {
+      headers.style.backgroundColor = "rgba(0,0,0,0.5)";
+      headers.classList.remove("offset-0");
     } else {
-      headers.style = "";
-      headerA.forEach((a) => {
-        a.style.color = "#f6f6f6";
-      });
-      logo.src = "./Logo_Img/yellow_logo.svg";
+      headers.classList.add("offset-0");
+      yellow_logo.style.display = "block";
     }
   });
 
-  //hamburger active
+  //--------------- hamburger active ----------------------
   const hamburger = document.querySelector(".hamburger");
   const navUl = document.querySelector("nav");
   const navA = document.querySelectorAll("nav ul li a");
   //收合展開navBar
 
   hamburger.addEventListener("click", function () {
-    // console.log(navA);
     hamburger.classList.toggle("active");
-    // navUl.style.display = navUl.style.display === "block" ? "none" : "block";
     navUl.classList.toggle("nav_show");
   });
 
@@ -45,61 +40,35 @@ function doFirst() {
     n.addEventListener("click", function () {
       hamburger.classList.remove("active");
       navUl.classList.remove("nav_show");
-      // navUl.classList.toggle("active");
     })
   );
 }
-
-//navbar sticky
-let headers = document.querySelector("header");
-let headerA = document.querySelectorAll("header ul li a");
+//------------- navbar sticky -----------------------
+let headerA = document.querySelectorAll("header__nav-ul-a");
 let logo = document.querySelector("#logo");
 let hamgurger = document.querySelectorAll(".bar");
+let carts_icon = document.querySelectorAll(".fa-cart-shopping");
+let right_to_bracket = document.querySelectorAll(".fa-arrow-right-to-bracket");
 
-console.log(hamgurger);
+// console.log(hamgurger);
 window.addEventListener("scroll", () => {
   if (window.scrollY != 0) {
-    headers.style.backgroundColor = "rgba(246,246,246,0.9)";
-    headers.style.color = "#f6f6f6";
     hamgurger.forEach((ham) => {
-      ham.style.backgroundColor = "#1e1e1e";
+      ham.style.backgroundColor = "#f6f6f6";
     });
-    headerA.forEach((a) => {
-      // console.log(a);
-      a.style.color = "#f6f6f6";
-      logo.src = "./Logo_Img/black_logo.svg";
-    });
+    carts_icon.forEach((icon) => (icon.style.color = "#f6f6f6"));
+    right_to_bracket.forEach((icon) => (icon.style.color = "#f6f6f6"));
   } else {
     headers.style = "";
     hamgurger.forEach((ham) => {
       ham.style.backgroundColor = "#f6f6f6";
     });
-    headerA.forEach((a) => {
-      a.style.color = "#f6f6f6";
-    });
-    logo.src = "./Logo_Img/yellow_logo.svg";
+    carts_icon.forEach((icon) => (icon.style.color = "#f6f6f6"));
+    right_to_bracket.forEach((icon) => (icon.style.color = "#f6f6f6"));
   }
 });
 
-// let lastScrollTop = 0;
-// window.addEventListener("scroll", () => {
-//   let currentTop = window.scrollY || document.documentElement.scrollTop;
-
-//   if (currentTop > lastScrollTop) {
-//     headers.classList.add("hide_nav");
-//     headers.style.position = "sticky";
-//     headers.style.opacity = 1;
-//     headers.style.transition = "all 0.5s ease";
-//   } else {
-//     // headers.classList.remove("hide-nav");
-//     headers.style.opacity = 0;
-//     headers.style.transition = "all 0.5s ease";
-//     headers.style.position = "static";
-//   }
-//   lastScrollTop = currentTop <= 0 ? 0 : currentTop;
-// });
-
-//smooth a tags
+//----------------- smooth a tags ----------------------
 window.addEventListener("scroll", () => {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -146,9 +115,27 @@ function animation() {
     observer.observe(el);
   });
 }
-//animation
+//----------------- animation ---------------------------
 document.addEventListener("DOMContentLoaded", function () {
   animation();
 });
 
 window.addEventListener("load", doFirst);
+
+// let lastScrollTop = 0;
+// window.addEventListener("scroll", () => {
+//   let currentTop = window.scrollY || document.documentElement.scrollTop;
+
+//   if (currentTop > lastScrollTop) {
+//     headers.classList.add("hide_nav");
+//     headers.style.position = "sticky";
+//     headers.style.opacity = 1;
+//     headers.style.transition = "all 0.5s ease";
+//   } else {
+//     // headers.classList.remove("hide-nav");
+//     headers.style.opacity = 0;
+//     headers.style.transition = "all 0.5s ease";
+//     headers.style.position = "static";
+//   }
+//   lastScrollTop = currentTop <= 0 ? 0 : currentTop;
+// });

@@ -932,7 +932,8 @@ li:nth-child(2) {
     }
     li {
       margin: 1.5rem 0;
-      border: 1.5px solid $yello;
+      // border: 1.5px solid $yello;
+      border: 0;
       // animation: scale 2s infinite alternate;
       width: 90%;
     }
@@ -947,17 +948,20 @@ li:nth-child(2) {
   }
 
   .column_sections .trainer_column_content {
-    background: rgba(198, 189, 172, 0.79);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.3px);
-    -webkit-backdrop-filter: blur(8.3px);
+    opacity: 1;
+    padding: 0.25rem;
+    background: rgba(198, 189, 172, 0.89);
+
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(8.3px);
+    // -webkit-backdrop-filter: blur(8.3px);
     a {
       padding-top: 1.25rem;
       font-size: 32px;
       font-weight: 700;
     }
     p {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.6;
       padding: 1rem;
     }
