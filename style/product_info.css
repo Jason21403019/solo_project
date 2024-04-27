@@ -140,8 +140,8 @@
 }
 .product_info .info_content .quantity_btn input[type=number] {
   text-align: center;
-  margin-right: -6.5px;
-  margin-left: -6.5px;
+  margin-right: -7.5px;
+  margin-left: -7.5px;
   border: none;
   outline: none;
   padding: 0.45rem 0;
@@ -172,6 +172,7 @@
   cursor: pointer;
 }
 .product_info .info_content .bsbtn .add_to_cart {
+  color: #1e1e1e;
   margin-bottom: 0.75rem;
   background-color: #c6bdac;
 }

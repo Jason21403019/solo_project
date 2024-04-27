@@ -398,9 +398,11 @@ $font_size12: 12px;
 }
 @media screen and (max-width: 430px) {
   .search_bar {
-    input {
-      width: 195px;
-      height: 34px;
+    .search {
+      input {
+        width: 195px;
+        height: 34px;
+      }
     }
   }
   .product_title {
@@ -426,7 +428,7 @@ $font_size12: 12px;
         margin: 2.9%;
       }
       h4 {
-        font-size: 24px;
+        font-size: 18px;
       }
     }
     a {
@@ -437,9 +439,11 @@ $font_size12: 12px;
 
 @media screen and (max-width: 414px) {
   .search_bar {
-    input {
-      width: 195px;
-      height: 34px;
+    .search {
+      input {
+        width: 195px;
+        height: 34px;
+      }
     }
   }
   .product_title {
@@ -465,7 +469,7 @@ $font_size12: 12px;
         margin: 3.2%;
       }
       h4 {
-        font-size: 24px;
+        font-size: 18px;
       }
     }
     a {
@@ -476,9 +480,11 @@ $font_size12: 12px;
 
 @media screen and (max-width: 390px) {
   .search_bar {
-    input {
-      width: 195px;
-      height: 34px;
+    .search {
+      input {
+        width: 195px;
+        height: 34px;
+      }
     }
   }
   .product_title {
@@ -504,7 +510,7 @@ $font_size12: 12px;
         margin: 3.2%;
       }
       h4 {
-        font-size: 24px;
+        font-size: 18px;
       }
     }
     a {
