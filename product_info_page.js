@@ -48,14 +48,17 @@ function doFirst() {
   let addToCar = document.querySelector(".add_to_cart");
   let carIcon = document.querySelector(".car_number");
 
-  console.log(addToCar);
-  console.log(carIcon.textContent);
+  // console.log(addToCar);
+  // console.log(carIcon.textContent);
   addToCar.addEventListener("click", () => {
     let numberUP = parseInt(carIcon.textContent);
     carIcon.textContent = numberUP + 1;
     console.log(carIcon);
     localStorage.setItem("count", carIcon.textContent);
   });
+}
+function changeMainImg(newSrc) {
+  document.getElementById("mainImg").src = newSrc;
 }
 
 window.addEventListener("load", doFirst);

@@ -50,12 +50,13 @@ $font_size12: 12px;
       background-color: $sidebar_bgc;
       @include border-radius(8px);
       position: relative;
-
+      width: 340px;
+      height: 340px;
       img {
-        width: 340px;
-        height: 340px;
+        width: 100%;
+        height: 100%;
         object-position: center;
-        object-fit: cover;
+        object-fit: contain;
       }
       &:before {
         position: absolute;
@@ -73,11 +74,11 @@ $font_size12: 12px;
       .img1,
       .img2,
       .img3 {
-        // border: 1px solid red;
         background-color: $sidebar_bgc;
         border-radius: 8px;
         position: relative;
         margin-top: 1rem;
+        cursor: pointer;
         img {
           width: 100px;
           height: 70px;
