@@ -48,13 +48,26 @@ function doFirst() {
   let addToCar = document.querySelector(".add_to_cart");
   let carIcon = document.querySelector(".car_number");
 
-  // console.log(addToCar);
+  console.log(addToCar);
   // console.log(carIcon.textContent);
   addToCar.addEventListener("click", () => {
     let numberUP = parseInt(carIcon.textContent);
     carIcon.textContent = numberUP + 1;
-    console.log(carIcon);
+    // console.log(carIcon);
     localStorage.setItem("count", carIcon.textContent);
+    let productName = document.querySelector(".info_content h1").textContent;
+    let productPrice = document.querySelector(
+      ".info_content h2 span"
+    ).textContent;
+    let productCount = document.querySelector("#quantity_number").value;
+
+    const product = {
+      name: productName,
+      price: productPrice,
+      count: productCount,
+    };
+
+    localStorage.setItem("product", JSON.stringify(product));
   });
 }
 function changeMainImg(newSrc) {
