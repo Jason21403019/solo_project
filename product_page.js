@@ -38,9 +38,22 @@ function doFirst() {
   // //cartnumber
   // document.querySelector(".car_number").innerText =
   //   localStorage.getItem("count");
+}
+function searchProducts() {
+  document.getElementById("search").addEventListener("input", function () {
+    let searchValue = this.value.toLowerCase().trim();
+    let products = document.querySelectorAll(".products li");
+    // console.log(products);
 
-  let search = document.querySelector("#search");
-  console.log(search);
+    products.forEach((product) => {
+      let productName = product.querySelector("h4").textContent.toLowerCase();
+      if (productName.includes(searchValue)) {
+        product.style.display = "flex";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  });
 }
 
 window.addEventListener("load", doFirst);

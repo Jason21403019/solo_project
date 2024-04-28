@@ -70,7 +70,6 @@ $font_size12: 12px;
   padding-right: 9.5%;
   margin-bottom: 1rem;
   .search {
-    // border: 1px solid red;
     position: relative;
     input {
       width: 228px;
@@ -80,11 +79,16 @@ $font_size12: 12px;
       border-radius: 8px;
       font-size: 24px;
       padding-left: 1rem;
+      background-color: $font_color;
     }
     input[type="search"]::-webkit-search-cancel-button {
       display: none;
     }
-    i {
+    button {
+      border: none;
+      outline: none;
+      background-color: $font_color;
+      cursor: pointer;
       position: absolute;
       top: 50%;
       right: 10px;
@@ -101,7 +105,6 @@ $font_size12: 12px;
 }
 .product_sidebar {
   //----------- product_sidebar -------
-  width: 540px;
   position: sticky;
   top: 72px;
   margin-top: 1.85%;
@@ -144,7 +147,8 @@ $font_size12: 12px;
   .sidebar_title {
     li {
       margin-bottom: 1rem;
-
+      width: 260px;
+      // border: 1px solid red;
       a {
         width: 100%;
         height: 40px;
@@ -194,7 +198,7 @@ $font_size12: 12px;
 .product_sections {
   //-------- product_sections ------
   // border: 1px solid red;
-  flex-grow: 1;
+  // flex-grow: 1;
   .products {
     // border: 1px solid red;
     display: flex;

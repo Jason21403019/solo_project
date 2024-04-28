@@ -11,9 +11,6 @@ function doFirst() {
   headers = document.querySelector(".header");
   headerA = document.querySelectorAll(".header ul li a");
   yellow_logo = document.querySelector(".yellow-logo");
-  console.log(headers);
-  console.log(headerA);
-  console.log(yellow_logo);
 
   window.addEventListener("scroll", () => {
     if (window.scrollY != 0) {
