@@ -235,6 +235,7 @@ $font_size12: 12px;
       display: block;
       padding: 0.5rem 0;
       border: none;
+      color: $bgc_1e;
       outline: none;
       @include border-radius(8px);
       background-color: $sidebar_bgc;
