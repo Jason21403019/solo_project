@@ -23,3 +23,10 @@ function doFirst() {
 }
 
 window.addEventListener("load", doFirst);
+
+const carts = [
+  {
+    img: "./fitness_environment_img/PRODUCTS/dumbbell12.png",
+    name: "Dumbbell 12Kg",
+  },
+];
