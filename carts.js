@@ -7,6 +7,8 @@ function doFirst() {
   let unit = 1190;
   let quantity = parseInt(n.value);
 
+  // console.log(btn1);
+
   function updatePrice() {
     let total = unit * quantity;
     priceValue.textContent = `$${total}`;
@@ -31,120 +33,98 @@ function doFirst() {
     }
   });
 
-  document.querySelector(".car_number").innerText =
-    localStorage.getItem("count");
-
   let products = localStorage.getItem("product");
+  let carIcon = document.querySelector(".car_number");
+
   if (products) {
     products = JSON.parse(products);
+    carIcon.innerText = products.length;
     let items = document.querySelector(".items");
+    for (let i = 0; i < products.length; i++) {
+      //----------------------------------------------------------
+      //li
+      let li = document.createElement("li");
 
-    // let li = document.createElement("li");
-    // li.innerHTML = `
-    //     <div class="img">
-    //       <img src="./fitness_environment_img/PRODUCTS/dumbbell12.png" alt="" />
-    //     </div>
-    //     <div class="item_name">
-    //       <h2>${products.name}</h2>
-    //     </div>
-    //     <div class="quantity_btn">
-    //       <button class="btn1">
-    //         <i class="fa-solid fa-minus fa-lg" style="color: #1e1e1e"></i>
-    //       </button>
-    //       <input type="number" value="${products.count}" id="number" />
-    //       <button class="btn2">
-    //         <i class="fa-solid fa-plus fa-lg" style="color: #1e1e1e"></i>
-    //       </button>
-    //     </div>
-    //     <div class="price">
-    //       <p>${products.price}</p>
-    //     </div>
-    //     <div class="trashbtn">
-    //       <button>
-    //         <i class="fa-solid fa-trash-can fa-lg" style="color: #e00000"></i>
-    //       </button>
-    //     </div>
-    //   `;
-    // items.appendChild(li);
-    //----------------------------------------------------------
-    //li
-    let li = document.createElement("li");
+      //<div class="img">
+      let imgDiv = document.createElement("div");
+      imgDiv.classList = "img";
+      let img = document.createElement("img");
+      img.src = "./fitness_environment_img/PRODUCTS/dumbbell12.png";
+      img.alt = "";
+      imgDiv.appendChild(img);
+      li.appendChild(imgDiv);
 
-    //<div class="img">
-    let imgDiv = document.createElement("div");
-    imgDiv.classList = "img";
-    let img = document.createElement("img");
-    img.src = "./fitness_environment_img/PRODUCTS/dumbbell12.png";
-    img.alt = "";
-    imgDiv.appendChild(img);
-    li.appendChild(imgDiv);
+      //  <div class="item_name">
+      let itemNameDiv = document.createElement("div");
+      itemNameDiv.className = "item_name";
+      let itemNameH2 = document.createElement("h2");
+      itemNameH2.textContent = products[i].name;
+      itemNameDiv.appendChild(itemNameH2);
+      li.appendChild(itemNameDiv);
 
-    //  <div class="item_name">
-    let itemNameDiv = document.createElement("div");
-    itemNameDiv.className = "item_name";
-    let itemNameH2 = document.createElement("h2");
-    itemNameH2.textContent = products.name;
-    itemNameDiv.appendChild(itemNameH2);
-    li.appendChild(itemNameDiv);
+      //  <div class="quantity_btn">
+      let quantityBtnDiv = document.createElement("div");
+      quantityBtnDiv.className = "quantity_btn";
 
-    //  <div class="quantity_btn">
-    let quantityBtnDiv = document.createElement("div");
-    quantityBtnDiv.className = "quantity_btn";
+      //<div class="quantity_btn">
+      let minusBtn = document.createElement("button");
+      minusBtn.className = "btn1";
+      let minusIcon = document.createElement("i");
+      minusIcon.className = "fa-solid fa-minus fa-lg";
+      minusIcon.style.color = "#1e1e1e";
+      minusBtn.appendChild(minusIcon);
+      quantityBtnDiv.appendChild(minusBtn);
 
-    //<div class="quantity_btn">
-    let minusBtn = document.createElement("button");
-    minusBtn.className = "btn1";
-    let minusIcon = document.createElement("i");
-    minusIcon.className = "fa-solid fa-minus fa-lg";
-    minusIcon.style.color = "#1e1e1e";
-    minusBtn.appendChild(minusIcon);
-    quantityBtnDiv.appendChild(minusBtn);
+      //<div class="quantity_btn">
+      let input = document.createElement("input");
+      input.type = "number";
+      input.value = products[i].count;
+      input.id = "number";
+      quantityBtnDiv.appendChild(input);
 
-    //<div class="quantity_btn">
-    let input = document.createElement("input");
-    input.type = "number";
-    input.value = products.count;
-    input.id = "number";
-    quantityBtnDiv.appendChild(input);
+      // <div class="quantity_btn">
+      let plusBtn = document.createElement("button");
+      plusBtn.className = "btn2";
+      let plusIcon = document.createElement("i");
+      plusIcon.className = "fa-solid fa-plus fa-lg";
+      plusIcon.style.color = "#1e1e1e";
+      plusBtn.appendChild(plusIcon);
+      quantityBtnDiv.appendChild(plusBtn);
 
-    // <div class="quantity_btn">
-    let plusBtn = document.createElement("button");
-    plusBtn.className = "btn2";
-    let plusIcon = document.createElement("i");
-    plusIcon.className = "fa-solid fa-plus fa-lg";
-    plusIcon.style.color = "#1e1e1e";
-    plusBtn.appendChild(plusIcon);
-    quantityBtnDiv.appendChild(plusBtn);
+      //<div class="quantity_btn">
+      li.appendChild(quantityBtnDiv);
 
-    //<div class="quantity_btn">
-    li.appendChild(quantityBtnDiv);
+      //<div class="price">
+      let priceDiv = document.createElement("div");
+      priceDiv.className = "price";
+      let priceP = document.createElement("p");
+      priceP.textContent = products[i].price;
+      priceDiv.appendChild(priceP);
+      li.appendChild(priceDiv);
 
-    //<div class="price">
-    let priceDiv = document.createElement("div");
-    priceDiv.className = "price";
-    let priceP = document.createElement("p");
-    priceP.textContent = products.price;
-    priceDiv.appendChild(priceP);
-    li.appendChild(priceDiv);
+      // <div class="trashbtn">
+      let trashbtnDiv = document.createElement("div");
+      trashbtnDiv.className = "trashbtn";
+      let trashBtn = document.createElement("button");
+      let trashIcon = document.createElement("i");
+      trashIcon.className = "fa-solid fa-trash-can fa-lg";
+      trashIcon.style.color = "#e00000";
+      trashBtn.appendChild(trashIcon);
+      trashbtnDiv.appendChild(trashBtn);
+      li.appendChild(trashbtnDiv);
 
-    // <div class="trashbtn">
-    let trashbtnDiv = document.createElement("div");
-    trashbtnDiv.className = "trashbtn";
-    let trashBtn = document.createElement("button");
-    let trashIcon = document.createElement("i");
-    trashIcon.className = "fa-solid fa-trash-can fa-lg";
-    trashIcon.style.color = "#e00000";
-    trashBtn.appendChild(trashIcon);
-    trashbtnDiv.appendChild(trashBtn);
-    li.appendChild(trashbtnDiv);
-
-    // <li>
-    items.appendChild(li);
+      // <li>
+      items.appendChild(li);
+    }
 
     let trashbtns = document.querySelectorAll(".trashbtn button");
-    trashbtns.forEach((trash) => {
+    trashbtns.forEach((trash, index) => {
+      let itemToRemove = document.querySelectorAll(".items li")[index];
       trash.addEventListener("click", () => {
-        li.remove();
+        itemToRemove.classList.add("fade_out");
+        setTimeout(() => {
+          itemToRemove.remove();
+        }, 500);
       });
     });
   }

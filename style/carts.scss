@@ -244,6 +244,19 @@ $font_size12: 12px;
     }
   }
 }
+
+.fade_out {
+  animation: fadeOut 0.7s ease;
+}
+@keyframes fadeOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0) rotate(360deg);
+  }
+}
+
 @media screen and (max-width: 820px) {
   .carts_title {
     h1 {

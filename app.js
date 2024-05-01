@@ -1,11 +1,12 @@
 function doFirst() {
   const cart_count = localStorage.getItem("count");
-  if (cart_count) {
-    document.querySelector(".car_number").innerText =
-      localStorage.getItem("count");
-  } else {
-    document.querySelector(".car_number").innerText = "0";
-  }
+  console.log(cart_count);
+  // if (cart_count) {
+  //   document.querySelector(".car_number").innerText =
+  //     localStorage.getItem("count");
+  // } else {
+  //   document.querySelector(".car_number").innerText = "0";
+  // }
 
   //-------------- navbar sticky -----------------------
   headers = document.querySelector(".header");

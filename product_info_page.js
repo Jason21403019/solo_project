@@ -19,6 +19,29 @@ function doFirst() {
       q_number.value = nminus;
     }
   });
+  // add to car
+  let addToCar = document.querySelector(".add_to_cart");
+  let carIcon = document.querySelector(".car_number");
+  let productsArray = [];
+  addToCar.addEventListener("click", () => {
+    let numberUP = parseInt(carIcon.textContent);
+    carIcon.textContent = numberUP + 1;
+    // console.log(carIcon);
+    localStorage.setItem("count", carIcon.textContent);
+    let productName = document.querySelector(".info_content h1").textContent;
+    let productPrice = document.querySelector(
+      ".info_content h2 span"
+    ).textContent;
+    let productCount = document.querySelector("#quantity_number").value;
+
+    const product = {
+      name: productName,
+      price: productPrice,
+      count: productCount,
+    };
+    productsArray.push(product);
+    localStorage.setItem("product", JSON.stringify(productsArray));
+  });
 
   //shopping info and return info
   let shipping = document.querySelector(".shipping_info");
@@ -42,32 +65,6 @@ function doFirst() {
       return_info_p.style.display = "block";
     }
     isVisible = !isVisible;
-  });
-
-  // // add to car
-  let addToCar = document.querySelector(".add_to_cart");
-  let carIcon = document.querySelector(".car_number");
-
-  console.log(addToCar);
-  // console.log(carIcon.textContent);
-  addToCar.addEventListener("click", () => {
-    let numberUP = parseInt(carIcon.textContent);
-    carIcon.textContent = numberUP + 1;
-    // console.log(carIcon);
-    localStorage.setItem("count", carIcon.textContent);
-    let productName = document.querySelector(".info_content h1").textContent;
-    let productPrice = document.querySelector(
-      ".info_content h2 span"
-    ).textContent;
-    let productCount = document.querySelector("#quantity_number").value;
-
-    const product = {
-      name: productName,
-      price: productPrice,
-      count: productCount,
-    };
-
-    localStorage.setItem("product", JSON.stringify(product));
   });
 }
 function changeMainImg(newSrc) {
