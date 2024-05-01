@@ -228,6 +228,9 @@ body {
   .session .month_choose {
     width: 100%;
   }
+  .session .month_choose .month {
+    text-align: center;
+  }
   .session .session_list {
     width: 80%;
   }
@@ -249,6 +252,9 @@ body {
   .session .month_choose .months {
     margin-right: 0rem;
     margin-top: 0.75rem;
+  }
+  .session .month_choose .months .month {
+    text-align: center;
   }
   .session .session_list {
     width: 75%;
@@ -294,6 +300,7 @@ body {
     right: -100px;
   }
   .session .month_choose .month {
+    text-align: center;
     padding: 0.45rem 0.5rem 0.45rem 0.5rem;
   }
   .session .month_choose .days_ul li {
