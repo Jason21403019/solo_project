@@ -117,4 +117,32 @@ svg {
   .logo_animation svg:nth-child(3) {
     margin-bottom: 2rem;
   }
+  .logo_animation svg:nth-child(5) {
+    width: 50px;
+    height: 60px;
+  }
+  .logo_animation svg:nth-child(6) {
+    width: 36px;
+    height: 60px;
+  }
+  .logo_animation svg:nth-child(7) {
+    width: 48px;
+    height: 65px;
+  }
+  .logo_animation svg:nth-child(8) {
+    width: 56px;
+    height: 57px;
+  }
+  .logo_animation svg:nth-child(9) {
+    width: 49px;
+    height: 56px;
+  }
+  .logo_animation svg:nth-child(10) {
+    width: 47px;
+    height: 56px;
+  }
+  .logo_animation svg:nth-child(11) {
+    width: 48px;
+    height: 56px;
+  }
 }/*# sourceMappingURL=animation.css.map */
