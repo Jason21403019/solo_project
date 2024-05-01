@@ -385,6 +385,9 @@
   .product_sections a {
     width: 190px;
   }
+  .product_sections a .product_bg {
+    height: 164px;
+  }
 }
 @media screen and (max-width: 414px) {
   .search_bar .search input {
@@ -416,6 +419,9 @@
   .product_sections a {
     width: 180px;
   }
+  .product_sections a .product_bg {
+    height: 164px;
+  }
 }
 @media screen and (max-width: 390px) {
   .search_bar .search input {
@@ -446,5 +452,8 @@
   }
   .product_sections a {
     width: 170px;
+  }
+  .product_sections a .product_bg {
+    height: 164px;
   }
 }/*# sourceMappingURL=product.css.map */

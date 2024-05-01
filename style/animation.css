@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.logo_animations {
+  width: 100%;
+  height: 100vh;
+  background-color: #1e1e1e;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first {
+  stroke-dasharray: 237px;
+  stroke-dashoffset: 237px;
+  animation: fadeInside 0.6s ease-in forwards;
+}
+
+#second {
+  stroke-dasharray: 266px;
+  stroke-dashoffset: 266px;
+  animation: fadeInside 0.3s ease-in forwards 0.3s;
+}
+
+#third {
+  stroke-dasharray: 217px;
+  stroke-dashoffset: 217px;
+  animation: fadeInside 0.3s ease-in forwards 0.6s;
+}
+
+#fourth {
+  stroke-dasharray: 241px;
+  stroke-dashoffset: 241px;
+  animation: fadeInside 0.3s ease-in forwards 0.9s;
+}
+
+#fifth {
+  stroke-dasharray: 225px;
+  stroke-dashoffset: 225px;
+  animation: fadeInside 0.3s ease-in forwards 1.2s;
+}
+
+#sixth {
+  stroke-dasharray: 165px;
+  stroke-dashoffset: 165px;
+  animation: fadeInside 0.3s ease-in forwards 1.5s;
+}
+
+#seventh {
+  stroke-dasharray: 202px;
+  stroke-dashoffset: 202px;
+  animation: fadeInside 0.3s ease-in forwards 1.8s;
+}
+
+#eigth {
+  stroke-dasharray: 257px;
+  stroke-dashoffset: 257px;
+  animation: fadeInside 0.3s ease-in forwards 2.1s;
+}
+
+#nineth {
+  stroke-dasharray: 217px;
+  stroke-dashoffset: 217px;
+  animation: fadeInside 0.3s ease-in forwards 2.4s;
+}
+
+#tenth {
+  stroke-dasharray: 199px;
+  stroke-dashoffset: 199px;
+  animation: fadeInside 0.3s ease-in forwards 2.7s;
+}
+
+#eleventh {
+  stroke-dasharray: 199px;
+  stroke-dashoffset: 199px;
+  animation: fadeInside 0.3s ease-in forwards 3s;
+}
+
+svg {
+  animation: fill 0.3s ease-in forwards 3.3s;
+}
+
+@keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #c6bdac;
+  }
+}
+@media (max-width: 430px) {
+  .logo_animation {
+    text-align: center;
+  }
+  .logo_animation svg:nth-child(4) {
+    margin-right: 3rem !important;
+    margin-bottom: 2rem;
+  }
+  .logo_animation svg:nth-child(1) {
+    margin-left: 3rem !important;
+    margin-bottom: 2rem;
+  }
+  .logo_animation svg:nth-child(2) {
+    margin-bottom: 2rem;
+  }
+  .logo_animation svg:nth-child(3) {
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=animation.css.map */
