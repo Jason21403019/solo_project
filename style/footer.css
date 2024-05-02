@@ -27,8 +27,10 @@ footer li {
   flex-direction: column;
 }
 footer li h4 {
-  font-size: 1.75rem;
-  padding-bottom: 1.2rem;
+  font-size: 28px;
+  padding-bottom: 24px;
+  font-weight: 700;
+  color: #c6bdac;
 }
 footer li a {
   width: 100%;
@@ -137,10 +139,10 @@ footer .project_statemen p {
     width: 60%;
   }
   footer .footer_ul li h4 {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
   footer .footer_ul li a {
-    font-size: 0.65rem;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 430px) {
@@ -148,18 +150,24 @@ footer .project_statemen p {
     padding: 0;
     padding-top: 1rem;
   }
+  footer .footer_ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   footer .footer_ul .no_text_logo {
     width: 40%;
     display: none;
   }
   footer .footer_ul li {
-    margin-left: 8px;
+    text-align: center;
+    width: 45%;
+    margin-bottom: 0.25rem;
   }
   footer .footer_ul li h4 {
     font-size: 20px;
   }
   footer .footer_ul li a {
-    font-size: 12px;
+    font-size: 16px;
   }
   footer .footer_register_content {
     margin-bottom: 0.5rem;

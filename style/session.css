@@ -43,7 +43,6 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   margin-bottom: 3rem;
   position: sticky;
   top: 72px;
@@ -224,6 +223,30 @@ body {
     padding: 0.5rem 0.75rem;
   }
 }
+@media screen and (max-width: 930px) {
+  .session .month_choose {
+    width: 95%;
+  }
+  .session .month_choose .months {
+    margin-right: 1rem;
+  }
+  .session .month_choose .days_ul li:first-child {
+    display: none;
+  }
+  .session .month_choose .days_ul li:last-child {
+    display: none;
+  }
+  .session .session_list {
+    width: 80%;
+  }
+  .session .session_list .session_content h2 {
+    font-size: 24px;
+  }
+  .session .session_list .session_content a {
+    font-size: 18px;
+    padding: 0.5rem 0.75rem;
+  }
+}
 @media screen and (max-width: 910px) {
   .session .month_choose {
     width: 100%;
@@ -251,10 +274,39 @@ body {
   }
   .session .month_choose .months {
     margin-right: 0rem;
-    margin-top: 0.75rem;
   }
   .session .month_choose .months .month {
     text-align: center;
+  }
+  .session .session_list {
+    width: 75%;
+  }
+  .session .session_list .session_content h2 {
+    font-size: 20px;
+  }
+  .session .session_list .session_content p {
+    font-size: 14px;
+  }
+  .session .session_list .session_content a {
+    text-align: center;
+    font-size: 20px;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 810px) {
+  .session_title h1 {
+    font-size: 2rem;
+  }
+  .session .month_choose .months {
+    margin-right: 0rem;
+  }
+  .session .month_choose .months .month {
+    text-align: center;
+    padding: 0.7rem 0.35rem;
+  }
+  .session .month_choose .days_ul li button {
+    padding: 0.25rem 0.75rem;
   }
   .session .session_list {
     width: 75%;
@@ -299,12 +351,12 @@ body {
   .session_title h1:after {
     right: -100px;
   }
-  .session .month_choose .month {
+  .session .month_choose .months .month {
     text-align: center;
-    padding: 0.45rem 0.5rem 0.45rem 0.5rem;
+    padding: 0.5rem 0;
   }
   .session .month_choose .days_ul li {
-    margin: 0 0.45rem;
+    margin: 0 0.125rem;
   }
   .session .month_choose .days_ul li:first-child {
     display: none;
@@ -312,12 +364,12 @@ body {
   .session .month_choose .days_ul li:last-child {
     display: none;
   }
+  .session .month_choose .days_ul li button {
+    padding: 0.25rem;
+  }
   .session .month_choose .days_ul p {
     line-height: 1;
     font-size: 12px;
-  }
-  .session .month_choose .days_ul button {
-    padding: 0.25rem 0.25rem;
   }
   .session .session_list {
     width: 95%;
