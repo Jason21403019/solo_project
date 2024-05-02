@@ -365,7 +365,7 @@ body {
     display: none;
   }
   .session .month_choose .days_ul li button {
-    padding: 0.25rem;
+    padding: 0.3rem;
   }
   .session .month_choose .days_ul p {
     line-height: 1;
