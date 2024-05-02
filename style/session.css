@@ -73,7 +73,9 @@ body {
   padding: 0.9rem 1rem 0.9rem 1rem;
   border: none;
   outline: none;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
   -webkit-appearance: none;
   -moz-appearance: none;
