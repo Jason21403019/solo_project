@@ -73,15 +73,15 @@ body {
   padding: 0.9rem 1rem 0.9rem 1rem;
   border: none;
   outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 8px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   font-weight: 700;
   cursor: pointer;
+}
+.month_choose .month option {
+  text-align: center;
 }
 .month_choose h1 {
   color: #1e1e1e;

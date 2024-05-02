@@ -90,15 +90,15 @@ body {
     padding: 0.9rem 1rem 0.9rem 1rem;
     border: none;
     outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     @include border-radius(8px);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     font-weight: 700;
     cursor: pointer;
+    option {
+      text-align: center;
+    }
   }
 
   h1 {
